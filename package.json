@@ -1,0 +1,19 @@
+{
+  "name": "awesome-learning-exercises",
+  "version": "1.0.0",
+  "description": "AL exercises",
+  "main": "readme.md",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "jest": "23.6.0",
+    "jest-html-reporter": "2.5.0"
+  },
+  "devDependencies": {
+    "@types/jest": "23.3.13",
+    "jest": "23.6.0"
+  },
+  "author": "",
+  "license": "ISC"
+}

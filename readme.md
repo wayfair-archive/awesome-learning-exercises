@@ -4,7 +4,7 @@ This repo contains the source code for the Awesome Learning platform. These sub-
 ## Git Wizard Process
 The codesandbox wizard works by pulling the source code from the specified link and bootstrapping a new codesandbox instance with it. Check out the docs [here](https://codesandbox.io/docs/importing#import-from-github)
 
-In the Awesome Learning platform repo, we link to the codesandbox git endpoint. When a user clicks the link within the session, codesanbox stands up an on the fly instance for them. 
+In the Awesome Learning platform repo, we link to the codesandbox git endpoint. When a user clicks the link within the session, codesandbox stands up an on the fly instance for them. 
 
 The codesandbox endpoint works by pre-pending your username and repo link with `https://codesandbox.io/s/github/`. If your lesson is nested within the awesome learning exercises repo, it would look something like this.    
 
@@ -65,7 +65,7 @@ This manifests as something like this:
 ```
 
 ### Example Lesson Structure With Jest Tests
-Within each lesson directory should be all the files required to build a working codesanbox instance. 
+Within each lesson directory should be all the files required to build a working codesandbox instance. 
 
 **NOTE:** For the codesandbox github wizard to work, you will need a package.json file at the top level of your lesson folder. 
 

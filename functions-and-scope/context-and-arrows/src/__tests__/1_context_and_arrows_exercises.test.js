@@ -19,7 +19,7 @@ concepts in our daily JS use.
 
 🚨 The following code is setup for the exercises. Please familiarize
 🚨 yourself with it before starting exercise 1.
-`
+`;
 
 // The robot constructor function. Each robot will be 
 // called with a name arguments which belongs to the Robot instance
@@ -50,7 +50,7 @@ const quotes = {
 
 `
 🚨 END EXERCISE SETUP
-`
+`;
 
 `📚 Exercise #1 - Explicit Bindings 📚
 
@@ -122,7 +122,7 @@ context binding we can show _how_ they are different and why we use them.
 2) Arrow functions introduce the concept of implicit 
    returns with concise bodies 
    for example: const implicit = x => x // this returns "x"
-`
+`;
 
 
 
@@ -142,7 +142,7 @@ logic which uses .bind to keep track of events and callbacks.
 
 🛠️ Rewrite the Notifier code so that .on and .trigger no 
 🛠️ longer use .bind() methods by using arrow functions.
-`
+`;
 
 function Notifier() {
   this.callbacks = {};

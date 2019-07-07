@@ -1,10 +1,4 @@
-// Let's get introduced to how context works
-
-// NOTE: To do this exercise have the MDN docs for .bind .call and .apply handy!
-
-// Group Exercise intro and setup
-
-// The robot consturctor function. Each robot will be called with a name arguments which belongs to the Robot instance
+// The robot constructor function. Each robot will be called with a name arguments which belongs to the Robot instance
 function Robot(name) {
   // Use the name function argument to attach the name property to the context/this object of each Robot
   this.name = name; // this will be deleted in the example
@@ -25,27 +19,19 @@ function speak(message) {
 }
 
 // Here we have all of our robots
-export const voltron = new Robot("Voltron");
-export const bender = new Robot("Bender");
-export const optimus = new Robot("Optimus Prime");
+const voltron = new Robot("Voltron");
+const bender = new Robot("Bender");
+const optimus = new Robot("Optimus Prime");
 
 // ...and their quotes
-export const quotes = {
+const quotes = {
   voltron: "Defenders of the Universe.",
   bender:
     "Blackmail's such an ugly word. I prefer extortion. The X makes it sound cool.",
   optimus: "There's a thin line between being a hero and being a memory."
 };
 
-// Group Exercise:
-//
-//   Given the robots objects above, attach the speak() function to each object such that
-//
-// . * speak function MUST BE USED
-//   * when robot.quote() is called, each one utters the correct quote
-//   * robot.quote() does not require any arguments
-
-// TEACHER NOTE: In the broken/student version all of the bellow .quote methods are not assigned
+`Exercise 1 Solution`;
 
 // Use the .bind method to attach the correct quote to voltron
 // Solution
@@ -64,72 +50,8 @@ optimus.quote = function() {
 };
 
 
-/**
- * Enter the ARROW FUNCTION
- *
- * The arrow funcitons on their own are not very interesting.
- * They are not necessary to write JavaScript, traditional functions
- * are just fine. On their own the arrow functions would not be a very
- * interesting topic, but when contrasted with the semantics of traditional
- * context binding we can show _how_ they are different and why we use them.
- */
-
-// Arrow Functions Are different...
-
-// 1) Arrow functions have their context bound lexically! What does that mean?
-//    It means that the context, which before arrow functions was dynamic now becomes
-//    a static concept when we are discussing arrows. An arrow function always inherits
-//    the context of the function it was defined in (or global)
-
-// 3) Arrow _may_ have concise bodies, or a body without { } curly braces. This is only valid when
-//    a function only contains a single expression. const foo = x => x > 2 ? x : 0;
-
-// 2) Arrow functions introduce the concept of implicit returns with concise bodies
-// .  const implicit = x => x // this returns "x"
-
-// Pair exercise problem
-
-// Notifier is a factory which returns an Object with a .on and a .trigger methods
-// It allows for setting up listeners to events with .on and triggering of them with .trigger
-// The way it's implemented isn't ideal, it makes heavy use of context internally. The challenge
-// of this exercise is to re-write this logic to use arrow functions to simplify a lot of the
-// internal logic which uses .bind to keep track of events and callbacks.
-
-// THIS IS THE STUDENT VERSION
-// function Notifier() {
-//   this.callbacks = {};
-//   this.data = null;
-
-//   // Trigger an event with a string(event) and a data object
-//   const trigger = function(event, data) {
-//     if (!this.callbacks[event]) {
-//       return;
-//     }
-
-//     this.data = data;
-
-//     // This is an old trick of ES5 of saving the current context(this) into a different variable
-//     // and then referncing it later.
-//     const self = this;
-//     this.callbacks[event].forEach(function(cb) {
-//       setTimeout(cb.bind(self));
-//     });
-//   }.bind(this);
-
-//   const on = function(eventName, callback) {
-//     if (!this.callbacks[eventName]) {
-//       this.callbacks[eventName] = [];
-//     }
-//     this.callbacks[eventName].push(callback);
-//   }.bind(this);
-
-//   return { trigger, on };
-// }
-
-// Rewrite the above code so that .on and .trigger no longer use .bind() methods by using arrow functions.
-
-// Pair exercise solution
-export function Notifier() {
+`Exercise 2 Solution`
+function Notifier() {
   const callbacks = {};
   this.data = null;
 

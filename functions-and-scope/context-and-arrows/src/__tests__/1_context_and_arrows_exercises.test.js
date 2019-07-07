@@ -1,6 +1,7 @@
 /*eslint-disable no-unused-expressions */
 `
 ⬇️
+
 Welcome to Functions and Scope - Context and Arrows! 
 
 In the following exercises we will work with the concept 
@@ -11,7 +12,7 @@ concepts in our daily JS use.
 💡 .bind .call and .apply handy!
 
 ⬆️
-`
+`;
 
 `
 🚨 BEGIN EXERCISE SETUP

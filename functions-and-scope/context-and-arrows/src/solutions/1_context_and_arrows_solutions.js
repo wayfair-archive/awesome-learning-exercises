@@ -156,6 +156,6 @@ export function Notifier() {
   };
 
   return { trigger, on };
-}}
+}
 
 export const ENABLE_BONUS_EXERCISE = false;

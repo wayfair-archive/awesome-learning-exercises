@@ -1,14 +1,35 @@
-// Pair Exercise #2 - ADVANCED
+// Exercise 1.a
+// What is love? (the global version)
+const WHAT_IS_GLOBAL_LOVE = "woah-woah-woah, oh, oh";
 
-// Let's put it all together to see how scope is useful when applied to a very common problem in JavaScript, MODULES.
-// All of the code is executed in GLOBAL scope in JavaScript, only when we define methods is when we create additional scopes.
-// When we have thousands of JavaScript files like we do in our codebase eventually we will run into variable collisions as
-// files re-define variables with common names like "x" or "i". But if we utilize JavaScript scope creatively we can overcome
-// this problem!
+// What is love? (the local version)
+const WHAT_IS_LOCAL_LOVE = "Baby don't hurt me";
 
-// The goal of this exercise is to scope the two methods below to produce the correct result
+// Exercise 1.b
+const WHAT_IS_HOISTED_LOVE = undefined;
 
-// Imagine we have two separate 3 different files represented below with comment
+// Exercise 1.c
+const WHAT_IS_BLOCK_LOVE = "What is love?";
+
+
+// Exercise 2
+var whoStoleTheCookies;
+var whoseFingerprintsAreOnItNow;
+
+{
+  const fingerprints = "Cookie Monster"; // This is the only change needed. You cant also use "let" instead of "const" here.
+  whoStoleTheCookies = function() {
+    return fingerprints;
+  };
+}
+
+var fingerprints = "You!"; // Cookie Monster sneakily replaces his fingerprints with yours. Don't actually do this in your day-to-day work!
+whoseFingerprintsAreOnItNow = function() {
+  return fingerprints;
+};
+
+
+// Exercise #3 - ADVANCED
 
 // SETUP CODE (IGNORE FOR NOW)
 function noop() {}
@@ -76,7 +97,7 @@ var nameToModule = {
   main: main_module
 };
 
-export function _require(moduleName) {
+function _require(moduleName) {
   if (modules[moduleName]) {
     return modules[moduleName].exports;
   }
@@ -88,9 +109,3 @@ export function _require(moduleName) {
   return modules[moduleName].exports;
 }
 
-// EXERCISE TODOs
-// 1 - Make sure each file above is a module by creating a scope for each one
-// 2 - Make sure each file/module has access to it's own "module" object
-// 3 - Make sure the result of _require('main') return the number 6!
-
-// The test will call _require('main') and expect it to return the number 6

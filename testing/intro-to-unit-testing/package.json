@@ -2,7 +2,7 @@
   "name": "testing-beginner",
   "version": "1.0.0",
   "description": "Simple template for JS exercises. Please fork when creating a new exercise!",
-  "main": "/src/1-unit-tests-with-jest.js",
+  "main": "/src/__tests__/1-unit-tests-with-jest.js",
   "scripts": {},
   "dependencies": {
     "jest": "23.6.0"

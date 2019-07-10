@@ -9,7 +9,7 @@ Welcome to Array Methods - Advanced Reduce!
 In this session, we use reduce to handle some more complex data
 manipulation cases. It's worth noting that reduce isn't the only
 option for these exercises. In fact, if your team wants to go 
-another route with these solutions please do! We encourage 
+another route with these solutions, please do! We encourage 
 exploration and the conversation that comes with it. 
 
 💡 We import a mock data object used for testing your functions.
@@ -21,12 +21,11 @@ exploration and the conversation that comes with it.
 
 `📚 Exercise #1 - Averaging Numbers 📚
 
-We need the average rating of our living room furniture! 
-
+We need the average review rating of our living room furniture! 
 
 🛠️ Implement averageCategoryRating below.
 🛠️ It should take two inputs: 
-🛠️ An array products and a string key
+🛠️ An array products and a string key.
 🛠️ This function should return a floating point number
 🛠️ that is the average rating of all products that have 
 🛠️ a category field that matches the supplied key.
@@ -44,7 +43,7 @@ We need the average rating of our living room furniture!
 💡 },
 
 
-🚨 Javascript has a weird way of doing math. 
+🚨 JavaScript has a weird way of doing math. 
 🚨 You may need to do something like .toFixed(1) 
 🚨 to get the nearest rounded float. 
 `;
@@ -55,9 +54,9 @@ const averageCategoryRating = (products, key) => {
 
 describe("Exercise 1", () => {
   it("returns the average rating of all products in products that match the supplied string key", () => {
-    // when passed bedroom, should match ids 1120 and 3113
+    // when passed "bedroom", should match ids 1120 and 3113
     expect(averageCategoryRating(products, "bedroom")).toBe(3.6);
-    // when passed livingroom should match 4195, 4435, 2335, and 1325.
+    // when passed "livingroom" should match 4195, 4435, 2335, and 1325.
     expect(averageCategoryRating(products, "livingroom")).toBe(3.8);
   });
 });
@@ -68,13 +67,12 @@ Oh no! We've received malformed product data.
 
 Implement a function called groupByKeys that takes an object 
 of malformed product data and 
-returns a new object where each key is 
-
+returns a new object where each key is.
 
 
 🛠️ Implement groupByKeys below.
-🛠️ It should an object of malformed product data and 
-🛠️ should return a new object where each key is
+🛠️ It should take an input object of malformed product data and 
+🛠️ return a new object where each key is
 🛠️ the unique value of the malformed data and 
 🛠️ their values are the former keys.
 
@@ -87,8 +85,8 @@ returns a new object where each key is
   
 💡 should return:
 💡  {
-💡   category: [bedroom_bed, livingroom_furniture],
-💡   name: [red stool]
+💡   category: ["bedroom_bed", "livingroom_furniture"],
+💡   name: ["red stool"]
 💡  }
 `;
 
@@ -117,14 +115,13 @@ describe("Exercise 2", () => {
 We need to know what our most popular saved items are. 
 
 🛠️ Implement savedItemsIntersection below.
-🛠️ It should take an array of customers and
+🛠️ It should take an input array of customers and
 🛠️ return an array of only the product ids that are found 
-🛠️ in each of the customers savedItems arrays.
+🛠️ in each of the customer's savedItems arrays.
 
-💡 For example, if some of the customers have id 1235 
+💡 For example, if some of the customers have id 1235,
 💡 but not all customers do, do not return that.
-💡 If all customers have 1902 and 1345, return [1902, 1345] 
-
+💡 If all customers have 1902 and 1345, return [1902, 1345].
 `
 
 const savedItemsIntersection = customers => {

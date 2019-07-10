@@ -1,6 +1,5 @@
 `📚 Exercise #1 - Write a vanilla JS implementation of map 📚`
 
-
 const vanillaMap = (numArray, callback) => {
   let results = [];
   numArray.forEach(itemInArray => {
@@ -9,23 +8,18 @@ const vanillaMap = (numArray, callback) => {
   return results;
 };
 
-
-
 `📚 Exercise #2 - Write a vanilla JS implementation of filter 📚`
 
 const vanillaFilter = (numArray, callBack) => {
-   // Your code goes here!
-   let results = [];
-   numArray.forEach(itemInArray => {
-     if (callBack(itemInArray)) {
-       results.push(itemInArray);
-     }
-   });
-   return results;
+  // Your code goes here!
+  let results = [];
+  numArray.forEach(itemInArray => {
+    if (callBack(itemInArray)) {
+      results.push(itemInArray);
+    }
+  });
+  return results;
 };
-
-
-
 
 `📚 Exercise #3 - New Product Objects via Map 📚`
 

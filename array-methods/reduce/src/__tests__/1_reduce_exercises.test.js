@@ -6,11 +6,11 @@ import { customers } from "../mockData";
 
 Welcome to Array Methods - Reduce! 
 
-Reduce is the culmination of all the previous session. It combines all the
-properties of the previous iterative methods but it flips the script by
+Reduce is the culmination of all the previous sessions. It combines all the
+properties of the previous iterative methods, but it flips the script by
 making one simple but powerful change:
 
-In reduce, unlike all other methods the transformations and choices you
+In reduce, unlike all other methods, the transformations and choices you
 make about the values are completely optional. Consider the following:
 
 1. You may change the number of elements in the 
@@ -19,7 +19,7 @@ make about the values are completely optional. Consider the following:
 3. You may change the shape of elements like map, but it's optional.
 
 The property of reduce which allows for this flexibility is the
-accumulator argument.The accumulator allows us to reason about the final
+accumulator argument. The accumulator allows us to reason about the final
 result value.
 
 ⬆️
@@ -36,8 +36,8 @@ tool to understand how the real prototype method works.
 🛠️ It should take three parameters: 
 🛠️ 1. An array
 🛠️ 2. A callback function 
-🛠️   - (should take the accumulator value, current element, index, and original array)
-🛠️ 3. an initial value
+🛠️   - (This callback should take the accumulator value, current element, index, and original array)
+🛠️ 3. An initial value
 🛠️ vanillaReduce should return an element that is the result 
 🛠️ of calling the callback function with an accumulator value
 🛠️ and the next value in the input array. 
@@ -114,7 +114,7 @@ describe("exercise 2", () => {
 
 We need an array of all savedItemIds from our current customers. 
 
-🛠️ Implement the getSavedItems functions below 
+🛠️ Implement the getSavedItems functions below.
 🛠️ This function takes an array of customers objects and returns 
 🛠️ an array of unique savedItemIds across all customers. 
 
@@ -157,7 +157,7 @@ We want to know what the most popular saved items are with our customers.
 💡 For example, if two customers had savedItemIds of 
 💡 [134, 234, 131] and [134, 111],
 💡 getSavedItemFrequency should return 
-💡 {134: 2, 234: 1, 131: 1, 111: 1}
+💡 {134: 2, 234: 1, 131: 1, 111: 1}.
 `
 
 const getSavedItemFrequency = customers => {

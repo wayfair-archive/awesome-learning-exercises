@@ -2,7 +2,7 @@
   "name": "testing-components-and-enzyme",
   "version": "1.0.0",
   "description": "Simple template for JS exercises. Please fork when creating a new exercise!",
-  "main": "index.html",
+  "main": "/src/__tests__/1-components-elements.test.js",
   "scripts": {},
   "dependencies": {
     "enzyme": "3.9.0",

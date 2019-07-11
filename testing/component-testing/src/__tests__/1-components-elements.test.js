@@ -1,3 +1,4 @@
+/*eslint-disable no-unused-expressions */
 import React from "react";
 import ReactDOM from "react-dom";
 `
@@ -11,7 +12,8 @@ This will be a bit different than other Awesome Learning sessions
 💡 Instead, we are providing solutions for you to compare 
 💡 your completed exercises against.
 
-When your tests pass, check the solution file to see how you did
+When your tests are correct and pass, 
+check the solution file to see how you did
 
 The story: You've been tasked with writing tests for some of
 your React components using only Jest - your team hasn't adopted enzyme yet.

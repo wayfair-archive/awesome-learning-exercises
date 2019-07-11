@@ -55,9 +55,9 @@ test('returns the sum of two inputs', () => {
 
 
 ❓ What's a matcher? 
-❓ The most basic matcher in Jest is `.toBe`. A matcher is a method
+❓ The most basic matcher in Jest is '.toBe'. A matcher is a method
 ❓ to help you validate that the code you are running "matches"
-❓ what you expect. `toBe()` does a strict equality check
+❓ what you expect. 'toBe()' does a strict equality check
 `
 
 const reverse = str =>
@@ -76,7 +76,7 @@ make sure it works:
 🛠️ Write a test for makeUser, which takes in "name" and "hobbies"
 🛠️ arguments, and returns an object with those properties.
 
-🚨 When comparing objects or arrays, ".toBe" won't work
+🚨 When comparing objects or arrays, '.toBe' won't work
 🚨 unless the objects have the same reference. 
 
 💡 For example,  expect({ name: 'Alex'}).toBe({ name: 'Alex' }) 

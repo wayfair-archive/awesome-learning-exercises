@@ -1,4 +1,4 @@
-import { test1, test2, test3, test4 } from "../src/__tests__/1-unit-tests-with-jest";
+import { test1, test2, test3, test4 } from "../../src/1-unit-tests-with-jest";
 // import { test1, test2, test3, test4 } from "../src/solution";
 
 describe("Testing tests", () => {

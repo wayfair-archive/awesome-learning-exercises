@@ -6,8 +6,9 @@ function reset(input) {
   // YOUR SOLUTION HERE
 }
 
-// In our tests we will re-create the petData object and run it through reset()
-// At the end of it none of the reference _inside_ the two objects should be the same AND the original should not be altered
+// In our tests, we will re-create the petData object and run it through reset()
+// At the end of it, none of the references _inside_ the two objects should be the same
+// AND the original should not be altered
 const petDataCopy = {
   cats: ["whiskers", "mittens", "phoebe"],
   dogs: ["spot", "sebastian", "hank"],

@@ -5,7 +5,7 @@
   "main": "./src/exercises.test.js",
   "scripts": {},
   "dependencies": {
-    "jest": "24.8.0"
+    "jest": "23.6.0"
   },
   "devDependencies": {
     "@types/jest": "23.3.13",

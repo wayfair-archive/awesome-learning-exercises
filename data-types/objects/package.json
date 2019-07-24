@@ -2,7 +2,7 @@
   "name": "data-types-objects-all-exercises",
   "version": "1.0.0",
   "description": "Group and pair exercises.",
-  "main": "index.html",
+  "main": "./src/exercises.test.js",
   "scripts": {},
   "dependencies": {
     "jest": "23.6.0"

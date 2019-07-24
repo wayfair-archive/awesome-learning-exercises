@@ -191,7 +191,7 @@ function updatePackageTruckId(packages) {
  *
  * Try to complete the exercises without looking at the tests!
  */
-describe("Exercise 1 - Object Reference", () => {
+describe.skip("Exercise 1 - Object Reference", () => {
   it("correctly empties objects by reference", () => {
     const o = { a: "a", b: "b", c: "c" };
     empty(o);
@@ -204,7 +204,7 @@ describe("Exercise 1 - Object Reference", () => {
   });
 });
 
-describe("Exercise 2: Part 1 - Cloning An Object", () => {
+describe.skip("Exercise 2: Part 1 - Cloning An Object", () => {
   it("can clone objects correctly", () => {
     const o = {};
     expect(clone(o) !== o).toBe(true);
@@ -228,7 +228,7 @@ describe("Exercise 2: Part 1 - Cloning An Object", () => {
   });
 });
 
-describe("Exercise 2: Part 2 - Deep Cloning An Object", () => {
+describe.skip("Exercise 2: Part 2 - Deep Cloning An Object", () => {
   it("Can deep clone an object with array properties", () => {
     const obj = {
       b: 1,
@@ -252,7 +252,7 @@ describe("Exercise 2: Part 2 - Deep Cloning An Object", () => {
   });
 });
 
-describe("Exercise 3 - Reference Types & JavaScript Evaluation Strategy", () => {
+describe.skip("Exercise 3 - Reference Types & JavaScript Evaluation Strategy", () => {
   it("Correct value of fooFizz", () => {
     expect(fooFizz === 3).toBe(true);
   });
@@ -288,7 +288,7 @@ describe("Exercise 3 - Reference Types & JavaScript Evaluation Strategy", () => 
   });
 });
 
-describe("Exercise 4: Part 1 - Removing an object property without mutation", () => {
+describe.skip("Exercise 4: Part 1 - Removing an object property without mutation", () => {
   it("Does not mutate the original object", () => {
     const account = {
       billingAddress: "x",
@@ -319,7 +319,7 @@ describe("Exercise 4: Part 1 - Removing an object property without mutation", ()
   });
 });
 
-describe("Exercise 4: Part 2 - Updating a nested value without mutation", () => {
+describe.skip("Exercise 4: Part 2 - Updating a nested value without mutation", () => {
   it("Does not mutate the package object", () => {
     const packages = [
       { packageId: 1, truck: "A", customerName: "Jane Doe" },

@@ -19,7 +19,6 @@ const totalSavedItems = customers => {
   }, 0);
 };
 
-
 `📚 Exercise #3 - Saved Item Ids 📚`
 
 const getSavedItems = customers => {

@@ -1,6 +1,5 @@
 /*eslint-disable no-unused-expressions */
 `📚 Exercise 1 - simple forEach 📚`;
-
 const forEach = (array, callBack) => {
   for (let i = 0; i < array.length; i++) {
     callBack(array[i]);
@@ -17,7 +16,6 @@ const saveNewUsers = (array, callBack) => {
 };
 
 `📚 Exercise 3 - Save new Users! 📚`;
-
 export const createLibraVariations = (array, callback) => {
   array.forEach((user, index, array) => {
     index <= array.length / 2
@@ -27,7 +25,6 @@ export const createLibraVariations = (array, callback) => {
 };
 
 `📚 Exercise 4 - Log Those Users! 📚`;
-
 const logUserInformation = (array, callBack) => {
   array.forEach(userObject => {
     Object.entries(userObject).forEach(([key, value]) => {

@@ -14,7 +14,6 @@ const averageCategoryRating = (products, key) => {
 
 `📚 Exercise #2: Normalizing Data 📚 `;
 
-
 const groupByKeys = malformedData => {
   // Your solution here
   return Object.keys(malformedData).reduce((grouped, newKey) => {

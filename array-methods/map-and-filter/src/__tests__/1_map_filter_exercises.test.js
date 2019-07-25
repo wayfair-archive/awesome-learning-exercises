@@ -5,8 +5,8 @@ import { products, customers } from "../mockData";
 
 Welcome to Array Methods - Map and Filter! 
 
-In the following exercises we will utilize map, 
-filter and to manipulate collections of data.
+In the following exercises, we will utilize map, 
+filter, and forEach to manipulate collections of data.
 
 💡 We import a mock data object used for testing your functions.
 💡 If you are interested in the shape of the data, please 
@@ -20,12 +20,12 @@ filter and to manipulate collections of data.
 
 In order to better understand map, we want you to write a
 bare bones vanilla JS version of it. This will by no means 
-be an exhaustive version of map, it's meant as a instructional 
+be an exhaustive version of map; it's meant as a instructional 
 tool to understand how the real prototype method works. 
 
 🛠️ Implement vanillaMap below.
 🛠️ It should take two inputs: 
-🛠️ An array and a 'callback' function
+🛠️ An array and a 'callback' function.
 🛠️ vanillaMap should return a new array populated with the results of calling the 
 🛠️ provided callback on every element of the input array.
 `
@@ -59,10 +59,10 @@ tool to understand how the real prototype method works.
 
 🛠️ Implement vanillaFilter below.
 🛠️ It should take two inputs: 
-🛠️ An array and a callback
+🛠️ An array and a callback.
 🛠️ vanillaFilter should return a new array populated 
 🛠️ with all elements from the input array that return true
-🛠️ when passed to the callback function
+🛠️ when passed to the callback function.
 
 💡 The callback passed to filter is always a predicate function.
 💡 A predicate is a function that returns true or false based on it's arguments
@@ -90,11 +90,11 @@ describe("Exercise 2", () => {
 
 🛠️ Implement getProductMetaData below.
 🛠️ This function takes an array of product objects with many 
-🛠️ properties and returns a new array of new product objects with 
-🛠️ only productName and productId as properties. 
+🛠️ properties, and returns a new array of new product objects with 
+🛠️ only 'productName' and 'productId' as properties. 
 
-💡 The return product objects should look like this 
-💡 {productName: product.name, productId: product.id}
+💡 The return array should be populated with objects of the shape
+💡 {'productName': product.name, 'productId': product.id}
 `
 
 const getProductMetaData = productsArray => {
@@ -164,8 +164,9 @@ describe("exercise 5", () => {
 
 🛠️ Implement getPopularProducts below. 
 🛠️ This function takes an array of products and 
-🛠️ filter products with an outOfStock value of true, 
-🛠️ and return an array of objects of productId, and inStockDate.
+🛠️ filters out products with an outOfStock value of true, 
+🛠️ and return an array of objects with 
+🛠️ only 'productId' and 'inStockDate' as properties. 
 
 💡 The return array should be populated with objects of the shape 
 💡 { productId: <item.productId>, inStockDate: <item.inStockDate> }
@@ -187,21 +188,21 @@ describe("exercise 6", () => {
 
 `📚 Exercise #7 -  Use All of the Knowledge! 📚
 
-This exercise will require some complex map and filter chaining so get ready!
+This exercise will require some complex map and filter chaining, so get ready!
 Of note, this function will be a bit different in that it won't return a new array.
 
 🛠️ Implement alertOutOfStock below. 
 🛠️ This function takes 3 parameters:
-🛠️ an array of products, an array of customers, and a callback function
+🛠️ an array of products, an array of customers, and a callback function.
 🛠️ For each customer with a savedItems field, check if any of productIds 
-🛠️ within the savedItems field are out of stock.  If they are, 
-🛠️ Call the callback with the customer email and productId.
-🛠️ do this for every out of stock item in their savedItems array.
+🛠️ within the savedItems field are out of stock. If they are, 
+🛠️ call the callback with the customer email and productId.
+🛠️ Do this for every out of stock item in their savedItems array.
 
 🚨 Not all customers will have saved items.
 
 💡 Note: each product in the product array passed in will have 
-💡 both an id field and an outOfStock field.
+💡 both an 'id' field and an 'outOfStock' field.
 
 */
 `

@@ -1,5 +1,6 @@
 /*eslint-disable no-unused-expressions */
 import { userData } from "../userData";
+
 `
 ⬇️
 
@@ -7,7 +8,7 @@ Welcome to Array Methods - forEach
 
 This session is designed to introduce you to functional array methods through the forEach method.
 Array methods like forEach provide us with new ways 
-to operate on lists, largely replacing the for loops we all know. 
+to operate on lists, largely replacing the for loops we are familiar with. 
 
 💡 We will be importing some mock user data to test your 
 💡 functions. Feel free to check it out in the userData.js file
@@ -36,7 +37,7 @@ arrays but this will help understand the inner-workings of forEach.
 🛠️ an array and a callback, and will apply the  
 🛠️ callback to every element in an array. 
 
-💡 You will need to use a for-loop for this
+💡 You will need to use a for-loop for this.
 `;
 
 const forEach = (array, callBack) => {
@@ -58,7 +59,7 @@ describe("Exercise 1", () => {
 🛠️ Implement the saveNewUsers function.
 🛠️ It should take an array of users and and a callback. 
 🛠️ For each user, if the "newCustomer" property is true,
-🛠️ execute the callback with the user.name and user.email
+🛠️ execute the callback with the user.name and user.email.
 `;
 const saveNewUsers = (array, callBack) => {
   // Your solution here
@@ -79,14 +80,14 @@ describe("Exercise 2", () => {
 `📚 Exercise 3 - Save new Users! 📚
 
 🛠️ Implement the createLibraVariations function
-🛠️ This function takes an array of users and a callback
-🛠️ Iterate through all users. For the the first half of users, 
-🛠️ call the callback with an object consisting 
-🛠️ of user email, and libraGroup: "A".
+🛠️ This function takes two inputs:
+🛠️ an array of users and a callback. Iterate through all users. 
+🛠️ For the the first half of users, call the callback with 
+🛠️ an object consisting of the user's email address, and 'libraGroup: "A"'.
 🛠️ For the second half of users, call the callback with 
-🛠️ an object consisting of user email and libraGroup: "B".
+🛠️ an object consisting of the user's email address, and libraGroup: "B".
 
-💡 The callback parameter should look something 
+💡 The parameter to the callback should look something 
 💡 like this: callback({email: user.email, libraGroup: "A"})
 `;
 
@@ -110,11 +111,11 @@ describe("Exercise 3", () => {
 
 `📚 Exercise 4 - Log Those Users! 📚
 
-🛠️ Implement the logUserGroup function
+🛠️ Implement the logUserGroup function.
 🛠️ This function takes an array of users and a callback
 🛠️ Call the callback with each key/value
-🛠️ pair on the user object in the format "{key}: {value}"
-🛠️ EXCLUDING the orderHistory field
+🛠️ pair on the user object in the format "{key}: {value}",
+🛠️ EXCLUDING the orderHistory field.
 
 💡 For Example, the following user
 💡 {
@@ -126,8 +127,8 @@ describe("Exercise 3", () => {
 💡   ],
 💡 }
 💡 would result in the callback being called with:
-💡 "name: Roger Branch"
-💡 "newCustomer: false"
+💡 '"name: Roger Branch"'
+💡 '"newCustomer: false"'
 `;
 
 const logUserInformation = (array, callBack) => {

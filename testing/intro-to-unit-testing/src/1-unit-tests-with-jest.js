@@ -173,5 +173,5 @@ expected new functionality of getCartTotal called with wishlistWithSalePrice.
 
 🛠️ Modify the getCartTotal function to add the salePrice instead of
 🛠️ regular price if it exists and make sure both
-🛠️ test 4 and 5 pass once you are done!
+🛠️ test 3 and 4 pass once you are done!
 `

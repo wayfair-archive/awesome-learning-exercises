@@ -59,8 +59,6 @@ import React, {
   useState
 } from 'react';
 
-import MemeGenerator from './solution/exercise3Solution';
-
 const Exercise3 = () => {
   return (
     <section>
@@ -72,7 +70,6 @@ const Exercise3 = () => {
         </code>{' '}
         to start Exercise 3!
       </p>
-      <MemeGenerator />
     </section>
   );
 };

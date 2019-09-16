@@ -2,7 +2,10 @@ import React, {
   useEffect,
   useState
 } from 'react';
-import { getMemeInformation } from './../utilities';
+import {
+  getMemeInformation,
+  getExampleMemeUrl
+} from './../utilities';
 import MemeTemplatesDropdown from './components/MemeTemplatesDropdown';
 import MemeTemplateInformation from './components/MemeTemplateInformation';
 import MemeCreator from './components/MemeCreator';
@@ -33,25 +36,10 @@ const MemeGenerator = () => {
       );
     }
   }, [selectedMemeLink]);
-  // Bonus: Get our example meme URL
-  let imageUrl;
-  let baseImgUrl;
-  if (selectedMemeDetails) {
-    const memegenUrl = 'https://memegen.link/';
-    const imageUrlSplit = selectedMemeDetails.example.split(
-      '/'
-    );
-    // The indices at which
-    // the important parts of the image URL
-    // live in will always be the same (5, 6, 7)
-    const templateName = imageUrlSplit[5];
-    const textPart1 = imageUrlSplit[6];
-    const textPart2 = imageUrlSplit[7];
-    // Save this for later to pass to the meme creator
-    baseImgUrl = `${memegenUrl}/${templateName}`;
-    // Need to add .jpg at the end
-    imageUrl = `${baseImgUrl}/${textPart1}/${textPart2}.jpg`;
-  }
+  const {
+    baseImageUrl,
+    exampleImageUrl
+  } = getExampleMemeUrl(selectedMemeDetails);
   return (
     <section>
       <MemeTemplatesDropdown
@@ -59,15 +47,16 @@ const MemeGenerator = () => {
       />
       {selectedMemeDetails && (
         <MemeTemplateInformation
-          imageUrl={imageUrl}
+          imageUrl={exampleImageUrl}
           selectedMemeDetails={
             selectedMemeDetails
           }
         />
       )}
+      {/* Bonus below: Create your own meme */}
       {selectedMemeDetails && (
         <MemeCreator
-          baseImgUrl={baseImgUrl}
+          baseImageUrl={baseImageUrl}
           selectedMemeDetails={
             selectedMemeDetails
           }

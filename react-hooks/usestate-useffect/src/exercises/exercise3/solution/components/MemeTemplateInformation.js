@@ -1,4 +1,5 @@
 import React from 'react';
+import MemeAliases from './../../components/MemeAliases';
 
 const MemeTemplateInformation = (props) => (
   <article>
@@ -10,17 +11,11 @@ const MemeTemplateInformation = (props) => (
     <p>
       <b>Meme Aliases:</b>
     </p>
-    <ul>
-      {props.selectedMemeDetails.aliases.map(
-        (alias) => (
-          // Don't have to do this split and join
-          // Added here just to make it look pretty
-          <li key={alias}>
-            {alias.split('-').join(' ')}
-          </li>
-        )
-      )}
-    </ul>
+    <MemeAliases
+      memeAliases={
+        props.selectedMemeDetails.aliases
+      }
+    />
     <p>
       <a
         href={

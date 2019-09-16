@@ -48,8 +48,13 @@
   💡 getMemeInformation (takes in the link of a template)
   💡  The link you need is returned from getMemeTemplates
 
-  💡 Feel free to break up code into different files and
-  💡 components if you need to!
+  💡 Feel free to reuse components from other exercises
+  💡 for this exercise! You can also break up parts
+  💡 of this exercise into other files and components.
+  💡 Look in the "components" folder in this directory
+  💡 to see two components that will reduce the amount
+  💡 of data processing and manipulation you need to do
+  💡 from the API results.
 
   🚨 Experiment with the API before you start coding!
 `;

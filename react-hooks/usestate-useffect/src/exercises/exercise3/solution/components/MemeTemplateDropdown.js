@@ -3,6 +3,7 @@ import React, {
   useState
 } from 'react';
 import { getMemeTemplates } from './../../utilities';
+import ObjectDropdown from '../../components/ObjectDropdown';
 
 const MemeTemplates = ({ onSelectChange }) => {
   // Set the state of our meme templates
@@ -18,24 +19,10 @@ const MemeTemplates = ({ onSelectChange }) => {
     });
   }, []);
   return (
-    <select onChange={onSelectChange}>
-      {Object.keys(memeTemplates).length > 0 ? (
-        Object.keys(memeTemplates).map(
-          (templateName) => (
-            <option
-              key={templateName}
-              value={memeTemplates[templateName]}
-            >
-              {templateName}
-            </option>
-          )
-        )
-      ) : (
-        <option value="">
-          Loading meme templates...
-        </option>
-      )}
-    </select>
+    <ObjectDropdown
+      data={memeTemplates}
+      onChange={onSelectChange}
+    />
   );
 };
 

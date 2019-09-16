@@ -6,7 +6,7 @@ import {
   getMemeInformation,
   getExampleMemeUrl
 } from './../utilities';
-import MemeTemplatesDropdown from './components/MemeTemplatesDropdown';
+import MemeTemplateDropdown from './components/MemeTemplateDropdown';
 import MemeTemplateInformation from './components/MemeTemplateInformation';
 import MemeCreator from './components/MemeCreator';
 
@@ -42,7 +42,7 @@ const MemeGenerator = () => {
   } = getExampleMemeUrl(selectedMemeDetails);
   return (
     <section>
-      <MemeTemplatesDropdown
+      <MemeTemplateDropdown
         onSelectChange={handleSelectChange}
       />
       {selectedMemeDetails && (

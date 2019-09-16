@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "keywords": [],
-  "main": "App.js",
+  "main": "src/App.js",
   "author": "Awesome Learning <awesomelearning@wayfair.com>",
   "dependencies": {
     "prop-types": "15.7.2",

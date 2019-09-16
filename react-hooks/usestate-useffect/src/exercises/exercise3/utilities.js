@@ -1,3 +1,5 @@
+export const memegenUrl = 'https://memegen.link/';
+
 export function getMemeTemplates() {
   return fetch(
     'https://memegen.link/api/templates'

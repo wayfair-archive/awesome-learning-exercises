@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-expressions, import/first */
 `
-📚 Exercise 2, Part 2 - Hooks and the DOM 📚
+📚 Exercise 2, Part 2 - Hooks Cleanup 📚
  
   We've seen how useEffect works similarly to
   React lifecycle methods like componentDidMount,
@@ -10,20 +10,23 @@
   In Part 1, we fire a network request to get trivia
   about a number. However, what happens when this
   component unmounts while the request is still
-  in flight? Try navigating away from the Exercise 2
-  page immediately after you've updated the slider.
-  React will throw an error if you try to change the
-  state of an unmounted component. Let's fix it!
+  in flight? Open the console, then try navigating 
+  away from the Exercise 2 page after setting the 
+  slider value to 6. React will throw an error if 
+  you try to change the state of an unmounted 
+  component. Let's fix it!
   
-  🛠️ Change the useEffect hook to return a function
-  🛠️ that "cleans up" the Promise if it has not yet
-  🛠️ resolved if the component was unmounted.
+  🛠️ Change the useEffect hook to uses the "hasUnmounted"
+  🛠️ variable, provided for you inside useEffect.
+  🛠️ Based on the value of this variable,
+  🛠️ prevent the setTrivia call from occurring
+  🛠️ if the component has unmounted.
 
-  💡 Before we execute getNumberTrivia, we want to 
-  💡 track whether or not the Promise resolved.
-  💡 You can use a variable to hold this value,
-  💡 then evaluate the value of that variable
-  💡 after the Promise resolves.
+  💡 The cleanup function returned from useEffect
+  💡 should change "hasUnmounted" in some way.
+  💡 Inside the Promise, you then need to implement
+  💡 "hasUnmounted" and prevent setTrivia if the
+  💡 component was unmounted.
 `;
 
 import React, {
@@ -41,6 +44,7 @@ const Exercise2Part2 = (props) => {
     defaultTriviaMessage
   );
   useEffect(() => {
+    let hasUnmounted = false;
     getNumberTrivia(number).then((response) => {
       setTrivia(response.trivia);
     });
@@ -54,6 +58,18 @@ const Exercise2Part2 = (props) => {
   );
 };
 
+` 
+✅✅✅ 
+
+  When you're done with Part 1, open 
+  'exercises/exercise3/index.js' to
+  begin the next exercise!
+  
+✅✅✅
+`;
+
+// ⛔ You should not need to modify anything below
+// ⛔ this line
 const Form = () => {
   const [sliderValue, setSliderValue] = useState(
     1

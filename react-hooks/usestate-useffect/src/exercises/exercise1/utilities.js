@@ -10,7 +10,18 @@ export function processForm({
       and your email address is ${emailAddress}.
     `);
   } else {
-    alert('Please enter all fields in the form!');
+    const isFullNameAbsent = !fullName
+      ? 'Full name'
+      : '';
+    const isPhoneNumberAbsent = !phoneNumber
+      ? ' Phone number'
+      : '';
+    const isEmailAddressAbsent = !emailAddress
+      ? ' Email address'
+      : '';
+    alert(
+      `Missing fields: ${isFullNameAbsent}${isPhoneNumberAbsent}${isEmailAddressAbsent}`
+    );
   }
 }
 
@@ -18,7 +29,7 @@ const tlds = ['.com', '.org', '.net'];
 export function validateField(data, name) {
   switch (name) {
     case 'fullName': {
-      return /^[a-zA-Z\s]*$/.test(data);
+      return /^[a-z A-Z\s]*$/.test(data);
     }
     case 'phoneNumber': {
       return (
@@ -34,6 +45,6 @@ export function validateField(data, name) {
       );
     }
     default:
-      return true;
+      return false;
   }
 }

@@ -4,13 +4,14 @@ export function getNumberTrivia(number) {
   )
     .then((response) => response.text())
     .then((response) => {
+      const timeout = number === 6 ? 3000 : 0;
       return new Promise((resolve) => {
         setTimeout(() => {
           resolve({
             number,
             trivia: response
           });
-        }, 2500);
+        }, timeout);
       });
     })
     .catch((error) => ({

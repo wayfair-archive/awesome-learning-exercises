@@ -6,7 +6,7 @@ import React, {
 import { getNumberTrivia } from './utilities';
 import NumberSlider from './NumberSlider';
 
-const Exercise2Part2 = (props) => {
+const NumberTrivia = (props) => {
   const defaultTriviaMessage =
     "Couldn't find any trivia!";
   const { number } = props;
@@ -53,7 +53,7 @@ const Form = () => {
         Exercise 2, Part 1: Add Data Fetching to a
         component
       </h3>
-      <Exercise2Part2 number={sliderValue} />
+      <NumberTrivia number={sliderValue} />
       <NumberSlider
         handleChange={handleSliderChange}
         value={sliderValue}

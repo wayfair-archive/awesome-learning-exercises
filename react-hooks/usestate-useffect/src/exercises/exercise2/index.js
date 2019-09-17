@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-expressions, import/first */
 `
-📚 Exercise 2 - Making a Stateless Component Stateful 📚
+📚 Exercise 2 - Data Fetching with Hooks 📚
  
-  Welcome to Exercise 1! In your browser, make sure "Exercise 2" 
+  Welcome to Exercise 2! In your browser, make sure "Exercise 2" 
   is bold in the browser navigation before proceeding. 
 
   We are working with a new component that we
@@ -11,7 +11,7 @@
   🛠️ Open 'part1.js' in this folder when you're ready to start!
 `;
 
-// Exercise setup, ignore everything below this line
+// ⛔ Exercise setup, ignore everything below this line
 import React, { useState } from 'react';
 import Exercise2Part1 from './part1';
 import Exercise2Part2 from './part2';

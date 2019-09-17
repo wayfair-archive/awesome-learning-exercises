@@ -1,11 +1,5 @@
 export const memegenUrl = 'https://memegen.link/';
 
-export function getMemeTemplates() {
-  return fetch(
-    'https://memegen.link/api/templates'
-  ).then((response) => response.json());
-}
-
 export function getMemeInformation(
   memeTemplateLink
 ) {
@@ -30,4 +24,49 @@ export function getExampleMemeUrl(meme) {
   } else {
     return {};
   }
+}
+
+const blacklist = [
+  'butthurt',
+  'murder',
+  'facepalm',
+  'forever alone',
+  'fuck',
+  'crazy',
+  'kill',
+  'bull',
+  'scumbag',
+  'nazi',
+  'insanity',
+  'condescending',
+  'cry',
+  'shut up'
+];
+
+export function getMemeTemplates() {
+  return fetch(
+    'https://memegen.link/api/templates'
+  )
+    .then((response) => response.json())
+    .then((response) => {
+      const filteredKeys = Object.keys(
+        response
+      ).filter((keyToCheck) => {
+        return blacklist.every(
+          (blacklistedWord) =>
+            !keyToCheck
+              .toLowerCase()
+              .includes(
+                blacklistedWord.toLowerCase()
+              )
+        );
+      });
+      return filteredKeys.reduce(
+        (accumulatorObj, key) => {
+          accumulatorObj[key] = response[key];
+          return accumulatorObj;
+        },
+        {}
+      );
+    });
 }

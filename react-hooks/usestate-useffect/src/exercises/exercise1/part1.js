@@ -2,25 +2,28 @@
 `
 📚 Exercise 1, Part 1 - Making Inputs Stateful 📚
  
-  We've got a form with 3 fields: a person's full name, 
-  their phone number, and an email address. However, the inputs
-  don't work; when we try to submit the form, it tells us that
-  the fields are empty. If we manage the state of the values
-  with hooks, we can fix this!
+  We've got a form with 3 fields: a person's full 
+  name, their phone number, and an email address.
+  However, the inputs don't work; when we try to 
+  submit the form, it tells us that the fields are 
+  empty. If we manage the state of the values with 
+  hooks, we can fix this!
  
-  🛠️ Make all of the inputs stateful using the useState hook
-  🛠️ When an input changes (onChange event), it should save the value to state
-  🛠️ The value of an input should always come from state
+  🛠️ Make all of the inputs stateful using the useState 
+  🛠️ hook. When an input changes (onChange event), it 
+  🛠️ should save the value to state. The value of
+  🛠️ an input should always come from state
 
-  💡 processForm takes an object of our 3 fields. If any of these
-  💡 fields are missing, it shows an alert to indicate this.
-  💡 If all fields have values when processForm is ran, 
-  💡 processForm will show an alert with the contents of the fields
+  💡 processForm takes an object of our 3 fields. 
+  💡 If any of these fields are missing, it shows 
+  💡 an alert to indicate this. If all fields have 
+  💡 values when processForm is ran, processForm 
+  💡 will show an alert with the contents of the fields
 
   💡 We provide a "Field" component which reduces some complexity
-  💡 in how much code is necessary. Take a look to see how it functions,
-  💡 and what you will need to do to make its value stateful.
-  💡 You do __not__ need to modify this component for this exercise.
+  💡 in how much code is necessary. Take a look to see how 
+  💡 it functions, and what you will need to do to make its 
+  💡 value stateful. You do not need to modify the Field component.
 `;
 
 import React, { useState } from 'react';
@@ -33,7 +36,7 @@ function Form() {
     processForm({
       fullName,
       phoneNumber,
-      emailAddress,
+      emailAddress
     });
   };
   return (
@@ -74,8 +77,18 @@ function Form() {
   );
 }
 
-// This component is provided as a helper
-// You should __not__ need to modify it to solve this exercise
+` 
+✅✅✅ 
+
+  When you're done with Part 1, open 
+  'exercises/exercise2/index.js' to
+  begin the next exercise!
+  
+✅✅✅
+`;
+
+// ⛔ This component is provided as a helper
+// ⛔ You should __not__ need to modify it to solve this exercise
 function Field({
   label,
   name,
@@ -103,15 +116,4 @@ function Field({
   );
 }
 
-` 
-✅✅✅ 
-
-  When you're done with Part 1, open 'part2.js' to
-  begin the next part of this exercise, and click
-  the 'Advance to Part 2' button in the browser!
-  
-✅✅✅
-`;
-
-// Exercise setup, ignore everything below this line
 export default Form;

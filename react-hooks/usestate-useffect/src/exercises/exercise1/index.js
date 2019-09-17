@@ -2,55 +2,35 @@
 `
 📚 Exercise 1 - Making a Stateless Component Stateful 📚
  
-  Welcome to Exercise 1! In your browser, make sure "Exercise 1" 
-  is bold in the browser navigation before proceeding. 
+  Welcome to Exercise 1! In your browser, make 
+  sure "Exercise 1" is bold in the browser 
+  navigation before proceeding. 
 
-  We are working with a form that does not manage its own state; the inputs
-  in the form take input, but they don't currently send it anywhere.
-  This exercise will make this form stateful, and validate its fields!
+  We are working with a form that does not 
+  manage its own state; the inputs in the 
+  form take input, but they don't currently
+  send it anywhere. This exercise will make 
+  this form stateful, and validate its fields!
 
-  🛠️ Open 'part1.js' in this folder when you're ready to start!
+  🛠️ Open 'part1.js' in this folder when you're 
+  🛠️ ready to start!
 `;
 
-// Exercise setup, ignore everything below this line
-import React, { Component } from 'react';
-import Exercise1Part1 from './part1';
-import Exercise1Part2 from './part2';
+` ⛔ Exercise setup, ignore everything below this line`;
+import React from 'react';
+import Exercise1 from './solution/classSolution/part1SolutionClass';
 
-class Exercise1 extends Component {
-  state = {
-    isOnPart1: true,
-  };
+const Lesson1 = () => (
+  <section>
+    <p>
+      Check out{' '}
+      <code className="inlineCode">
+        exercises/exercise1/index.js
+      </code>{' '}
+      to start Exercise 1!
+    </p>
+    <Exercise1 />
+  </section>
+);
 
-  handleButtonClick = () => {
-    this.setState((prevState) => ({
-      isOnPart1: !prevState.isOnPart1,
-    }));
-  };
-
-  render() {
-    return (
-      <section>
-        <button onClick={this.handleButtonClick}>
-          {this.state.isOnPart1
-            ? 'Advance to Part 2'
-            : 'Return to Part 1'}
-        </button>
-        <p>
-          Check out{' '}
-          <code className="inlineCode">
-            exercises/exercise1/index.js
-          </code>{' '}
-          to start Exercise 1!
-        </p>
-        {this.state.isOnPart1 ? (
-          <Exercise1Part1 />
-        ) : (
-          <Exercise1Part2 />
-        )}
-      </section>
-    );
-  }
-}
-
-export default Exercise1;
+export default Lesson1;

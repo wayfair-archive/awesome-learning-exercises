@@ -1,5 +1,6 @@
 import React from 'react';
 import MemeAliases from './../../components/MemeAliases';
+import MemeExampleImage from './../../components/MemeExampleImage';
 
 const MemeTemplateInformation = (props) => (
   <article>
@@ -12,9 +13,7 @@ const MemeTemplateInformation = (props) => (
       <b>Meme Aliases:</b>
     </p>
     <MemeAliases
-      memeAliases={
-        props.selectedMemeDetails.aliases
-      }
+      meme={props.selectedMemeDetails}
     />
     <p>
       <a
@@ -28,15 +27,9 @@ const MemeTemplateInformation = (props) => (
     <p>
       <b>Meme Example:</b>
     </p>
-    {props.imageUrl && (
-      <img
-        alt={`Example of ${
-          props.selectedMemeDetails.name
-        }`}
-        src={props.imageUrl}
-        width="50%"
-      />
-    )}
+    <MemeExampleImage
+      meme={props.selectedMemeDetails}
+    />
   </article>
 );
 

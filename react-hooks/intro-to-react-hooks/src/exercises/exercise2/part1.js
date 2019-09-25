@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-expressions, import/first */
 `
-📚 Exercise 2, Part 1 - Add Data Fetching 📚
+📚 Exercise 2 - Add Data Fetching 📚
  
   We have a slider on the page which shows users
   a fun fact about a number, as represented by
@@ -17,7 +17,7 @@
   this number and pass it to our trivia component
   based on the new slider value.
   
-  🛠️ Implement the getNumberTrivia function
+  🛠️ Call the getNumberTrivia function
   🛠️ inside of a useEffect hook to change the 
   🛠️ trivia displayed in the NumberTrivia component. 
   🛠️ NumberTrivia takes a number as a prop, and shows
@@ -66,10 +66,10 @@ const NumberTrivia = (props) => {
 ✅✅✅ 
 
   When you're done with Part 1, open 
-  'exercises/exercise2/part2.js' to
+  'exercises/exercise3/index.js' to
   begin the next exercise! Also
-  click the "Advance to Part 2"
-  button in the browser!
+  click the "Exercise 3"
+  link in the browser!
   
 ✅✅✅
 `;

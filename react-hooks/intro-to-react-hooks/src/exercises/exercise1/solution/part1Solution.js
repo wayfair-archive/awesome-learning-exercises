@@ -15,9 +15,9 @@ const Form = () => {
 
   // Further reading:
   // https://reactjs.org/docs/hooks-state.html#tip-using-multiple-state-variables
-  const [fullName, updateFullName] = useState();
-  const [phoneNumber, updatePhoneNumber] = useState();
-  const [emailAddress, updateEmailAddress] = useState();
+  const [fullName, setFullName] = useState();
+  const [phoneNumber, setPhoneNumber] = useState();
+  const [emailAddress, setEmailAddress] = useState();
   // 📗 Solution above 📗
   const handleFormSubmit = e => {
     e.preventDefault();
@@ -29,19 +29,19 @@ const Form = () => {
       <form className="Form" onSubmit={handleFormSubmit}>
         <Field
           label="Full Name"
-          onChange={e => updateFullName(e.target.value)}
+          onChange={e => setFullName(e.target.value)}
           name="fullName"
           value={fullName}
         />
         <Field
           label="Phone Number"
-          onChange={e => updatePhoneNumber(e.target.value)}
+          onChange={e => setPhoneNumber(e.target.value)}
           name="phoneNumber"
           value={phoneNumber}
         />
         <Field
           label="Email Address"
-          onChange={e => updateEmailAddress(e.target.value)}
+          onChange={e => setEmailAddress(e.target.value)}
           name="email"
           value={emailAddress}
         />

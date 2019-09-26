@@ -18,7 +18,7 @@
 
 ` ⛔ Exercise setup, ignore everything below this line`;
 import React from 'react';
-import Exercise1 from './solution/classSolution/part1SolutionClass';
+import Exercise1 from './part1';
 
 const Lesson1 = () => (
   <section>

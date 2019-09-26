@@ -72,9 +72,6 @@ import MemeAliases from './components/MemeAliases';
 import MemeExampleImage from './components/MemeExampleImage';
 import MemeTemplatesDropdown from './components/MemeTemplatesDropdown';
 
-// import ClassSolution from './solution/classSolution/exercise3SolutionClass';
-import HookedSolution from './solution/hookedSolution/exercise3SolutionHook';
-
 const MemeExplorer = () => {
   return (
     <section>
@@ -83,7 +80,6 @@ const MemeExplorer = () => {
         exercises/exercise3/index.js
       </code>{' '}
       to start Exercise 3!
-      <HookedSolution />
     </section>
   );
 };

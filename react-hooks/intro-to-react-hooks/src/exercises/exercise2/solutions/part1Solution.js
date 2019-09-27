@@ -33,7 +33,7 @@ const NumberTrivia = (props) => {
     });
   }, [number]);
   // 📗 Solution above 📗
-  return <h1>{this.state.trivia}</h1>;
+  return <h1>{trivia}</h1>;
 };
 
 const Form = () => {

@@ -14,7 +14,7 @@ const MemeTemplatesBrowser = (props) => {
   // This effect does not depend on any external
   // variable, other than getMemeTemplates
   // (which, as an import, is not expected to change)
-  // We specify an empty dependency array to instruct
+  // We specify an empty array to instruct
   // the hook to run once when the component mounts,
   // then never again for the life of this component
   useEffect(() => {

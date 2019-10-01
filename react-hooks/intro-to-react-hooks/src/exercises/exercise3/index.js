@@ -23,7 +23,7 @@
     }
 
    getMemeInformation(link): Takes the API endpoint of a
-    meme (returned from getMemeTemplates), returns
+    meme (returned from getMemeTemplates), and returns
     information on that individual meme.
     Example output:
     {

@@ -6,7 +6,7 @@
   a fun fact about a number, as represented by
   the value of the slider. 
 
-  Currently, the component to display trivia
+  Currently, the component to display the trivia
   and the component to show the slider are written
   separately. This is often the case when working in
   large component libraries, where we can implement

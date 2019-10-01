@@ -1,13 +1,13 @@
 /* eslint-disable no-unused-expressions, import/first */
 `
-📚 Exercise 2 - Data Fetching with Hooks 📚
- 
-  Welcome to Exercise 2! In your browser, make sure "Exercise 2" 
-  is bold in the browser navigation before proceeding. 
+📚 Exercise 2 - Fetching data with Hooks 📚
+
+  Welcome to Exercise 2! In your browser, make sure "Exercise 2"
+  is bold in the browser navigation before proceeding.
 
   We are working with a new component that we
   want to add data-fetching functionality to.
-  
+
   🛠️ Open 'part1.js' in this folder when you're ready to start!
 `;
 

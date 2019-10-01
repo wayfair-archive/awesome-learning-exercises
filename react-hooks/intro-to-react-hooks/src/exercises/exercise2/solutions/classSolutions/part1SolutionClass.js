@@ -13,8 +13,8 @@ class NumberTrivia extends Component {
 
   // Classes vs hooks
   // We need to manually inspect prevProps
-  // to determine if the number value has changed
-  // if it has, then and only then do we make the
+  // to determine if the number value has changed.
+  // If it has, only then do we make the
   // getNumberTrivia call
   componentDidUpdate(prevProps) {
     if (prevProps.number !== this.props.number) {

@@ -23,7 +23,7 @@ const NumberTrivia = (props) => {
 
   // See what happens in the editor if you pass an empty
   // array. You should see an ESLint warning, telling
-  // you that there's a missing value (number).
+  // you that there's a missing value (number) in the dependency array.
   // This is helpful when writing hooks that depend
   // on variables that may change. You should declare
   // these variables in the dependency array of useEffect

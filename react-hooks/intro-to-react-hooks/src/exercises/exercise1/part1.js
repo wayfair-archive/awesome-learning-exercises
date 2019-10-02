@@ -22,7 +22,7 @@
 
   💡 We provide a "Field" component which reduces some complexity
   💡 in how much code is necessary. Take a look to see how 
-  💡 it functions, and what you will need to do to make it's 
+  💡 it functions, and what you will need to do to make its 
   💡 value stateful. You don't need to modify the Field component.
 `;
 

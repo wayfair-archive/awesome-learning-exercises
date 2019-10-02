@@ -5,6 +5,7 @@
   Welcome to Exercise 1! In your browser, make
   sure "Exercise 1" is bold in the browser
   navigation before proceeding.
+
   We are working with a form that does not
   manage it's own state, this means that any
   user input in this form will not be sent

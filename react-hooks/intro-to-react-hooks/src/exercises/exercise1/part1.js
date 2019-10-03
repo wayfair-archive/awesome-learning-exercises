@@ -1,18 +1,18 @@
 /* eslint-disable no-unused-expressions, import/first */
 `
 📚 Exercise 1, Part 1 - Making Inputs Stateful 📚
- 
-  We've got a form with 3 fields: a person's full 
+
+  We've got a form with 3 fields, a person's full
   name, their phone number, and an email address.
-  However, the inputs don't work; when we try to 
+  However, the inputs are not working; when we try to
   submit the form, it tells us that the fields are 
-  empty. If we manage the state of the values with 
-  hooks, we can fix this!
- 
+  empty. We can fix this by managing the state of
+  the values using hooks.
+
   🛠️ Make all of the inputs stateful using the useState 
   🛠️ hook. When an input changes (onChange event), it 
-  🛠️ should save the value to state. The value of
-  🛠️ an input should always come from state
+  🛠️ should save the value to the state. The value of
+  🛠️ an input should always come from state.
 
   💡 processForm takes an object of our 3 fields. 
   💡 If any of these fields are missing, it shows 
@@ -23,7 +23,7 @@
   💡 We provide a "Field" component which reduces some complexity
   💡 in how much code is necessary. Take a look to see how 
   💡 it functions, and what you will need to do to make its 
-  💡 value stateful. You do not need to modify the Field component.
+  💡 value stateful. You don't need to modify the Field component.
 `;
 
 import React, { useState } from 'react';

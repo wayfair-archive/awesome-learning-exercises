@@ -1,18 +1,19 @@
 /* eslint-disable no-unused-expressions, import/first */
 `
 📚 Exercise 1 - Making a Stateless Component Stateful 📚
- 
-  Welcome to Exercise 1! In your browser, make 
-  sure "Exercise 1" is bold in the browser 
-  navigation before proceeding. 
 
-  We are working with a form that does not 
-  manage its own state; the inputs in the 
-  form take input, but they don't currently
-  send it anywhere. This exercise will make 
-  this form stateful, and validate its fields!
+  Welcome to Exercise 1! In your browser, make
+  sure "Exercise 1" is bold in the browser
+  navigation before proceeding.
 
-  🛠️ Open 'part1.js' in this folder when you're 
+  We are working with a form that does not
+  manage it's own state, this means that any
+  user input in this form will not be sent
+  anywhere. In this exercise, you will make this
+  form stateful while validating all its fields.
+
+
+  🛠️ Open 'part1.js' in this folder when you're
   🛠️ ready to start!
 `;
 

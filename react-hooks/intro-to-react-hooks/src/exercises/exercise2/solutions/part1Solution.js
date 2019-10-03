@@ -15,7 +15,7 @@ const NumberTrivia = (props) => {
   );
   // 📗 Solution below 📗
   // We have also provided the second parameter to
-  // useEffect, an array of dependencies. We only
+  // useEffect, an array of values. We only
   // want to re-run this effect if the number prop
   // changes, otherwise the hook will run every time
   // the component re-renders (setTrivia changes the
@@ -23,7 +23,7 @@ const NumberTrivia = (props) => {
 
   // See what happens in the editor if you pass an empty
   // array. You should see an ESLint warning, telling
-  // you that there's a missing dependency (number).
+  // you that there's a missing value (number) in the dependency array.
   // This is helpful when writing hooks that depend
   // on variables that may change. You should declare
   // these variables in the dependency array of useEffect

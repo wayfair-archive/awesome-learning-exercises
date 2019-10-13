@@ -8,7 +8,7 @@ import fetchBasket from "../../api/baskets";
 Welcome to Async Js- Intro to promises!
 
  This will build your knowledge of async JS -
- particularly promises. You will use to two mock APIs
+ particularly promises. You will use two mock APIs
  to mimic working with something like a fetch or AJAX call.
 
  If you are curious about those fake APIs, feel free to
@@ -30,7 +30,7 @@ const exerciseOne = () => {
   // Your code here
 };
 
-test('the promise resolves with a string of "promise complete!"', () => {
+test('the promise resolves with a string "promise complete!"', () => {
   return expect(exerciseOne()).resolves.toBe("promise complete!");
 });
 
@@ -46,7 +46,7 @@ const exerciseTwo = () => {
   // Your code here
 };
 
-test('the promise rejects with a string of "promise rejected!"', () => {
+test('the promise rejects with a string "promise rejected!"', () => {
   expect.assertions(1);
   return expect(exerciseTwo()).rejects.toMatch("promise rejected!");
 });
@@ -131,8 +131,9 @@ test("getBasketId returns empty string when no basket id exists", () => {
   🛠️ Fill in the getBasketItems function below
   🛠️ It should take in a basketId string, 
   🛠️ call the fetchBasket endpoint with basketId.
-  🛠️ If items exists on the response object, resolve with the items array.
-  🛠️ If items doesn't exist on the response object, resolve with an empty array
+  🛠️ If basket with given id does not exists, reject with string 'Invalid basket ID passed'.
+  🛠️ If items exist on the response object, resolve with the items array.
+  🛠️ If items don't exist on the response object, resolve with an empty array
  
   💡 fetchBasket returns an object in this shape:
   {

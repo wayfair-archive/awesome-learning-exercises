@@ -77,13 +77,13 @@ describe("exercise 1", () => {
 🛠️ requestSalePrice takes a sku. 
 🛠️ call fetchProduct with the sku argument 
 🛠️ and handle the following cases:
-🛠️ 1. If requestSalePrice responds with a product object
+🛠️ 1. If fetchProduct responds with a product object
 🛠️     that contains a salePrice field, return the sale price.
-🛠️  2. If requestSalePrice doesn't respond with a 
+🛠️  2. If fetchProduct doesn't respond with a 
 🛠️     product object that contains a salePrice field, 
 🛠️     throw a new Error with the string 
 🛠️     "Your product is not on sale"
-🛠️  2. If requestSalePrice doesn't respond with 
+🛠️  2. If fetchProduct doesn't respond with 
 🛠️     a product at all (response is null) throw a new Error 
 🛠️     with the string "Your request didn't return a product"
 🛠️  3. Catch and return any errors 
@@ -94,13 +94,13 @@ function requestSalePrice(sku) {
 }
 
 describe("exercise 2", () => {
-  it("Calls requestSalePrice and returns products", () => {
+  it("Calls requestSalePrice and returns product's sale price", () => {
     return requestSalePrice("SEHO2194").then(response => {
       expect(response).toEqual(data["SEHO2194"].salePrice);
     });
   });
 
-  it("Calls requestSalePrice with an endpoint that responds with no sale price and throws the error 'Your request didn't return a product'", () => {
+  it("Calls requestSalePrice with an endpoint that responds with no sale price and throws the error 'Your product is not on sale'", () => {
     const err = new Error("Your product is not on sale");
     expect.assertions(1);
     return expect(requestSalePrice("RIGH2345")).resolves.toEqual(err);
@@ -112,13 +112,13 @@ describe("exercise 2", () => {
     return expect(requestSalePrice("DRTG1100")).resolves.toEqual(err);
   });
 
-  it("Null response", () => {
+  it("Calls requestSalePrice with an endpoint that returns a null response for product", () => {
     const err = new Error("Your request didn't return a product");
     expect.assertions(1);
     return expect(requestSalePrice("NOPR0000")).resolves.toEqual(err);
   });
 
-  it("Errors on the server", () => {
+  it("Calls requestSalePrice with an endpoint that gives errors on the server", () => {
     const err = new Error("Error loading file");
     expect.assertions(1);
     return expect(requestSalePrice("DRTG1100")).resolves.toEqual(err);

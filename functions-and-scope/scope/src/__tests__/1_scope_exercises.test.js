@@ -8,8 +8,8 @@ In the previous section we learned about the
 dynamic context feature of JavaScript functions. 
 Today we will explore the static _scope_ and the
 differences of scope vs context. We will demonstrate 
-how scope _work_ directly by exploring some of 
-the lesser known gotchas in JavaScript like "hoisting
+how scope _works_ directly by exploring some of 
+the lesser known gotchas in JavaScript like "hoisting."
 
 ⬆️
 `;
@@ -20,8 +20,8 @@ Let's kick things off with examples of the basic scopes in JavaScript.
 💡 Local scope: only accessible within the enclosed function.
 💡 Global scope: accessible to ALL functions.
 
-💡 One of the functions below changes the locally scope 
-💡 love variable. The other changes a globally scoped love
+💡 One of the functions below changes the locally scoped 
+💡 love variable. The other changes the globally scoped love variable.
 
 🛠️ Take a look at the following code and assign 
 🛠️ the correct answers to the two VARIABLES 
@@ -52,9 +52,9 @@ In JavaScript every variable declared in a function is "hoisted"
 to the top of the function no matter where in the function it is defined.
 
 🛠️ Look at the code below and assign the correct value 
-🛠️ to WHAT_IS_HOISTED_LOVE
+🛠️ to WHAT_IS_HOISTED_LOVE.
 
-💡 For bonus points, talk to each other about why your answer is correct
+💡 For bonus points, talk to each other about why your answer is correct.
 `;
 
 function noop() {}
@@ -74,13 +74,13 @@ const WHAT_IS_HOISTED_LOVE = "";
 
 ES6 Syntax introduced two new ways to declare variables 
 with let and const keywords. let & const also 
-introduce a new type of scope, BLOCK SCOPE
+introduce a new type of scope, BLOCK SCOPE.
 
 Take a look at the code below. Notice that the log callback is called
 with the love variable, but what is the value of the love variable?
 
-🛠️ It's your job to answer that question
-🛠️ Assign the correct of what the love variable is when called by log
+🛠️ It's your job to answer that question.
+🛠️ Assign the correct value of the love variable when called by log
 🛠️ to the WHAT_IS_BLOCK_LOVE declaration below. 
 `;
 
@@ -154,22 +154,22 @@ describe("Pair exercise 1", () => {
 Let's put it all together to see how scope is useful when applied 
 to a very common problem in JavaScript, MODULES.
 
-All code is executed in GLOBAL scope in JavaScript, only when we 
-define methods is when we create additional scopes.
+All code is executed in GLOBAL scope in JavaScript, and 
+defining methods creates additional scopes.
 
 When we have thousands of JavaScript files in a codebase
 eventually we will run into variable collisions as files re-define 
 variables with common names like "x" or "i". 
 
-But if we utilize JavaScript scope creatively we can overcome
+But if we utilize JavaScript scopes creatively we can overcome
 this problem!
 
 💡 We are mocking the idea of different files below,
 💡 note the code comments that denote different files. 
 
-🛠️ Make sure each file  is a module by creating a scope for each one
-🛠️ Make sure each file/module has access to it's own "module" object
-🛠️ Make sure the result of _require('main') return the number 6!
+🛠️ Make sure each file is a module by creating a scope for each one.
+🛠️ Make sure each file/module has access to its own "module" object.
+🛠️ Make sure the result of _require('main') returns the number 6!
 
 The goal of this exercise is to scope the two methods 
 below to produce the correct result. You can change any of the code 
@@ -182,7 +182,7 @@ var modules = {};
 
 `
 💡 Our require method will use this object to map a module 
-💡 to it's exports, use this as a clue on how to solve this problem!
+💡 to its exports, use this as a clue on how to solve this problem!
 `;
 
 // Remove this when writing your solution
@@ -200,7 +200,7 @@ var nameToModule = {
 
 `--- FILE: accumulator_module.js ---
 💡 This module returns a function which accumulates 
-💡 values passed into it and returns the result
+💡 values passed into it and returns the result.
 `;
 var result = 0;
 module.exports = function(value) {
@@ -209,7 +209,7 @@ module.exports = function(value) {
 
 
 `--- FILE: add2_module.js ---
-💡 This module returns a function which adds 2 to a value passed in
+💡 This module returns a function which adds 2 to a value passed in.
 `;
  
 module.exports = function(value) {
@@ -218,7 +218,7 @@ module.exports = function(value) {
 
 
 `--- FILE: main.js ---
-💡 Our main module for the page should accumulate some stuff
+💡 Our main module for the page should accumulate some stuff.
 `;
 var accumulator = _require("accumulator_module");
 var addTwo = _require("add2_module");
@@ -231,9 +231,9 @@ module.exports = addTwo(result);
 
 `
 💡 Here is our require method we see used above, 
-💡 it's mostly complete for our purpose
+💡 it's mostly complete for our purpose.
 
-🛠️ fix it to make sure a new module is created correctly 
+🛠️ Fix it to make sure a new module is created correctly 
 🛠️ by creating a correct scope for each module.
 `;
 

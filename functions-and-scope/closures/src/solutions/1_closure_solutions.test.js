@@ -20,7 +20,6 @@ function once(func) {
   };
 }
 
-
 // Exercise 3
 export function counterFunc() {
   let current = 0;

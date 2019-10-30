@@ -22,7 +22,7 @@ concepts in our daily JS use.
 `;
 
 // The robot constructor function. Each robot will be 
-// called with a name arguments which belongs to the Robot instance
+// called with a name argument which belongs to the Robot instance
 function Robot(name) {
   // Use the name function argument to attach the name 
   // property to the context/this object of each Robot
@@ -109,18 +109,18 @@ context binding we can show _how_ they are different and why we use them.
 
 1) Arrow functions have their context bound lexically! 
    What does that mean? It means that the context, which 
-   before arrow functions was dynamic now becomes
-   a static concept when we are discussing arrows. 
+   was dynamic in traditional functions now becomes
+   a static concept when we are discussing arrow functions. 
    An arrow function always inherits
    the context of the function it was defined in (or global)
 
-3) Arrow _may_ have concise bodies, or a body without 
+2) Arrow _may_ have concise bodies, or a body without 
    { } curly braces. This is only valid when a function 
    only contains a single expression. 
    for example: const foo = x => x > 2 ? x : 0;
 
-2) Arrow functions introduce the concept of implicit 
-   returns with concise bodies 
+3) Arrow functions introduce the concept of implicit 
+   returns with concise bodies, 
    for example: const implicit = x => x // this returns "x"
 `;
 
@@ -130,9 +130,9 @@ context binding we can show _how_ they are different and why we use them.
 `📚 Exercise 2 - Notifier 
 
 Notifier is a factory which returns an Object 
-with a .on and a .trigger methods It allows for 
+with a .on and a .trigger methods. It allows for 
 setting up listeners to events with .on and triggering 
-of them with .trigger. 
+them with .trigger. 
 
 The way it's implemented isn't ideal, it makes 
 heavy use of context internally. The challenge
@@ -156,7 +156,7 @@ function Notifier() {
 
     this.data = data;
 
-    // This is an old trick of ES5 of saving the current context(this) into a different variable
+    // This is an old trick of ES5 for saving the current context(this) into a different variable
     // and then referencing it later.
     const self = this;
     this.callbacks[event].forEach(function(cb) {

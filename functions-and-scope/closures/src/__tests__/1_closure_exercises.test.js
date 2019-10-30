@@ -10,8 +10,8 @@ bundled together (enclosed) with references to
 its surrounding state (the lexical environment).
 
 This is a short definition, but the concept is extremely 
-powerful. Let's leverage this language super power in the 
-following exercises to help give us the confidence to
+powerful. Let's leverage this super power in the 
+following exercises to help give ourselves the confidence to
 use this tool more often.
 
 ⬆️
@@ -21,7 +21,7 @@ use this tool more often.
 
 🛠️ Implement addByX below.
 🛠️ It should return a function that will add an 
-🛠️ input by x and return the result
+🛠️ input by x and return the result.
 `
 function addByX(x) {
   // Your code here
@@ -51,9 +51,9 @@ and what incrementCounter has access to when outer is executed.
 Talk through what you think this function does.
 
 When you have finished discussing what this function does, 
-follow the instructions below
+follow the instructions below.
 
-🚨 You will not be writing any code for this exercise
+🚨 You will not be writing any code for this exercise.
 `
 /*
 
@@ -89,18 +89,18 @@ Exercise #2 Instructions
 // willCounter();
 
 `
-🚨 We suggest re-commenting these ^^ when you are done
+🚨 We suggest re-commenting these ^^ when you are done.
 `;
 
 
 `📚 Exercise #3 - Only do it Once 📚
 
 🛠️ Implement once below. 
-🛠️ Once accepts a callback and should return a function
-🛠️ When the returned function is called for the first time
-🛠️ it should call the callback and return that output
-🛠️ If it is called any additional times, it should not run the callback 
-🛠️ instead of calling the callback again it will simply 
+🛠️ Once accepts a callback and should return a function.
+🛠️ When the returned function is called for the first time,
+🛠️ it should call the callback and return that output.
+🛠️ If it is called any additional times, it should not run the callback. 
+🛠️ Instead of calling the callback again it will simply 
 🛠️ return the output value from the first time it was called.
 `
 function once(func) {
@@ -126,7 +126,7 @@ Consider the following counter object used in an application.
 This object can be used in multiple functions, right?
 
 Uncomment each of the lines below, one by one.
-Before your do, guess what will be logged from each function call. 
+Before you do, guess what will be logged from each function call. 
 
 Make sure to talk about why you think your guess is right. Also,
 discuss if this can be used in multiple functions. 
@@ -153,16 +153,16 @@ const counterObj = {
 // counterObj.current = 45;
 // console.log(counterObj.current) // <- not ideal. But Why?
 `
-🚨 We suggest re-commenting these ^^ when you are done
+🚨 We suggest re-commenting these ^^ when you are done.
 `;
 
 
-`📚 Exercise #5 -  Fixing counterObj 📚 
+`📚 Exercise #5 - Fixing counterObj 📚 
 
-🛠️ Implement counterFunc below 
-🛠️ It should that recreates the functionality of rhe counterObj above, 
-🛠️ but with private scope. This counter function should restrict access 
-🛠️ to it's internals via closure, and expose an incrementCurrent, 
+🛠️ Implement counterFunc below.
+🛠️ It should recreate the functionality of the counterObj above, 
+🛠️ but with a private scope. This counter function should restrict access 
+🛠️ to its internals via closure, and expose an incrementCurrent, 
 🛠️ decrementCurrent, and getCurrent method. 
 `
 
@@ -179,7 +179,7 @@ describe("Exercise 3 - counterFunc", () => {
     // Test functionality of counterObj
     expect(counterObj.getCurrent()).toBe(0);
 
-    // Testing increment
+    // Test increment
     counterObj.incrementCurrent();
     counterObj.incrementCurrent();
     expect(counterObj.getCurrent()).toBe(2);

@@ -17,7 +17,7 @@ var whoStoleTheCookies;
 var whoseFingerprintsAreOnItNow;
 
 {
-  const fingerprints = "Cookie Monster"; // This is the only change needed. You cant also use "let" instead of "const" here.
+  const fingerprints = "Cookie Monster"; // This is the only change needed. You can also use "let" instead of "const" here.
   whoStoleTheCookies = function() {
     return fingerprints;
   };
@@ -86,10 +86,10 @@ function main_module(module) {
 // END FILE main.js
 
 // Here is our require method we see used above, it's mostly complete for our purpose
-// fix it to make sure a new module is created correctly by creating a correct scope
+// Fix it to make sure a new module is created correctly by creating a correct scope
 // for each module.
 
-// Our require method will use this object to map a module to it's exports, use this as
+// Our require method will use this object to map a module to its exports, use this as
 // a clue on how to solve this problem!
 var nameToModule = {
   accumulator_module: accumulator_module,

@@ -41,7 +41,9 @@ arrays but this will help understand the inner-workings of forEach.
 `;
 
 const forEach = (array, callBack) => {
-  // Your solution here
+  for (let $i = 0; $i < array.length; $i++) {
+    callBack(array[$i]);
+  }
 };
 
 describe("Exercise 1", () => {
@@ -62,7 +64,11 @@ describe("Exercise 1", () => {
 🛠️ execute the callback with the user.name and user.email.
 `;
 const saveNewUsers = (array, callBack) => {
-  // Your solution here
+  array.forEach(user => {
+    if (user.newCustomer) {
+      callBack(user.name, user.email);
+    }
+  });
 };
 
 describe("Exercise 2", () => {
@@ -92,7 +98,15 @@ describe("Exercise 2", () => {
 `;
 
 export const createLibraVariations = (array, callback) => {
-  // Your solution here
+  let libraGroup;
+  array.forEach((user, index) => {
+    if (index < array.length / 2) {
+      libraGroup = "A";
+    } else {
+      libraGroup = "B";
+    }
+    callback({ email: user.email, libraGroup: libraGroup });
+  });
 };
 
 describe("Exercise 3", () => {
@@ -132,7 +146,13 @@ describe("Exercise 3", () => {
 `;
 
 const logUserInformation = (array, callBack) => {
-  // Your solution here
+  array.forEach(user => {
+    Object.keys(user).forEach(property => {
+      if (property !== "orderHistory") {
+        callBack(`${property}: ${user[property]}`);
+      }
+    });
+  });
 };
 
 describe("Exercise 4", () => {

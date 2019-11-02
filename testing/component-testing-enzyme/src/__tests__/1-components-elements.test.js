@@ -1,7 +1,7 @@
 /*eslint-disable no-unused-expressions */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import '../../../component-testing-rtl/test/setup';
+import '../../test/setup';
 
 `
 ⬇️

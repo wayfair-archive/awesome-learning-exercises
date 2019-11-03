@@ -9,7 +9,8 @@
   "dependencies": {
     "jest": "23.6.0",
     "react": "16.8.5",
-    "react-dom": "16.8.5"
+    "react-dom": "16.8.5",
+    "@testing-library/jest-dom": "^4.2.3"
   },
   "devDependencies": {
     "@testing-library/react": "^9.3.0",

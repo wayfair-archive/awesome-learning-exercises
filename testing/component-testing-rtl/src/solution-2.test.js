@@ -44,18 +44,31 @@ const Dialog = ({ isOpen, children }) => {
   return isOpen ? <div>{children}</div> : null;
 };
 
-test.skip('Dialog renders button text when open and null when not open', () => {
-  const wrapper = mount(
-    <Dialog isOpen={false}>
+// This is one way to test the Dialog component without repeating this code
+// code in the test. Note that you have to be careful when you create helpers
+// in tests to avoid repetition, because you can introduce bugs into your
+// test code. Make sure you can trust your tests!
+const TestComponent = ({ isOpen }) => {
+  return (
+    <Dialog isOpen={isOpen}>
       <IconButton iconType="trash" altText="Delete">
         Click Me
       </IconButton>
     </Dialog>
   );
-  // YOUR CODE HERE...
-  expect(wrapper.find(IconButton).exists()).toBe(false);
-  wrapper.setProps({ isOpen: true });
-  expect(wrapper.find(IconButton).exists()).toBe(true);
+};
+
+test.skip('Dialog renders button text when open and null when not open', () => {
+  const { queryByText, queryByAltText, rerender } = render(
+    <TestComponent isOpen />
+  );
+  const icon = queryByAltText('Delete');
+  const button = queryByText('Click Me');
+  expect(icon).toBeInTheDocument();
+  expect(button).toBeInTheDocument();
+  rerender(<TestComponent isOpen={false} />);
+  expect(icon).not.toBeInTheDocument();
+  expect(button).not.toBeInTheDocument();
 });
 
 // Exercise 4

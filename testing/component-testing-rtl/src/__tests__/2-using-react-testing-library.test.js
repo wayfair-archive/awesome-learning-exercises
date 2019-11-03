@@ -98,27 +98,8 @@ const Dialog = ({ isOpen, children }) => {
   return isOpen ? <div>{children}</div> : null;
 };
 
-const TestComponent = ({ isOpen }) => {
-  return (
-    <Dialog isOpen={isOpen}>
-      <IconButton iconType="trash" altText="Delete">
-        Click Me
-      </IconButton>
-    </Dialog>
-  );
-};
-
 test('Dialog renders button text when open and nothing when not open', () => {
-  const { queryByText, queryByAltText, rerender } = render(
-    <TestComponent isOpen />
-  );
-  const icon = queryByAltText('Delete');
-  const button = queryByText('Click Me');
-  expect(icon).toBeInTheDocument();
-  expect(button).toBeInTheDocument();
-  rerender(<TestComponent isOpen={false} />);
-  expect(icon).not.toBeInTheDocument();
-  expect(button).not.toBeInTheDocument();
+  // Your code here...
 });
 
 `📚 Exercise 4 - Testing more complex UI 📚

@@ -1,6 +1,6 @@
-import React from "react";
-import { shallow, mount } from "enzyme";
-import setup from "../test/setup";
+import React from 'react';
+import { shallow, mount } from 'enzyme';
+import setup from '../test/setup';
 
 // Exercise 1
 const Icon = ({ iconType, altText }) => (
@@ -10,14 +10,21 @@ const Icon = ({ iconType, altText }) => (
   />
 );
 
-test.skip("Title outputs the text given as props", () => {
+test('Icon has the right props and type', () => {
   // YOUR CODE HERE...
-  const wrapper = shallow(<Icon iconType="trash" altText="Delete" />);
-  expect(wrapper.props()).toEqual({
-    alt: "Delete",
-    src: "https://cdn.wayfair.com/static/icons/trash.svg"
-  });
-  expect(wrapper.type()).toBe("image");
+  // const wrapper = shallow(<Icon iconType="trash" altText="Delete" />);
+  // expect(wrapper.props()).toEqual({
+  //   alt: "Delete",
+  //   src: "https://cdn.wayfair.com/static/icons/trash.svg"
+  // });
+  // expect(wrapper.type()).toBe("image");
+
+  const { getByAltText } = render(<Icon iconType="trash" altText="Delete" />);
+  const image = getByAltText(/delete/i);
+  expect(image.type).toBe('image');
+  expect(image.getAttribute('src')).toBe(
+    'https://cdn.wayfair.com/static/icons/trash.svg'
+  );
 });
 
 // Exercise 2
@@ -28,7 +35,7 @@ const IconButton = ({ iconType, altText, children }) => (
   </button>
 );
 
-test.skip("IconButton renders an Icon and button text", () => {
+test.skip('IconButton renders an Icon and button text', () => {
   const wrapper = mount(
     <IconButton iconType="trash" altText="Delete">
       Click Me
@@ -37,10 +44,10 @@ test.skip("IconButton renders an Icon and button text", () => {
   // YOUR CODE HERE...
   expect(wrapper.find(Icon).exists()).toBe(true);
   expect(wrapper.find(Icon).props()).toEqual({
-    altText: "Delete",
-    iconType: "trash"
+    altText: 'Delete',
+    iconType: 'trash',
   });
-  expect(wrapper.text()).toBe("Click Me");
+  expect(wrapper.text()).toBe('Click Me');
 });
 
 // Exercise 3
@@ -48,7 +55,7 @@ const Dialog = ({ isOpen, children }) => {
   return isOpen ? <div>{children}</div> : null;
 };
 
-test.skip("Dialog renders button text when open and null when not open", () => {
+test.skip('Dialog renders button text when open and null when not open', () => {
   const wrapper = mount(
     <Dialog isOpen={false}>
       <IconButton iconType="trash" altText="Delete">
@@ -89,16 +96,16 @@ const SalesDialog = ({ isOpen }) => {
   );
 };
 
-test.skip("SalesDialog renders sales text and a button with the right href", () => {
+test.skip('SalesDialog renders sales text and a button with the right href', () => {
   const wrapper = mount(<SalesDialog isOpen />);
   expect(wrapper.find(`[data-enzyme-id="ComplexDialogText"]`).text()).toBe(
-    "If you buy now, get 25% off on our finest widgets!"
+    'If you buy now, get 25% off on our finest widgets!'
   );
   expect(wrapper.find(IconButton).length).toBe(2);
   expect(
     wrapper.find('[data-enzyme-id="ComplexDialogSuccessButton"]').text()
-  ).toBe("Buy Now");
+  ).toBe('Buy Now');
   expect(
     wrapper.find('[data-enzyme-id="ComplexDialogDismissButton"]').text()
-  ).toBe("Dismiss");
+  ).toBe('Dismiss');
 });

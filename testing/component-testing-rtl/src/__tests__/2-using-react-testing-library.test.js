@@ -1,7 +1,7 @@
 /*eslint-disable no-unused-expressions */
 import React from 'react';
 import { render } from '@testing-library/react';
-import setup from '../../test/setup';
+import '../../test/setup';
 
 `
 ⬇️
@@ -9,9 +9,9 @@ import setup from '../../test/setup';
 You now know it can be tough to test nontrivial React components based
 on the elements they return.
 
-Your goal throughout these exercises is to leverage the power of React Testing Library
-to re-write our old tests into a series of smaller, more readable, and
-more robust new tests.
+Your goal throughout these exercises is to leverage the power of React
+Testing Library to re-write our old tests into a series of smaller, more
+readable, and more robust new tests.
 
 Along the way, you will learn more about the React Testing Library API.
 We suggest you keep the React Testing Library docs open throughout this.
@@ -38,7 +38,10 @@ Let's recreate that test using React Testing Library.
 `;
 
 const Icon = ({ iconType, altText }) => (
-  <img src={`https://cdn.wayfair.com/static/icons/${iconType}.svg`} alt={altText} />
+  <img
+    src={`https://cdn.wayfair.com/static/icons/${iconType}.svg`}
+    alt={altText}
+  />
 );
 
 test('Icon has the right props and type', () => {
@@ -148,7 +151,11 @@ const SalesDialog = ({ isOpen }) => {
         >
           Buy Now
         </IconButton>
-        <IconButton iconType="x" altText="Dismiss X" data-enzyme-id="ComplexDialogDismissButton">
+        <IconButton
+          iconType="x"
+          altText="Dismiss X"
+          data-enzyme-id="ComplexDialogDismissButton"
+        >
           Dismiss
         </IconButton>
       </div>

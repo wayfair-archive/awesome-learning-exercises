@@ -1,6 +1,6 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
-import setup from '../test/setup';
+import { render } from '@testing-library/react';
+import '../test/setup';
 
 // Exercise 1
 const Icon = ({ iconType, altText }) => (
@@ -10,21 +10,12 @@ const Icon = ({ iconType, altText }) => (
   />
 );
 
-test('Icon has the right props and type', () => {
-  // YOUR CODE HERE...
-  // const wrapper = shallow(<Icon iconType="trash" altText="Delete" />);
-  // expect(wrapper.props()).toEqual({
-  //   alt: "Delete",
-  //   src: "https://cdn.wayfair.com/static/icons/trash.svg"
-  // });
-  // expect(wrapper.type()).toBe("image");
-
+test.skip('Icon has the right props and type', () => {
   const { getByAltText } = render(<Icon iconType="trash" altText="Delete" />);
   const image = getByAltText(/delete/i);
-  expect(image.type).toBe('image');
-  expect(image.getAttribute('src')).toBe(
-    'https://cdn.wayfair.com/static/icons/trash.svg'
-  );
+  console.log(image);
+  expect(image.tagName).toBe('IMG');
+  expect(image.src).toMatch('trash.svg');
 });
 
 // Exercise 2
@@ -36,18 +27,16 @@ const IconButton = ({ iconType, altText, children }) => (
 );
 
 test.skip('IconButton renders an Icon and button text', () => {
-  const wrapper = mount(
+  const { getByAltText, getByText } = render(
     <IconButton iconType="trash" altText="Delete">
       Click Me
     </IconButton>
   );
-  // YOUR CODE HERE...
-  expect(wrapper.find(Icon).exists()).toBe(true);
-  expect(wrapper.find(Icon).props()).toEqual({
-    altText: 'Delete',
-    iconType: 'trash',
-  });
-  expect(wrapper.text()).toBe('Click Me');
+  const image = getByAltText('Delete');
+  const button = getByText('Click Me');
+  expect(image.src).toMatch('trash.svg');
+  expect(button).toBeInTheDocument();
+  expect(button.tagName).toBe('BUTTON');
 });
 
 // Exercise 3

@@ -32,9 +32,8 @@ Let's recreate that test using React Testing Library.
 🛠️ 2) Icon type is <img>
 
 🚨 In order to do this, you will need head over to the React Testing Library docs
-🚨 (https://testing-library.com/docs/react-testing-library/intro)
-// TODO: what parts of RTL are needed here?
-🚨 and familiarize yourself with "shallow", "props", and "type"
+🚨 and familiarize yourself with "getByAltText"
+🚨 (https://testing-library.com/docs/dom-testing-library/api-queries#byalttext)
 `;
 
 const Icon = ({ iconType, altText }) => (
@@ -53,21 +52,18 @@ test('Icon has the right props and type', () => {
 
 In our last attempt, we tested IconButton by using ReactDOM to render
 into a <div>, making assertions on the innerHTML property of the <div>.
-We can do more with Enzyme and its "mount" api
+We can do more with React Testing Library and its "render" api
 
 🛠️ Write a test that checks three things:
-🛠️ 1) The IconButton should render an Icon component
-🛠️ 2) The Icon component is receiving the altText and iconType props
-🛠️ 3) Renders the text you pass it as a child (<IconButton>Click</IconButton>) should
-🛠️ have text of Click.
+🛠️ 1) The IconButton should render an img element
+🛠️ 2) The img element is receiving the altText and iconType props
+🛠️ 3) Renders the text you pass it as a child (<IconButton>Click</IconButton> should
+🛠️ have text of Click.)
 
-🚨 In order to do this, head over to the enzyme docs
-🚨 (https://airbnb.io/enzyme/docs/api/) and familiarize yourself
-🚨 with a few new things:
-🚨 "mount", "find", and "exists"
-
-💡 (Give this a shot with shallow and see why mount may be the
-💡 best solution here)
+🚨 In order to do this, head over to the React Testing Library docs
+🚨 and familiarize yourself with a few new things: "getByText" and "toBeInTheDocument"
+🚨 (https://testing-library.com/docs/guide-disappearance)
+🚨 (https://testing-library.com/docs/dom-testing-library/api-queries#bytext)
 `;
 
 const IconButton = ({ iconType, altText, children }) => (
@@ -91,24 +87,38 @@ children only when isOpen is true.
 🛠️ 1) When isOpen is true, Dialog renders IconButton.
 🛠️ 2) When isOpen is false, Dialog doesn't render IconButton
 
-🚨 In order to do this, head over to the enzyme docs
-🚨 (https://airbnb.io/enzyme/docs/api/) and familiarize yourself
-🚨 with the setProps() method.
+🚨 Head over to the React Testing Library docs
+🚨 (https://testing-library.com/docs/react-testing-library/api)
+🚨 and familiarize yourself with the "rerender" method, and the
+🚨 difference between "queryBy*" and "getBy"
+🚨 (https://testing-library.com/docs/dom-testing-library/api-queries)
 `;
 
 const Dialog = ({ isOpen, children }) => {
   return isOpen ? <div>{children}</div> : null;
 };
 
-test('Dialog renders button text when open and null when not open', () => {
-  const wrapper = mount(
-    <Dialog isOpen={false}>
+const TestComponent = ({ isOpen }) => {
+  return (
+    <Dialog isOpen={isOpen}>
       <IconButton iconType="trash" altText="Delete">
         Click Me
       </IconButton>
     </Dialog>
   );
-  // Your code here ...
+};
+
+test('Dialog renders button text when open and nothing when not open', () => {
+  const { queryByText, queryByAltText, rerender } = render(
+    <TestComponent isOpen />
+  );
+  const icon = queryByAltText('Delete');
+  const button = queryByText('Click Me');
+  expect(icon).toBeInTheDocument();
+  expect(button).toBeInTheDocument();
+  rerender(<TestComponent isOpen={false} />);
+  expect(icon).not.toBeInTheDocument();
+  expect(button).not.toBeInTheDocument();
 });
 
 `📚 Exercise 4 - Testing more complex UI 📚

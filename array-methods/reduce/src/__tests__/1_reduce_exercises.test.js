@@ -51,10 +51,10 @@ tool to understand how the real prototype method works.
 💡 The next loop executes with this new accumulator value.
 💡 This occurs until there are no more elements, 
 💡 at which point the accumulator is returned.
-`
+`;
 
 const vanillaReduce = (array, callback, initialValue) => {
-  // Your solution here
+  return array.reduce(callback, initialValue);
 };
 
 describe("exercise 1", () => {
@@ -96,10 +96,13 @@ We need to to know how many saved items all of our customers have.
 💡  email: "rodrut@gmail.com",
 💡  savedItemIds: [2335, 1120]
 💡}
-`
+`;
 
 const totalSavedItems = customers => {
-  // Your solution here
+  return customers.reduce(
+    (totalLength, customer) => totalLength + customer.savedItemIds.length,
+    0
+  );
 };
 
 describe("exercise 2", () => {
@@ -108,7 +111,6 @@ describe("exercise 2", () => {
     expect(totalIds).toBe(16);
   });
 });
-
 
 `📚 Exercise #3 - Saved Item Ids 📚
 
@@ -119,10 +121,17 @@ We need an array of all savedItemIds from our current customers.
 🛠️ an array of unique savedItemIds across all customers. 
 
 🚨 No duplicate savedItemIds allowed!
-`
+`;
 
 const getSavedItems = customers => {
-  // Your solution here
+  return customers.reduce((uniqueIds, customer) => {
+    customer.savedItemIds.forEach(savedItemId => {
+      if (!uniqueIds.includes(savedItemId)) {
+        uniqueIds = [...uniqueIds, savedItemId];
+      }
+    });
+    return uniqueIds;
+  }, []);
 };
 
 describe("exercise 3", () => {
@@ -158,10 +167,19 @@ We want to know what the most popular saved items are with our customers.
 💡 [134, 234, 131] and [134, 111],
 💡 getSavedItemFrequency should return 
 💡 {134: 2, 234: 1, 131: 1, 111: 1}.
-`
+`;
 
 const getSavedItemFrequency = customers => {
-  // Your solution here
+  return customers
+    .reduce((uniqueIds, customer) => {
+      return [...uniqueIds, ...customer.savedItemIds];
+    }, [])
+    .reduce((idCount, itemId) => {
+      return {
+        ...idCount,
+        [itemId]: idCount[itemId] ? idCount[itemId] + 1 : 1
+      };
+    }, {});
 };
 
 describe("exercise 4", () => {

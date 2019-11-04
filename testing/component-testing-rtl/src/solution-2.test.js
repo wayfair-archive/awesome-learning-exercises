@@ -98,16 +98,15 @@ const SalesDialog = ({ isOpen }) => {
   );
 };
 
-test.skip('SalesDialog renders sales text and a button with the right href', () => {
-  const wrapper = mount(<SalesDialog isOpen />);
-  expect(wrapper.find(`[data-enzyme-id="ComplexDialogText"]`).text()).toBe(
+test.skip('SalesDialog renders sales text and button text', () => {
+  const { getByTestId, getByText, getByAltText } = render(
+    <SalesDialog isOpen />
+  );
+  expect(getByTestId('ComplexDialogText').textContent).toBe(
     'If you buy now, get 25% off on our finest widgets!'
   );
-  expect(wrapper.find(IconButton).length).toBe(2);
-  expect(
-    wrapper.find('[data-enzyme-id="ComplexDialogSuccessButton"]').text()
-  ).toBe('Buy Now');
-  expect(
-    wrapper.find('[data-enzyme-id="ComplexDialogDismissButton"]').text()
-  ).toBe('Dismiss');
+  expect(getByText('Buy Now')).toBeInTheDocument();
+  expect(getByText('Dismiss')).toBeInTheDocument();
+  expect(getByAltText('Check Mark')).toBeInTheDocument();
+  expect(getByAltText('Dismiss X')).toBeInTheDocument();
 });

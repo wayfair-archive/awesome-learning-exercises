@@ -115,15 +115,15 @@ we only need to test what's unique about this particular component
 🛠️ 3) Each button renders the text passed to it
 
 You will need some new tricks for this -
-you can just assert on the text of the entire Dialog component,
+if you just assert on the text of the entire Dialog component,
 as it will be a jumbled mess.
 
-💡 You will need to "find()" each individual element
+💡 You will need to find each individual element
 💡 in the SalesDialog to validate them on their own.
-💡 Feel free to add "data-enzyme-id" properies to the
+💡 Feel free to add "data-testid" properies to the
 💡 component, or find elements in some other way.
 💡 Here are the docs for reference.
-💡 (https://airbnb.io/enzyme/docs/api/selector.html)
+💡 (https://testing-library.com/docs/dom-testing-library/api-queries)
 
 🚨 Please check the answer key when you have finished.
 `;
@@ -132,20 +132,20 @@ const SalesDialog = ({ isOpen }) => {
   return (
     <Dialog isOpen={isOpen}>
       <div className="Dialog-contentWrapper">
-        <p className="Dialog-salesText" data-enzyme-id="ComplexDialogText">
+        <p className="Dialog-salesText" data-testid="ComplexDialogText">
           If you buy now, get 25% off on our finest widgets!
         </p>
         <IconButton
           iconType="check"
           altText="Check Mark"
-          data-enzyme-id="ComplexDialogSuccessButton"
+          data-testid="ComplexDialogSuccessButton"
         >
           Buy Now
         </IconButton>
         <IconButton
           iconType="x"
           altText="Dismiss X"
-          data-enzyme-id="ComplexDialogDismissButton"
+          data-testid="ComplexDialogDismissButton"
         >
           Dismiss
         </IconButton>
@@ -154,8 +154,10 @@ const SalesDialog = ({ isOpen }) => {
   );
 };
 
-test('SalesDialog renders sales text and a button with the right href', () => {
-  const wrapper = mount(<SalesDialog isOpen />);
+test('SalesDialog renders sales text and button text', () => {
+  const { getByTestId, getByText, getByAltText } = render(
+    <SalesDialog isOpen />
+  );
   // Your code here ...
 });
 
@@ -164,13 +166,13 @@ test('SalesDialog renders sales text and a button with the right href', () => {
 
 OUTTRO - Not an exercise
 
-By now you should feel comfortable sorting through the enzyme docs and testing
-the output of components.
+By now you should feel comfortable sorting through the React Testing Library docs
+and testing the output of components.
 
 As you get more comfortable, we suggest looking into replace the above text-matching
 tests with Jest tools like "toMatchInlineSnapshot() and toMatchSnapshot()".
-Make sure to check out the Jest docs as well as the enzyme docs to see
-all the methods you can apply to your tests.
+Make sure to check out the Jest docs as well as the React Testing Library docs
+to see all the methods you can apply to your tests.
 
 ✅✅✅
 `;

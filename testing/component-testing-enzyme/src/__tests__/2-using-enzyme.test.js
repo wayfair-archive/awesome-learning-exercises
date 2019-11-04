@@ -123,7 +123,7 @@ we only need to test what's unique about this particular component
 🛠️ 3) Each button renders the text passed to it
 
 You will need some new tricks for this -
-you can just assert on the text of the entire Dialog component,
+if you just assert on the text of the entire Dialog component,
 as it will be a jumbled mess.
 
 💡 You will need to "find()" each individual element

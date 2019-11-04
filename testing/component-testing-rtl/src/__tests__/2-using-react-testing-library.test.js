@@ -1,7 +1,7 @@
 /*eslint-disable no-unused-expressions */
 import React from 'react';
 import { render } from '@testing-library/react';
-import setup from '../../test/setup';
+import '../../test/setup';
 
 `
 ⬇️
@@ -9,9 +9,9 @@ import setup from '../../test/setup';
 You now know it can be tough to test nontrivial React components based
 on the elements they return.
 
-Your goal throughout these exercises is to leverage the power of React Testing Library
-to re-write our old tests into a series of smaller, more readable, and
-more robust new tests.
+Your goal throughout these exercises is to leverage the power of React
+Testing Library to re-write our old tests into a series of smaller, more
+readable, and more robust new tests.
 
 Along the way, you will learn more about the React Testing Library API.
 We suggest you keep the React Testing Library docs open throughout this.
@@ -32,13 +32,15 @@ Let's recreate that test using React Testing Library.
 🛠️ 2) Icon type is <img>
 
 🚨 In order to do this, you will need head over to the React Testing Library docs
-🚨 (https://testing-library.com/docs/react-testing-library/intro)
-// TODO: what parts of RTL are needed here?
-🚨 and familiarize yourself with "shallow", "props", and "type"
+🚨 and familiarize yourself with "getByAltText"
+🚨 (https://testing-library.com/docs/dom-testing-library/api-queries#byalttext)
 `;
 
 const Icon = ({ iconType, altText }) => (
-  <img src={`https://cdn.wayfair.com/static/icons/${iconType}.svg`} alt={altText} />
+  <img
+    src={`https://cdn.wayfair.com/static/icons/${iconType}.svg`}
+    alt={altText}
+  />
 );
 
 test('Icon has the right props and type', () => {
@@ -50,21 +52,18 @@ test('Icon has the right props and type', () => {
 
 In our last attempt, we tested IconButton by using ReactDOM to render
 into a <div>, making assertions on the innerHTML property of the <div>.
-We can do more with Enzyme and its "mount" api
+We can do more with React Testing Library and its "render" api
 
 🛠️ Write a test that checks three things:
-🛠️ 1) The IconButton should render an Icon component
-🛠️ 2) The Icon component is receiving the altText and iconType props
-🛠️ 3) Renders the text you pass it as a child (<IconButton>Click</IconButton>) should
-🛠️ have text of Click.
+🛠️ 1) The IconButton should render an img element
+🛠️ 2) The img element is receiving the altText and iconType props
+🛠️ 3) Renders the text you pass it as a child (<IconButton>Click</IconButton> should
+🛠️ have text of Click.)
 
-🚨 In order to do this, head over to the enzyme docs
-🚨 (https://airbnb.io/enzyme/docs/api/) and familiarize yourself
-🚨 with a few new things:
-🚨 "mount", "find", and "exists"
-
-💡 (Give this a shot with shallow and see why mount may be the
-💡 best solution here)
+🚨 In order to do this, head over to the React Testing Library docs
+🚨 and familiarize yourself with a few new things: "getByText" and "toBeInTheDocument"
+🚨 (https://testing-library.com/docs/guide-disappearance)
+🚨 (https://testing-library.com/docs/dom-testing-library/api-queries#bytext)
 `;
 
 const IconButton = ({ iconType, altText, children }) => (
@@ -88,24 +87,19 @@ children only when isOpen is true.
 🛠️ 1) When isOpen is true, Dialog renders IconButton.
 🛠️ 2) When isOpen is false, Dialog doesn't render IconButton
 
-🚨 In order to do this, head over to the enzyme docs
-🚨 (https://airbnb.io/enzyme/docs/api/) and familiarize yourself
-🚨 with the setProps() method.
+🚨 Head over to the React Testing Library docs
+🚨 (https://testing-library.com/docs/react-testing-library/api)
+🚨 and familiarize yourself with the "rerender" method, and the
+🚨 difference between "queryBy*" and "getBy"
+🚨 (https://testing-library.com/docs/dom-testing-library/api-queries)
 `;
 
 const Dialog = ({ isOpen, children }) => {
   return isOpen ? <div>{children}</div> : null;
 };
 
-test('Dialog renders button text when open and null when not open', () => {
-  const wrapper = mount(
-    <Dialog isOpen={false}>
-      <IconButton iconType="trash" altText="Delete">
-        Click Me
-      </IconButton>
-    </Dialog>
-  );
-  // Your code here ...
+test('Dialog renders button text when open and nothing when not open', () => {
+  // Your code here...
 });
 
 `📚 Exercise 4 - Testing more complex UI 📚
@@ -121,15 +115,15 @@ we only need to test what's unique about this particular component
 🛠️ 3) Each button renders the text passed to it
 
 You will need some new tricks for this -
-you can just assert on the text of the entire Dialog component,
+if you just assert on the text of the entire Dialog component,
 as it will be a jumbled mess.
 
-💡 You will need to "find()" each individual element
+💡 You will need to find each individual element
 💡 in the SalesDialog to validate them on their own.
-💡 Feel free to add "data-enzyme-id" properies to the
+💡 Feel free to add "data-testid" properies to the
 💡 component, or find elements in some other way.
 💡 Here are the docs for reference.
-💡 (https://airbnb.io/enzyme/docs/api/selector.html)
+💡 (https://testing-library.com/docs/dom-testing-library/api-queries)
 
 🚨 Please check the answer key when you have finished.
 `;
@@ -138,17 +132,21 @@ const SalesDialog = ({ isOpen }) => {
   return (
     <Dialog isOpen={isOpen}>
       <div className="Dialog-contentWrapper">
-        <p className="Dialog-salesText" data-enzyme-id="ComplexDialogText">
+        <p className="Dialog-salesText" data-testid="ComplexDialogText">
           If you buy now, get 25% off on our finest widgets!
         </p>
         <IconButton
           iconType="check"
           altText="Check Mark"
-          data-enzyme-id="ComplexDialogSuccessButton"
+          data-testid="ComplexDialogSuccessButton"
         >
           Buy Now
         </IconButton>
-        <IconButton iconType="x" altText="Dismiss X" data-enzyme-id="ComplexDialogDismissButton">
+        <IconButton
+          iconType="x"
+          altText="Dismiss X"
+          data-testid="ComplexDialogDismissButton"
+        >
           Dismiss
         </IconButton>
       </div>
@@ -156,8 +154,10 @@ const SalesDialog = ({ isOpen }) => {
   );
 };
 
-test('SalesDialog renders sales text and a button with the right href', () => {
-  const wrapper = mount(<SalesDialog isOpen />);
+test('SalesDialog renders sales text and button text', () => {
+  const { getByTestId, getByText, getByAltText } = render(
+    <SalesDialog isOpen />
+  );
   // Your code here ...
 });
 
@@ -166,13 +166,13 @@ test('SalesDialog renders sales text and a button with the right href', () => {
 
 OUTTRO - Not an exercise
 
-By now you should feel comfortable sorting through the enzyme docs and testing
-the output of components.
+By now you should feel comfortable sorting through the React Testing Library docs
+and testing the output of components.
 
 As you get more comfortable, we suggest looking into replace the above text-matching
 tests with Jest tools like "toMatchInlineSnapshot() and toMatchSnapshot()".
-Make sure to check out the Jest docs as well as the enzyme docs to see
-all the methods you can apply to your tests.
+Make sure to check out the Jest docs as well as the React Testing Library docs
+to see all the methods you can apply to your tests.
 
 ✅✅✅
 `;

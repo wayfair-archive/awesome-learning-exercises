@@ -65,16 +65,15 @@ the exercises below.
 `;
 
 class NameDialog extends React.Component {
-
-  this.state = { name: '' };
+  state = { name: '' };
 
   handleNameChange = e => {
     this.setState({ name: e.target.value });
-  }
+  };
 
   handleSaveClick = () => {
     this.props.onSave(this.state.name);
-  }
+  };
 
   render() {
     return (
@@ -115,7 +114,9 @@ Test user interaction by doing the following:
 test("NameDialog displays text input and it's onSave() is called when the button is clicked", () => {
   const mock = jest.fn();
 
-  const { getByText, getByPlaceholderText } = render(<NameDialog onSave={mock} />);
+  const { getByText, getByPlaceholderText } = render(
+    <NameDialog onSave={mock} />
+  );
   // Your code here
 });
 
@@ -128,6 +129,8 @@ test("NameDialog displays text input and it's onSave() is called when the button
 `;
 
 test("NameDialog's button is disabled until a user inputs text", () => {
-  const {getByText, getByPlaceholderText} = render(<NameDialog onSave={() => {}} />);
+  const { getByText, getByPlaceholderText } = render(
+    <NameDialog onSave={() => {}} />
+  );
   // Your code here
 });

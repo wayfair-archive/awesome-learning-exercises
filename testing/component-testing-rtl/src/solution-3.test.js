@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { shallow, mount } from "enzyme";
-import setup from "../test/setup";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { render, fireEvent } from '@testing-library/react';
+import setup from '../test/setup';
 
 const Icon = ({ iconType, altText }) => (
   <img
@@ -20,31 +20,25 @@ const IconButton = ({ iconType, altText, buttonText, onClick, isDisabled }) => (
 test.skip("IconButton's onClick() is called when the button is clicked", () => {
   const mock = jest.fn();
 
-  const wrapper = mount(
+  const { getByText } = render(
     <IconButton buttonText="Submit" iconType="submit" onClick={mock} />
   );
   // Your code here
   expect(mock).toHaveBeenCalledTimes(0);
-  wrapper.find("button").simulate("click");
+  fireEvent.click(getByText('Submit'));
   expect(mock).toHaveBeenCalledTimes(1);
 });
 
 class NameDialog extends React.Component {
-  constructor() {
-    super();
+  state = { name: '' };
 
-    this.state = { name: "" };
-    this.handleNameChange = this.handleNameChange.bind(this);
-    this.handleSaveClick = this.handleSaveClick.bind(this);
-  }
-
-  handleNameChange(e) {
+  handleNameChange = e => {
     this.setState({ name: e.target.value });
-  }
+  };
 
-  handleSaveClick() {
+  handleSaveClick = () => {
     this.props.onSave(this.state.name);
-  }
+  };
 
   render() {
     return (
@@ -52,6 +46,7 @@ class NameDialog extends React.Component {
         <p>What is your name?</p>
         <input
           type="text"
+          placeholder="Enter your name"
           value={this.state.name}
           onChange={this.handleNameChange}
         />
@@ -67,40 +62,39 @@ class NameDialog extends React.Component {
 }
 
 NameDialog.propTypes = {
-  onSave: PropTypes.func.isRequired
+  onSave: PropTypes.func.isRequired,
 };
 
-// Exercise 2
-test.skip("NameDialog's onSave() is called when the button is clicked", () => {
+// Exercise 2a
+test.skip('NameDialog displays text input and onSave() is called when the button is clicked', () => {
   const mock = jest.fn();
 
-  const wrapper = mount(<NameDialog onSave={mock} />);
+  const { getByText, getByPlaceholderText, queryByDisplayValue } = render(
+    <NameDialog onSave={mock} />
+  );
+
+  expect(queryByDisplayValue('Taylor')).not.toBeInTheDocument();
+  fireEvent.change(getByPlaceholderText('Enter your name'), {
+    target: { value: 'Taylor' },
+  });
+  expect(queryByDisplayValue('Taylor')).toBeInTheDocument();
 
   expect(mock).toHaveBeenCalledTimes(0);
-
-  wrapper.find("input").simulate("change", { target: { value: "Taylor" } });
-  wrapper.find("button").simulate("click");
-
+  fireEvent.click(getByText('Save'));
   expect(mock).toHaveBeenCalledTimes(1);
-  expect(mock).toHaveBeenCalledWith("Taylor");
+  expect(mock).toHaveBeenCalledWith('Taylor');
 });
 
-// Exercise 2a
-test.skip("NameDialog's onSave() is called when the button is clicked", () => {
-  const mock = jest.fn();
+// Exercise 2b
+test.skip("NameDialog's button is disabled until a user inputs text", () => {
+  const { getByText, getByPlaceholderText } = render(
+    <NameDialog onSave={() => {}} />
+  );
 
-  const wrapper = mount(<NameDialog onSave={mock} />);
+  const button = getByText('Save');
+  const input = getByPlaceholderText('Enter your name');
 
-  expect(mock).toHaveBeenCalledTimes(0);
-  expect(wrapper.find("button").prop("disabled")).toBe(true);
-
-  wrapper.find("input").simulate("change", { target: { value: "Kris" } });
-
-  expect(wrapper.find("button").prop("disabled")).toBe(false);
-  expect(wrapper.find("input").prop("value")).toBe("Kris");
-
-  wrapper.find("button").simulate("click");
-
-  expect(mock).toHaveBeenCalledTimes(1);
-  expect(mock).toHaveBeenCalledWith("Kris");
+  expect(button.disabled).toBe(true);
+  fireEvent.change(input, { target: { value: 'Kris' } });
+  expect(button.disabled).toBe(false);
 });

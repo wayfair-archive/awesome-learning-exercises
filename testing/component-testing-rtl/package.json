@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "Simple template for JS exercises. Please fork when creating a new exercise!",
   "main": "/src/__tests__/1-components-elements.test.js",
-  "scripts": {
-    "test": "jest"
-  },
+  "scripts": {},
   "dependencies": {
     "jest": "23.6.0",
     "react": "16.8.5",

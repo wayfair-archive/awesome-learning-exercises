@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "Simple template for JS exercises. Please fork when creating a new exercise!",
   "main": "/src/__tests__/1-components-elements.test.js",
-  "scripts": {
-    "test": "jest"
-  },
+  "scripts": {},
   "dependencies": {
     "enzyme": "3.9.0",
     "enzyme-adapter-react-16": "1.11.2",

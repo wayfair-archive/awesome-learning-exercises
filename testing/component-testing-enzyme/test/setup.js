@@ -3,6 +3,5 @@ import Adapter from 'enzyme-adapter-react-16';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-if (!window.test) {
-  window.test = () => {};
-}
+// No-op so the browser doesn't error
+window.test = () => {};

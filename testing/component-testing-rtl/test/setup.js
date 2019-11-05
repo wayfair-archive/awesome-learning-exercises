@@ -1,5 +1,2 @@
-import '@testing-library/jest-dom/extend-expect';
-
-if (!window.test) {
-  window.test = () => {};
-}
+// No-op so the browser doesn't error
+window.test = () => {};

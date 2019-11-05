@@ -1,4 +1,3 @@
-/*eslint-disable no-unused-expressions */
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import '../../test/setup';

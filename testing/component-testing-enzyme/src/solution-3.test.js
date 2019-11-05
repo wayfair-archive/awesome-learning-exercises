@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { shallow, mount } from "enzyme";
-import setup from "../test/setup";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { shallow, mount } from 'enzyme';
+import '../test/setup';
 
 const Icon = ({ iconType, altText }) => (
   <img
@@ -25,7 +25,7 @@ test.skip("IconButton's onClick() is called when the button is clicked", () => {
   );
   // Your code here
   expect(mock).toHaveBeenCalledTimes(0);
-  wrapper.find("button").simulate("click");
+  wrapper.find('button').simulate('click');
   expect(mock).toHaveBeenCalledTimes(1);
 });
 
@@ -33,7 +33,7 @@ class NameDialog extends React.Component {
   constructor() {
     super();
 
-    this.state = { name: "" };
+    this.state = { name: '' };
     this.handleNameChange = this.handleNameChange.bind(this);
     this.handleSaveClick = this.handleSaveClick.bind(this);
   }
@@ -67,7 +67,7 @@ class NameDialog extends React.Component {
 }
 
 NameDialog.propTypes = {
-  onSave: PropTypes.func.isRequired
+  onSave: PropTypes.func.isRequired,
 };
 
 // Exercise 2
@@ -78,11 +78,11 @@ test.skip("NameDialog's onSave() is called when the button is clicked", () => {
 
   expect(mock).toHaveBeenCalledTimes(0);
 
-  wrapper.find("input").simulate("change", { target: { value: "Taylor" } });
-  wrapper.find("button").simulate("click");
+  wrapper.find('input').simulate('change', { target: { value: 'Taylor' } });
+  wrapper.find('button').simulate('click');
 
   expect(mock).toHaveBeenCalledTimes(1);
-  expect(mock).toHaveBeenCalledWith("Taylor");
+  expect(mock).toHaveBeenCalledWith('Taylor');
 });
 
 // Exercise 2a
@@ -92,15 +92,15 @@ test.skip("NameDialog's onSave() is called when the button is clicked", () => {
   const wrapper = mount(<NameDialog onSave={mock} />);
 
   expect(mock).toHaveBeenCalledTimes(0);
-  expect(wrapper.find("button").prop("disabled")).toBe(true);
+  expect(wrapper.find('button').prop('disabled')).toBe(true);
 
-  wrapper.find("input").simulate("change", { target: { value: "Kris" } });
+  wrapper.find('input').simulate('change', { target: { value: 'Kris' } });
 
-  expect(wrapper.find("button").prop("disabled")).toBe(false);
-  expect(wrapper.find("input").prop("value")).toBe("Kris");
+  expect(wrapper.find('button').prop('disabled')).toBe(false);
+  expect(wrapper.find('input').prop('value')).toBe('Kris');
 
-  wrapper.find("button").simulate("click");
+  wrapper.find('button').simulate('click');
 
   expect(mock).toHaveBeenCalledTimes(1);
-  expect(mock).toHaveBeenCalledWith("Kris");
+  expect(mock).toHaveBeenCalledWith('Kris');
 });

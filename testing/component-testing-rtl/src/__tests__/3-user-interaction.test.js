@@ -1,14 +1,14 @@
 /*eslint-disable no-unused-expressions */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { shallow, mount } from 'enzyme';
+import { render, fireEvent } from '@testing-library/react';
 import '../../test/setup';
 
 `
 ⬇️
 
-You should now be comfortable with the major parts of the Enzyme API.
-Let's exercise that knowledge with more complex components to test.
+You should now be comfortable with the major parts of the React Testing Library
+API. Let's exercise that knowledge with more complex components to test.
 
 💡 Note: The Icon and IconButton components below are setup for the
 💡 rest of this session.
@@ -17,7 +17,10 @@ Let's exercise that knowledge with more complex components to test.
 `;
 
 const Icon = ({ iconType, altText }) => (
-  <img src={`https://cdn.wayfair.com/static/icons/${iconType}.svg`} alt={altText} />
+  <img
+    src={`https://cdn.wayfair.com/static/icons/${iconType}.svg`}
+    alt={altText}
+  />
 );
 
 `
@@ -37,14 +40,16 @@ const IconButton = ({ iconType, altText, buttonText, onClick, isDisabled }) => (
 🛠️ Write a test that the "onClick" prop of IconButton
 🛠️ is called when the button is pressed.
 
-🚨 You should use Jest mocks and Enzyme's mount() and simulate()
-🚨 methods - (https://airbnb.io/enzyme/docs/api/ReactWrapper/simulate.html)
+🚨 You should use Jest mocks and RTL's render() and fireEvent.click()
+🚨 methods - (https://testing-library.com/docs/dom-testing-library/api-events)
 `;
 
 test("IconButton's onClick() is called when the button is clicked", () => {
   const mock = jest.fn();
 
-  const wrapper = mount(<IconButton buttonText="Submit" iconType="submit" onClick={mock} />);
+  const { getByText } = render(
+    <IconButton buttonText="Submit" iconType="submit" onClick={mock} />
+  );
   // Your code here
 });
 
@@ -60,27 +65,26 @@ the exercises below.
 `;
 
 class NameDialog extends React.Component {
-  constructor() {
-    super();
+  state = { name: '' };
 
-    this.state = { name: '' };
-    this.handleNameChange = this.handleNameChange.bind(this);
-    this.handleSaveClick = this.handleSaveClick.bind(this);
-  }
-
-  handleNameChange(e) {
+  handleNameChange = e => {
     this.setState({ name: e.target.value });
-  }
+  };
 
-  handleSaveClick() {
+  handleSaveClick = () => {
     this.props.onSave(this.state.name);
-  }
+  };
 
   render() {
     return (
       <div>
         <p>What is your name?</p>
-        <input type="text" value={this.state.name} onChange={this.handleNameChange} />
+        <input
+          type="text"
+          placeholder="Enter your name"
+          value={this.state.name}
+          onChange={this.handleNameChange}
+        />
         <IconButton
           buttonText="Save"
           iconType="submit"
@@ -110,7 +114,9 @@ Test user interaction by doing the following:
 test("NameDialog displays text input and it's onSave() is called when the button is clicked", () => {
   const mock = jest.fn();
 
-  const wrapper = mount(<NameDialog onSave={mock} />);
+  const { getByText, getByPlaceholderText } = render(
+    <NameDialog onSave={mock} />
+  );
   // Your code here
 });
 
@@ -123,8 +129,8 @@ test("NameDialog displays text input and it's onSave() is called when the button
 `;
 
 test("NameDialog's button is disabled until a user inputs text", () => {
-  const mock = jest.fn();
-
-  const wrapper = mount(<NameDialog onSave={mock} />);
+  const { getByText, getByPlaceholderText } = render(
+    <NameDialog onSave={() => {}} />
+  );
   // Your code here
 });

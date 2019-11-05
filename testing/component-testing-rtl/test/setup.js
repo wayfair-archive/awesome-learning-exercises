@@ -1,5 +1,5 @@
-import '@testing-library/jest-dom/extend-expect';
+// Making these no-ops so that the codesandbox browser window doesn't error
+window.test = () => {};
+window.expect = () => {};
 
-if (!window.test) {
-  window.test = () => {};
-}
+import '@testing-library/jest-dom/extend-expect';

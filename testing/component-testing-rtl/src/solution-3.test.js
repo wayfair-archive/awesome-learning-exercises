@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { render, fireEvent } from '@testing-library/react';
-import setup from '../test/setup';
+import '@testing-library/jest-dom/extend-expect';
+import '../test/setup';
 
 const Icon = ({ iconType, altText }) => (
   <img

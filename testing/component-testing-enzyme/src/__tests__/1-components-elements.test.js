@@ -1,4 +1,3 @@
-/*eslint-disable no-unused-expressions */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import '../../test/setup';
@@ -43,7 +42,10 @@ We can call the function to get a React element
 `;
 
 const Icon = ({ iconType, altText }) => (
-  <img src={`https://cdn.wayfair.com/static/icons/${iconType}.svg`} alt={altText} />
+  <img
+    src={`https://cdn.wayfair.com/static/icons/${iconType}.svg`}
+    alt={altText}
+  />
 );
 
 test('component returns an element', () => {

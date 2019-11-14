@@ -33,7 +33,7 @@ Let's recreate that test using React Testing Library.
 🛠️ 2) Icon type is <img>
 
 🚨 In order to do this, you will need head over to the React Testing Library docs
-🚨 and familiarize yourself with "getByAltText"
+🚨 and familiarize yourself with "queryByAltText"
 🚨 (https://testing-library.com/docs/dom-testing-library/api-queries#byalttext)
 `;
 
@@ -45,7 +45,7 @@ const Icon = ({ iconType, altText }) => (
 );
 
 test('Icon has the right props and type', () => {
-  const { getByAltText } = render(<Icon iconType="trash" altText="Delete" />);
+  const { queryByAltText } = render(<Icon iconType="trash" altText="Delete" />);
   // Your code here ...
 });
 
@@ -62,7 +62,7 @@ We can do more with React Testing Library and its "render" api
 🛠️ have text of Click.)
 
 🚨 In order to do this, head over to the React Testing Library docs
-🚨 and familiarize yourself with a few new things: "getByText" and "toBeInTheDocument"
+🚨 and familiarize yourself with a few new things: "queryByText" and "toBeInTheDocument"
 🚨 (https://testing-library.com/docs/guide-disappearance)
 🚨 (https://testing-library.com/docs/dom-testing-library/api-queries#bytext)
 `;
@@ -90,8 +90,7 @@ children only when isOpen is true.
 
 🚨 Head over to the React Testing Library docs
 🚨 (https://testing-library.com/docs/react-testing-library/api)
-🚨 and familiarize yourself with the "rerender" method, and the
-🚨 difference between "queryBy*" and "getBy"
+🚨 and familiarize yourself with "rerender" and the other queryBy methods
 🚨 (https://testing-library.com/docs/dom-testing-library/api-queries)
 `;
 
@@ -156,7 +155,7 @@ const SalesDialog = ({ isOpen }) => {
 };
 
 test('SalesDialog renders sales text and button text', () => {
-  const { getByTestId, getByText, getByAltText } = render(
+  const { queryByTestId, queryByText, queryByAltText } = render(
     <SalesDialog isOpen />
   );
   // Your code here ...

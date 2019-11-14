@@ -48,8 +48,8 @@ const IconButton = ({ iconType, altText, buttonText, onClick, isDisabled }) => (
 test("IconButton's onClick() is called when the button is clicked", () => {
   const mock = jest.fn();
 
-  const { getByText } = render(
-    <IconButton buttonText="Submit" iconType="submit" onClick={mock} />
+  const { queryByText } = render(
+    <IconButton buttonText="Click Me" iconType="check" onClick={mock} />
   );
   // Your code here
 });
@@ -78,7 +78,7 @@ class NameDialog extends React.Component {
 
   render() {
     return (
-      <div>
+      <form onSubmit={this.handleSaveClick}>
         <p>What is your name?</p>
         <input
           type="text"
@@ -89,10 +89,9 @@ class NameDialog extends React.Component {
         <IconButton
           buttonText="Save"
           iconType="submit"
-          onClick={this.handleSaveClick}
           isDisabled={!this.state.name}
         />
-      </div>
+      </form>
     );
   }
 }
@@ -115,7 +114,7 @@ Test user interaction by doing the following:
 test("NameDialog displays text input and it's onSave() is called when the button is clicked", () => {
   const mock = jest.fn();
 
-  const { getByText, getByPlaceholderText } = render(
+  const { queryByText, queryByPlaceholderText } = render(
     <NameDialog onSave={mock} />
   );
   // Your code here
@@ -130,7 +129,7 @@ test("NameDialog displays text input and it's onSave() is called when the button
 `;
 
 test("NameDialog's button is disabled until a user inputs text", () => {
-  const { getByText, getByPlaceholderText } = render(
+  const { queryByText, queryByPlaceholderText } = render(
     <NameDialog onSave={() => {}} />
   );
   // Your code here

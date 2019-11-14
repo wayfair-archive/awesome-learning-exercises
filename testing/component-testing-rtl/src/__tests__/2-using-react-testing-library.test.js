@@ -138,14 +138,12 @@ const SalesDialog = ({ isOpen }) => {
         <IconButton
           iconType="check"
           altText="Check Mark"
-          data-testid="ComplexDialogSuccessButton"
         >
           Buy Now
         </IconButton>
         <IconButton
           iconType="x"
           altText="Dismiss X"
-          data-testid="ComplexDialogDismissButton"
         >
           Dismiss
         </IconButton>

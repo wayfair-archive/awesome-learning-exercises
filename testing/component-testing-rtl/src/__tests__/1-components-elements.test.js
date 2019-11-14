@@ -19,7 +19,7 @@ check the solution file to see how you did
 
 The story: You've been tasked with writing tests for some of
 your React components using only Jest - your team hasn't adopted
-Enzyme orReact Testing Library yet.
+Enzyme or React Testing Library yet.
 
 Through the course of this session you will learn:
 1) How to test React elements, components, and instances.

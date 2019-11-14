@@ -21,12 +21,11 @@ const IconButton = ({ iconType, altText, buttonText, onClick, isDisabled }) => (
 test.skip("IconButton's onClick() is called when the button is clicked", () => {
   const mock = jest.fn();
 
-  const { getByText } = render(
-    <IconButton buttonText="Submit" iconType="submit" onClick={mock} />
+  const { queryByText } = render(
+    <IconButton buttonText="Click Me" iconType="check" onClick={mock} />
   );
-  // Your code here
   expect(mock).toHaveBeenCalledTimes(0);
-  fireEvent.click(getByText('Submit'));
+  fireEvent.click(queryByText(/click me/i));
   expect(mock).toHaveBeenCalledTimes(1);
 });
 
@@ -43,7 +42,7 @@ class NameDialog extends React.Component {
 
   render() {
     return (
-      <div>
+      <form onSubmit={this.handleSaveClick}>
         <p>What is your name?</p>
         <input
           type="text"
@@ -54,10 +53,9 @@ class NameDialog extends React.Component {
         <IconButton
           buttonText="Save"
           iconType="submit"
-          onClick={this.handleSaveClick}
           isDisabled={!this.state.name}
         />
-      </div>
+      </form>
     );
   }
 }
@@ -70,30 +68,30 @@ NameDialog.propTypes = {
 test.skip('NameDialog displays text input and onSave() is called when the button is clicked', () => {
   const mock = jest.fn();
 
-  const { getByText, getByPlaceholderText, queryByDisplayValue } = render(
+  const { queryByText, queryByPlaceholderText, queryByDisplayValue } = render(
     <NameDialog onSave={mock} />
   );
 
   expect(queryByDisplayValue('Taylor')).not.toBeInTheDocument();
-  fireEvent.change(getByPlaceholderText('Enter your name'), {
+  fireEvent.change(queryByPlaceholderText('Enter your name'), {
     target: { value: 'Taylor' },
   });
   expect(queryByDisplayValue('Taylor')).toBeInTheDocument();
 
   expect(mock).toHaveBeenCalledTimes(0);
-  fireEvent.click(getByText('Save'));
+  fireEvent.submit(queryByText('Save'));
   expect(mock).toHaveBeenCalledTimes(1);
   expect(mock).toHaveBeenCalledWith('Taylor');
 });
 
 // Exercise 2b
 test.skip("NameDialog's button is disabled until a user inputs text", () => {
-  const { getByText, getByPlaceholderText } = render(
+  const { queryByText, queryByPlaceholderText } = render(
     <NameDialog onSave={() => {}} />
   );
 
-  const button = getByText('Save');
-  const input = getByPlaceholderText('Enter your name');
+  const button = queryByText('Save');
+  const input = queryByPlaceholderText('Enter your name');
 
   expect(button.disabled).toBe(true);
   fireEvent.change(input, { target: { value: 'Kris' } });

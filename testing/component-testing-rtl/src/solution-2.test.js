@@ -12,10 +12,8 @@ const Icon = ({ iconType, altText }) => (
 );
 
 test.skip('Icon has the right props and type', () => {
-  const { getByAltText } = render(<Icon iconType="trash" altText="Delete" />);
-  const image = getByAltText(/delete/i);
-  console.log(image);
-  expect(image.tagName).toBe('IMG');
+  const { queryByAltText } = render(<Icon iconType="trash" altText="Delete" />);
+  const image = queryByAltText(/delete/i);
   expect(image.src).toMatch('trash.svg');
 });
 
@@ -28,16 +26,15 @@ const IconButton = ({ iconType, altText, children }) => (
 );
 
 test.skip('IconButton renders an Icon and button text', () => {
-  const { getByAltText, getByText } = render(
+  const { queryByAltText, queryByText } = render(
     <IconButton iconType="trash" altText="Delete">
       Click Me
     </IconButton>
   );
-  const image = getByAltText('Delete');
-  const button = getByText('Click Me');
+  const image = queryByAltText(/delete/i);
+  const button = queryByRole('button');
   expect(image.src).toMatch('trash.svg');
-  expect(button).toBeInTheDocument();
-  expect(button.tagName).toBe('BUTTON');
+  expect(button.textContent).toBe('Click Me');
 });
 
 // Exercise 3
@@ -63,8 +60,8 @@ test.skip('Dialog renders button text when open and null when not open', () => {
   const { queryByText, queryByAltText, rerender } = render(
     <TestComponent isOpen />
   );
-  const icon = queryByAltText('Delete');
-  const button = queryByText('Click Me');
+  const icon = queryByAltText(/delete/i);
+  const button = queryByText(/click me/i);
   expect(icon).toBeInTheDocument();
   expect(button).toBeInTheDocument();
   rerender(<TestComponent isOpen={false} />);
@@ -77,20 +74,18 @@ const SalesDialog = ({ isOpen }) => {
   return (
     <Dialog isOpen={isOpen}>
       <div className="Dialog-contentWrapper">
-        <p className="Dialog-salesText" data-enzyme-id="ComplexDialogText">
+        <p className="Dialog-salesText" data-testid="ComplexDialogText">
           If you buy now, get 25% off on our finest widgets!
         </p>
         <IconButton
           iconType="check"
           altText="Check Mark"
-          data-enzyme-id="ComplexDialogSuccessButton"
         >
           Buy Now
         </IconButton>
         <IconButton
           iconType="x"
           altText="Dismiss X"
-          data-enzyme-id="ComplexDialogDismissButton"
         >
           Dismiss
         </IconButton>
@@ -100,14 +95,14 @@ const SalesDialog = ({ isOpen }) => {
 };
 
 test.skip('SalesDialog renders sales text and button text', () => {
-  const { getByTestId, getByText, getByAltText } = render(
+  const { queryByTestId, queryByText, queryByAltText } = render(
     <SalesDialog isOpen />
   );
-  expect(getByTestId('ComplexDialogText').textContent).toBe(
+  expect(queryByTestId('ComplexDialogText').textContent).toBe(
     'If you buy now, get 25% off on our finest widgets!'
   );
-  expect(getByText('Buy Now')).toBeInTheDocument();
-  expect(getByText('Dismiss')).toBeInTheDocument();
-  expect(getByAltText('Check Mark')).toBeInTheDocument();
-  expect(getByAltText('Dismiss X')).toBeInTheDocument();
+  expect(queryByText('Buy Now')).toBeInTheDocument();
+  expect(queryByText('Dismiss')).toBeInTheDocument();
+  expect(queryByAltText('Check Mark')).toBeInTheDocument();
+  expect(queryByAltText('Dismiss X')).toBeInTheDocument();
 });

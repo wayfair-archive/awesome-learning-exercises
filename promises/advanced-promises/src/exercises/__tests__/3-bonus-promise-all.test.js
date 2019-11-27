@@ -56,15 +56,21 @@ function makePromiseGetter(p) {
 }
 
 describe('makePromiseGetter()', () => {
+  // 🛠️ complete the description
   it('should...', () => {
     const pending = new Promise((resolve, reject) => {});
     const getPromiseState = makePromiseGetter(pending);
+
+    // 🛠️ update the expected value
     expect(getPromiseState()).toBe('???');
   });
 
+  // 🛠️ complete the description
   it('should...', () => {
     const resolving = Promise.resolve(123);
     const getPromiseState = makePromiseGetter(resolving);
+
+    // 🛠️ update the expected values
 
     expect(getPromiseState()).toBe('???');
     return Promise.resolve().then(() => {
@@ -72,9 +78,12 @@ describe('makePromiseGetter()', () => {
     });
   });
 
+  // 🛠️ complete the description
   it('should...', () => {
     const rejecting = Promise.reject(123);
     const getPromiseState = makePromiseGetter(rejecting);
+
+    // 🛠️ update the expected values
 
     expect(getPromiseState()).toBe('???');
     return Promise.resolve().catch(() => {
@@ -102,7 +111,7 @@ the new promise.
 `;
 
 function promiseBoth(left, right) {
-  // todo
+  // 🛠️ implement this
 }
 
 describe('promiseBoth()', () => {
@@ -138,7 +147,7 @@ of promises.
 `;
 
 function promiseAll(promises) {
-  // todo
+  // 🛠️ implement this
 }
 
 describe('promiseAll()', () => {

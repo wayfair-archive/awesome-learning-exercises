@@ -1,11 +1,10 @@
-/*eslint-disable no-unused-expressions */
 `
 ⬇️
 
 Welcome to Assigning Values
 
 This session is designed to introduce you to how assigning values to variables
-works in javascript. In javascript the typeof a value determines whether the
+works in JavaScript. In JavaScript the type of a value determines whether the
 variable is assigned by value or assigned by refererence.
 This exercise will discuss and demonstrate the implications of this difference.
 
@@ -14,11 +13,12 @@ This exercise will discuss and demonstrate the implications of this difference.
 
 `📚 Exercise 1 - Assign by Value 📚
 
-In this exercise, we discuss the data types in javascript assigned by value.
+In this exercise, we discuss the data types in JavaScript assigned by value.
 Numbers, Strings, Booleans, undefined, null, and Symbols are the different
 types of variables that are assigned by value. As a result, the variable's
-value can only be changed by reassigning the variable itself
-(The assigned value cannot be mutated).
+value can only be changed by reassigning the variable itself. We cannot
+change the underlying value of the variable without explicitly reassigning
+it to a new value.
 
 🛠️ Correct the test such that the expected asserted value is correct.
 
@@ -28,13 +28,13 @@ value can only be changed by reassigning the variable itself
 `;
 
 const assignedByValue = () => {
-	var doNotModifyMyAssignedValue = 10;
-	var pleaseDoModifyMyAssignedValue = doNotModifyMyAssignedValue;
+	var assignedValueIsNotModified = 10;
+	var assignedValueIsModified = assignedValueIsNotModified;
 
-	pleaseDoModifyMyAssignedValue++;
-	pleaseDoModifyMyAssignedValue = doNotModifyMyAssignedValue + 20;
+	assignedValueIsModified++;
+	assignedValueIsModified = assignedValueIsModified + 20;
 
-	return doNotModifyMyAssignedValue;
+	return assignedValueIsNotModified;
 };
 
 describe("Exercise 1", () => {
@@ -47,7 +47,7 @@ describe("Exercise 1", () => {
 📚 Exercise 2 - Assign By Reference - Arrays 📚
 
 In this exercise, we look at one of the two data types that are assigned by
-reference in javascript.
+reference in JavaScript.
 
 🛠️ Similar to the exercise above, correct the test's expected value to match
 	 that which is output by the function.
@@ -59,16 +59,15 @@ reference in javascript.
 💡 Array.prototype.push docs https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
 `;
 const arraysAreAssignedByReference = () => {
-	var doNotModifyMe = ["Are", "Red", "Violets", "Are"];
-	var pleaseDoModifyMe = doNotModifyMe;
+	var assignedValueIsNotExplictlyModified = ["Are", "Red", "Violets", "Are"];
+	var assignedValueIsModified = assignedValueIsNotExplictlyModified;
 
 	// Mutation functions change the array value of doNotModifyMe without
 	// explicitly using the doNotModifyMe variable.
-	pleaseDoModifyMe.splice(0, 0, "Roses");
-	pleaseDoModifyMe.push("Blue");
+	assignedValueIsModified.splice(0, 0, "Roses");
+	assignedValueIsModified.push("Blue");
 
-	// Return doNotModifyMe.
-	return doNotModifyMe;
+	return assignedValueIsNotExplictlyModified;
 };
 
 describe("Exercise 2", () => {
@@ -96,7 +95,8 @@ which are assigned by value.
 	 value in the test
 🛠️ Do NOT explicitly use the doNotModifyMe variable to do so.
 
-💡 Unlike the above exercises, do NOT change the test, modify the function.
+💡 Unlike the above exercises, modify the function for this exercise
+💡 Unlike the above exercises, do NOT change the test.
 
 🚨 Mutating objects like this can be confusing to debug and understand.
 🚨 Engineers should generally endeavor to avoid introducing side effects into
@@ -104,15 +104,15 @@ which are assigned by value.
 `;
 
 export const objectsAreAssignedByReference = () => {
-	var doNotModifyMe = { foo: "originalValue" };
-	var pleaseDoModifyMe = doNotModifyMe;
+	var doNotExplicitlyModifyMe = { foo: "originalValue" };
+	var pleaseDoModifyMe = doNotExplicitlyModifyMe;
 	// Change the object value of doNotModifyMe without using the doNotModifyMe
 	// variable.
 
 	pleaseDoModifyMe.foo = "newValue";
 
 	// Add code above this comment, do not modify the return
-	return doNotModifyMe;
+	return doNotExplicitlyModifyMe;
 };
 
 describe("Exercise 3", () => {

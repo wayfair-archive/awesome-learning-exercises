@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions, import/first */
 `
 ⬇️
 
@@ -59,15 +60,15 @@ reference in JavaScript.
 💡 Array.prototype.push docs https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
 `;
 const arraysAreAssignedByReference = () => {
-	var assignedValueIsNotExplictlyModified = ["Are", "Red", "Violets", "Are"];
-	var assignedValueIsModified = assignedValueIsNotExplictlyModified;
+	var assignedValueIsNotExplicitlyModified = ["Are", "Red", "Violets", "Are"];
+	var assignedValueIsModified = assignedValueIsNotExplicitlyModified;
 
-	// Mutation functions change the array value of doNotModifyMe without
-	// explicitly using the doNotModifyMe variable.
+	// Mutation functions change the array value of assignedValueIsNotExplicitlyModified
+	// without explicitly using the assignedValueIsNotExplicitlyModified variable.
 	assignedValueIsModified.splice(0, 0, "Roses");
 	assignedValueIsModified.push("Blue");
 
-	return assignedValueIsNotExplictlyModified;
+	return assignedValueIsNotExplicitlyModified;
 };
 
 describe("Exercise 2", () => {

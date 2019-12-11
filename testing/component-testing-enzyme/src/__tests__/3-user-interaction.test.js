@@ -55,12 +55,12 @@ test("IconButton's onClick() is called when the button is clicked", () => {
 
 ` 🚨Exercise Setup 🚨
 
-In the following exercises , you'll write tests
+In the following exercises, you'll write tests
 for the NameDialog component. This component renders
 a text input and with a submit button (implemented
 using IconButton) that allows users to submit their name.
 
-Checkout the implementation, and when you're ready tackle
+Checkout the implementation, and when you're ready, tackle
 the exercises below.
 `;
 

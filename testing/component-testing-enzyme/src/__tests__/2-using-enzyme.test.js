@@ -122,9 +122,9 @@ we only need to test what's unique about this particular component
 🛠️ 2) Contains two Icon Buttons
 🛠️ 3) Each button renders the text passed to it
 
-You will need some new tricks for this -
-if you just assert on the text of the entire Dialog component,
-as it will be a jumbled mess.
+You will need some new tricks for this - if you just
+assert on the text of the entire Dialog component,
+it will be a jumbled mess.
 
 💡 You will need to "find()" each individual element
 💡 in the SalesDialog to validate them on their own.

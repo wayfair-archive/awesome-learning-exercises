@@ -22,7 +22,7 @@ function requestSalePrice(sku) {
         throw new Error("Your product is not on sale");
       }
     })
-    .catch();
+    .catch(err => {return err});
 }
 
 `📚 Exercise Three - Handle individual errors in a parallel request 📚`;

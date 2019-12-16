@@ -14,7 +14,7 @@ function requestSalePrice(sku) {
   return fetchProduct(sku)
     .then(response => {
       if (!response) {
-        throw new Error("Your response did not include a product");
+        throw new Error("Your response didn't include a product");
       }
       if (response.salePrice) {
         return response.salePrice;

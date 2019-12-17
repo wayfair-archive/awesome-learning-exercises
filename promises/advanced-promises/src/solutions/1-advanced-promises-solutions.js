@@ -14,7 +14,7 @@ function requestSalePrice(sku) {
   return fetchProduct(sku)
     .then(response => {
       if (!response) {
-        throw new Error("Your response did not include a product");
+        throw new Error("Your response didn't include a product");
       }
       if (response.salePrice) {
         return response.salePrice;
@@ -22,7 +22,7 @@ function requestSalePrice(sku) {
         throw new Error("Your product is not on sale");
       }
     })
-    .catch();
+    .catch(err => {return err});
 }
 
 `📚 Exercise Three - Handle individual errors in a parallel request 📚`;

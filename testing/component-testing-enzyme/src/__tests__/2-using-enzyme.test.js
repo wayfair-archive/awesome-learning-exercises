@@ -1,7 +1,7 @@
-/*eslint-disable no-unused-expressions */
-import React from "react";
-import { shallow, mount } from "enzyme";
-import setup from "../../test/setup";
+/* eslint-disable no-unused-expressions */
+import React from 'react';
+import { shallow, mount } from 'enzyme';
+import '../../test/setup';
 
 `
 ⬇️
@@ -19,16 +19,15 @@ We suggest you keep the Enzyme docs open throughout this.
 ⬆️
 `;
 
-
 `📚 Exercise one - Testing the Icon component with Enzyme 📚
 
-In our first attempt, we tested that Icon renders an <img> and 
+In our first attempt, we tested that Icon renders an <img> and
 that the <img> is given the correct props.
 
 Let's recreate that test using Enzyme's shallow wrapper.
 
 🛠️ Write a test that checks two things:
-🛠️ 1) Icon props contain a properly formatted src based 
+🛠️ 1) Icon props contain a properly formatted src based
 🛠️    on the iconType and the correct altText.
 🛠️ 2) Icon type is <img>
 
@@ -44,11 +43,10 @@ const Icon = ({ iconType, altText }) => (
   />
 );
 
-test("Icon has the right props and type", () => {
+test('Icon has the right props and type', () => {
   const wrapper = shallow(<Icon iconType="trash" altText="Delete" />);
   // Your code here ...
 });
-
 
 `📚 Exercise two - Testing the IconButton component with Enzyme 📚
 
@@ -59,8 +57,8 @@ We can do more with Enzyme and its "mount" api
 🛠️ Write a test that checks three things:
 🛠️ 1) The IconButton should render an Icon component
 🛠️ 2) The Icon component is receiving the altText and iconType props
-🛠️ 3) Renders the text you pass it as a child (<IconButton>Click</IconButton>) should
-🛠️ have text of Click.
+🛠️ 3) Renders the text you pass it as a child (<IconButton>Click</IconButton> should
+🛠️ have text of Click.)
 
 🚨 In order to do this, head over to the enzyme docs
 🚨 (https://airbnb.io/enzyme/docs/api/) and familiarize yourself
@@ -78,10 +76,9 @@ const IconButton = ({ iconType, altText, children }) => (
   </button>
 );
 
-test("IconButton renders an Icon and button text", () => {
+test('IconButton renders an Icon and button text', () => {
   // Your code here ...
 });
-
 
 `📚 Exercise 3 - Testing multiple states 📚
 
@@ -98,12 +95,11 @@ children only when isOpen is true.
 🚨 with the setProps() method.
 `;
 
-
 const Dialog = ({ isOpen, children }) => {
   return isOpen ? <div>{children}</div> : null;
 };
 
-test("Dialog renders button text when open and null when not open", () => {
+test('Dialog renders button text when open and null when not open', () => {
   const wrapper = mount(
     <Dialog isOpen={false}>
       <IconButton iconType="trash" altText="Delete">
@@ -116,9 +112,9 @@ test("Dialog renders button text when open and null when not open", () => {
 
 `📚 Exercise 4 - Testing more complex UI 📚
 
-Take a look at the SalesDialog below. Since we have 
-already tested the open and close functionality of the 
-Dialog, the IconButton, and the Icon individually, 
+Take a look at the SalesDialog below. Since we have
+already tested the open and close functionality of the
+Dialog, the IconButton, and the Icon individually,
 we only need to test what's unique about this particular component
 
 🛠️ Write a test for 3 things
@@ -126,20 +122,19 @@ we only need to test what's unique about this particular component
 🛠️ 2) Contains two Icon Buttons
 🛠️ 3) Each button renders the text passed to it
 
-You will need some new tricks for this - 
-you can just assert on the text of the entire Dialog component, 
-as it will be a jumbled mess.
+You will need some new tricks for this - if you just
+assert on the text of the entire Dialog component,
+it will be a jumbled mess.
 
-💡 You will need to "find()" each individual element 
-💡 in the SalesDialog to validate them on their own. 
+💡 You will need to "find()" each individual element
+💡 in the SalesDialog to validate them on their own.
 💡 Feel free to add "data-enzyme-id" properies to the
-💡 component, or find elements in some other way. 
+💡 component, or find elements in some other way.
 💡 Here are the docs for reference.
 💡 (https://airbnb.io/enzyme/docs/api/selector.html)
 
 🚨 Please check the answer key when you have finished.
 `;
-
 
 const SalesDialog = ({ isOpen }) => {
   return (
@@ -167,14 +162,13 @@ const SalesDialog = ({ isOpen }) => {
   );
 };
 
-test("SalesDialog renders sales text and a button with the right href", () => {
+test('SalesDialog renders sales text and a button with the right href', () => {
   const wrapper = mount(<SalesDialog isOpen />);
   // Your code here ...
 });
 
-
 `
-✅✅✅ 
+✅✅✅
 
 OUTTRO - Not an exercise
 
@@ -186,5 +180,5 @@ tests with Jest tools like "toMatchInlineSnapshot() and toMatchSnapshot()".
 Make sure to check out the Jest docs as well as the enzyme docs to see
 all the methods you can apply to your tests.
 
-✅✅✅ 
+✅✅✅
 `;

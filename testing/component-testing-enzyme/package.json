@@ -1,5 +1,5 @@
 {
-  "name": "testing-components-and-enzyme",
+  "name": "testing-components-enzyme",
   "version": "1.0.0",
   "description": "Simple template for JS exercises. Please fork when creating a new exercise!",
   "main": "/src/__tests__/1-components-elements.test.js",

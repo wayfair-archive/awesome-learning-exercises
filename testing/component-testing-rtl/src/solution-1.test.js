@@ -21,7 +21,7 @@ test.skip("icon component returns an element with the correct type and props", (
   expect(element.props).toEqual({
     alt: "Check Mark",
     src: "https://cdn.wayfair.com/static/icons/check.svg"
-  }); // toEqual here beacause its an object
+  }); // toEqual here beacause it's an object
 });
 
 // Exercise 3

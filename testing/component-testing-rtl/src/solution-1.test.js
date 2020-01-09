@@ -26,7 +26,7 @@ const IconButton = ({ iconType, altText, children }) => (
 );
 
 test.skip('IconButton renders an Icon and button text', () => {
-  const { queryByAltText, queryByText } = render(
+  const { queryByAltText, queryByRole } = render(
     <IconButton iconType="trash" altText="Delete">
       Click Me
     </IconButton>

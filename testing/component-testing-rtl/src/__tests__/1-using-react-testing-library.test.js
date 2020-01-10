@@ -112,10 +112,10 @@ already tested the open and close functionality of the
 Dialog, the IconButton, and the Icon individually,
 we only need to test what's unique about this particular component
 
-🛠️ Write a test for 2 things
-🛠️ 1) SalesDialog renders the copy within the P tag.
+🛠️ Write tests for the following:
+🛠️ 1) SalesDialog renders the copy within the <p> tag.
 🛠️ 2) Contains two IconButtons with the text passed into them
-🛠️ ...and a second test to make sure isOpen is passed to the Dialog
+🛠️ 3) isOpen is passed to the Dialog
 
 You will need some new tricks for this -
 if you just assert on the text of the entire Dialog component,

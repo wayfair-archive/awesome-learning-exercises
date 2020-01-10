@@ -41,9 +41,10 @@ const IconButton = ({ iconType, altText, children, onClick, isDisabled }) => (
 🛠️ Write a test that the "onClick" prop of IconButton
 🛠️ is called when the button is pressed.
 
-🚨 You should use a jest.fn() mock and RTL's render() and fireEvent.click()
-🚨 methods - (https://testing-library.com/docs/dom-testing-library/api-events)
-🚨 The FAQ shows how you can use jest.fn() to mock a function:
+🚨 You should use a jest.fn() mock and React Testing Library's render()
+🚨 and fireEvent.click() methods (imported above) -
+🚨 (https://testing-library.com/docs/dom-testing-library/api-events)
+🚨 The FAQ shows how you can use jest.fn() to mock a function -
 🚨 (https://testing-library.com/docs/react-testing-library/faq)
 `;
 

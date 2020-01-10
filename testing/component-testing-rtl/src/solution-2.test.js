@@ -19,14 +19,14 @@ const IconButton = ({ iconType, altText, children, onClick, isDisabled }) => (
 
 // Exercise 1
 test.skip("IconButton's onClick() is called when the button is clicked", () => {
-  const mock = jest.fn();
+  const mockOnClick = jest.fn();
 
   const { queryByText } = render(
-    <IconButton iconType="check" onClick={mock}>Click Me</IconButton>
+    <IconButton iconType="check" onClick={mockOnClick}>Click Me</IconButton>
   );
-  expect(mock).toHaveBeenCalledTimes(0);
+  expect(mockOnClick).toHaveBeenCalledTimes(0);
   fireEvent.click(queryByText(/click me/i));
-  expect(mock).toHaveBeenCalledTimes(1);
+  expect(mockOnClick).toHaveBeenCalledTimes(1);
 });
 
 class NameDialog extends React.Component {
@@ -65,10 +65,10 @@ NameDialog.propTypes = {
 
 // Exercise 2a
 test.skip('NameDialog displays text input and onSave() is called when the button is clicked', () => {
-  const mock = jest.fn();
+  const mockOnSave = jest.fn();
 
   const { queryByText, queryByPlaceholderText, queryByDisplayValue } = render(
-    <NameDialog onSave={mock} />
+    <NameDialog onSave={mockOnSave} />
   );
 
   expect(queryByDisplayValue('Taylor')).not.toBeInTheDocument();
@@ -77,10 +77,10 @@ test.skip('NameDialog displays text input and onSave() is called when the button
   });
   expect(queryByDisplayValue('Taylor')).toBeInTheDocument();
 
-  expect(mock).toHaveBeenCalledTimes(0);
+  expect(mockOnSave).toHaveBeenCalledTimes(0);
   fireEvent.submit(queryByText(/save/i));
-  expect(mock).toHaveBeenCalledTimes(1);
-  expect(mock).toHaveBeenCalledWith('Taylor');
+  expect(mockOnSave).toHaveBeenCalledTimes(1);
+  expect(mockOnSave).toHaveBeenCalledWith('Taylor');
 });
 
 // Exercise 2b

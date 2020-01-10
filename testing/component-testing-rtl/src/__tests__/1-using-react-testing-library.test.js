@@ -24,8 +24,8 @@ checks that a component's output is correct when given certain inputs (props).
 In this case, we'll check that it renders an image with the right svg.
 
 🛠️ Write a test that checks two things:
-🛠️ 2) Icon contains an img with the correct altText
-🛠️ 1) img props contain a src based on the iconType.
+🛠️ 1) Icon contains an img with the correct altText
+🛠️ 2) img props contain a src based on the iconType.
 
 🚨 In order to do this, you will need head over to the React Testing Library docs
 🚨 and familiarize yourself with "queryByAltText"

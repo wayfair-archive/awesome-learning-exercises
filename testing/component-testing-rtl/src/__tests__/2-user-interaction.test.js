@@ -30,9 +30,9 @@ const Icon = ({ iconType, altText }) => (
 💡 when the button is pressed) and an "isDisabled" prop.
 `;
 
-const IconButton = ({ iconType, altText, buttonText, onClick, isDisabled }) => (
+const IconButton = ({ iconType, altText, children, onClick, isDisabled }) => (
   <button onClick={onClick} disabled={isDisabled}>
-    <Icon iconType={iconType} altText={altText} /> {buttonText}
+    <Icon iconType={iconType} altText={altText} />{children}
   </button>
 );
 
@@ -41,17 +41,15 @@ const IconButton = ({ iconType, altText, buttonText, onClick, isDisabled }) => (
 🛠️ Write a test that the "onClick" prop of IconButton
 🛠️ is called when the button is pressed.
 
-🚨 You should use Jest mocks and RTL's render() and fireEvent.click()
+🚨 You should use a jest.fn() mock and RTL's render() and fireEvent.click()
 🚨 methods - (https://testing-library.com/docs/dom-testing-library/api-events)
+🚨 The FAQ shows how you can use jest.fn() to mock a function:
+🚨 (https://testing-library.com/docs/react-testing-library/faq)
 `;
 
 test("IconButton's onClick() is called when the button is clicked", () => {
-  const mock = jest.fn();
-
-  const { queryByText } = render(
-    <IconButton buttonText="Click Me" iconType="check" onClick={mock} />
-  );
-  // Your code here
+  // Your code here, remove the following expect before starting.
+  expect(1).toBe(2);
 });
 
 ` 🚨Exercise Setup 🚨
@@ -87,10 +85,9 @@ class NameDialog extends React.Component {
           onChange={this.handleNameChange}
         />
         <IconButton
-          buttonText="Save"
           iconType="submit"
           isDisabled={!this.state.name}
-        />
+        >Save</IconButton>
       </form>
     );
   }
@@ -106,18 +103,14 @@ NameDialog.propTypes = {
 Test user interaction by doing the following:
 
 🛠️ 1) Simulate a change to the text input and verify that
-🛠️    the component re-renders and displays the new value
+🛠️    the component displays the new value
 🛠️ 2) Simulate a click on the submit button and verify
 🛠️    that onSave() is called
 `;
 
 test("NameDialog displays text input and it's onSave() is called when the button is clicked", () => {
-  const mock = jest.fn();
-
-  const { queryByText, queryByPlaceholderText } = render(
-    <NameDialog onSave={mock} />
-  );
-  // Your code here
+  // Your code here, remove the following expect before starting.
+  expect(1).toBe(2);
 });
 
 `📚 Exercise 2b - User Interaction Part 2  📚
@@ -129,8 +122,6 @@ test("NameDialog displays text input and it's onSave() is called when the button
 `;
 
 test("NameDialog's button is disabled until a user inputs text", () => {
-  const { queryByText, queryByPlaceholderText } = render(
-    <NameDialog onSave={() => {}} />
-  );
-  // Your code here
+  // Your code here, remove the following expect before starting.
+  expect(1).toBe(2);
 });

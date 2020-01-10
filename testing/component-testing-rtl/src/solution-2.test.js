@@ -11,9 +11,9 @@ const Icon = ({ iconType, altText }) => (
   />
 );
 
-const IconButton = ({ iconType, altText, buttonText, onClick, isDisabled }) => (
+const IconButton = ({ iconType, altText, children, onClick, isDisabled }) => (
   <button onClick={onClick} disabled={isDisabled}>
-    <Icon iconType={iconType} altText={altText} /> {buttonText}
+    <Icon iconType={iconType} altText={altText} /> {children}
   </button>
 );
 
@@ -22,7 +22,7 @@ test.skip("IconButton's onClick() is called when the button is clicked", () => {
   const mock = jest.fn();
 
   const { queryByText } = render(
-    <IconButton buttonText="Click Me" iconType="check" onClick={mock} />
+    <IconButton iconType="check" onClick={mock}>Click Me</IconButton>
   );
   expect(mock).toHaveBeenCalledTimes(0);
   fireEvent.click(queryByText(/click me/i));
@@ -51,10 +51,9 @@ class NameDialog extends React.Component {
           onChange={this.handleNameChange}
         />
         <IconButton
-          buttonText="Save"
           iconType="submit"
           isDisabled={!this.state.name}
-        />
+        >Save</IconButton>
       </form>
     );
   }
@@ -73,13 +72,13 @@ test.skip('NameDialog displays text input and onSave() is called when the button
   );
 
   expect(queryByDisplayValue('Taylor')).not.toBeInTheDocument();
-  fireEvent.change(queryByPlaceholderText('Enter your name'), {
+  fireEvent.change(queryByPlaceholderText(/enter your name/i), {
     target: { value: 'Taylor' },
   });
   expect(queryByDisplayValue('Taylor')).toBeInTheDocument();
 
   expect(mock).toHaveBeenCalledTimes(0);
-  fireEvent.submit(queryByText('Save'));
+  fireEvent.submit(queryByText(/save/i));
   expect(mock).toHaveBeenCalledTimes(1);
   expect(mock).toHaveBeenCalledWith('Taylor');
 });
@@ -90,8 +89,8 @@ test.skip("NameDialog's button is disabled until a user inputs text", () => {
     <NameDialog onSave={() => {}} />
   );
 
-  const button = queryByText('Save');
-  const input = queryByPlaceholderText('Enter your name');
+  const button = queryByText(/save/i);
+  const input = queryByPlaceholderText(/enter your name/i);
 
   expect(button.disabled).toBe(true);
   fireEvent.change(input, { target: { value: 'Kris' } });

@@ -7,30 +7,25 @@ import '../../test/setup';
 `
 ⬇️
 
-You now know it can be tough to test nontrivial React components based
-on the elements they return.
-
 Your goal throughout these exercises is to leverage the power of React
-Testing Library to re-write our old tests into a series of smaller, more
-readable, and more robust new tests.
+Testing Library to write tests for React components.
 
 Along the way, you will learn more about the React Testing Library API.
 We suggest you keep the React Testing Library docs open throughout this.
+https://testing-library.com/docs/react-testing-library/api
 
 ⬆️
 `;
 
-`📚 Exercise one - Testing the Icon component with React Testing Library 📚
+`📚 Exercise one - Testing an Icon component with React Testing Library 📚
 
-In our first attempt, we tested that Icon renders an <img> and
-that the <img> is given the correct props.
-
-Let's recreate that test using React Testing Library.
+Let's start with a simple test for an Icon. The most basic component test
+checks that a component's output is correct when given certain inputs (props).
+In this case, we'll check that it renders an image with the right svg.
 
 🛠️ Write a test that checks two things:
-🛠️ 1) Icon props contain a properly formatted src based
-🛠️    on the iconType and the correct altText.
-🛠️ 2) Icon type is <img>
+🛠️ 1) Icon contains an img with the correct altText
+🛠️ 2) img props contain a src based on the iconType.
 
 🚨 In order to do this, you will need head over to the React Testing Library docs
 🚨 and familiarize yourself with "queryByAltText"
@@ -38,33 +33,30 @@ Let's recreate that test using React Testing Library.
 `;
 
 const Icon = ({ iconType, altText }) => (
-  <img
-    src={`https://cdn.wayfair.com/static/icons/${iconType}.svg`}
-    alt={altText}
-  />
+  <img src={`https://cdn.wayfair.com/static/icons/${iconType}.svg`} alt={altText} />
 );
 
 test('Icon has the right props and type', () => {
   const { queryByAltText } = render(<Icon iconType="trash" altText="Delete" />);
-  // Your code here ...
+  // Your code here, remove the following expect before starting.
+  expect(1).toBe(2);
 });
 
 `📚 Exercise two - Testing the IconButton component with React Testing Library 📚
 
-In our last attempt, we tested IconButton by using ReactDOM to render
-into a <div>, making assertions on the innerHTML property of the <div>.
-We can do more with React Testing Library and its "render" api
+Now we want to add our Icon component to a button, and we want to make sure we aren't
+breaking any behavior.
 
 🛠️ Write a test that checks three things:
-🛠️ 1) The IconButton should render an img element
-🛠️ 2) The img element is receiving the altText and iconType props
+🛠️ 1) The IconButton should render an img element with the right altText
+🛠️ 2) The img element is receiving the correct svg based on the iconType prop
 🛠️ 3) Renders the text you pass it as a child (<IconButton>Click</IconButton> should
 🛠️ have text of Click.)
 
-🚨 In order to do this, head over to the React Testing Library docs
-🚨 and familiarize yourself with a few new things: "queryByText" and "toBeInTheDocument"
-🚨 (https://testing-library.com/docs/guide-disappearance)
-🚨 (https://testing-library.com/docs/dom-testing-library/api-queries#bytext)
+🚨 In order to do this, head over to the React Testing Library docs and familiarize
+🚨 yourself with a few things: "queryByRole" and finding an element's text content
+🚨 (https://testing-library.com/docs/react-testing-library/example-intro)
+🚨 (https://testing-library.com/docs/dom-testing-library/api-queries#byrole)
 `;
 
 const IconButton = ({ iconType, altText, children }) => (
@@ -75,18 +67,23 @@ const IconButton = ({ iconType, altText, children }) => (
 );
 
 test('IconButton renders an Icon and button text', () => {
-  // Your code here ...
+  // Your code here, remove the following expect before starting.
+  expect(1).toBe(2);
 });
 
 `📚 Exercise 3 - Testing multiple states 📚
+
+Branching logic is an important part of component testing. When we want to
+build a component that has internal logic, We can check that a component
+gives the right output when given certain inputs.
 
 Your team is introducing a new component - Dialog.
 Dialog takes children and an "isOpen" prop, and renders
 children only when isOpen is true.
 
-🛠️ Write a test that checks the following
-🛠️ 1) When isOpen is true, Dialog renders IconButton.
-🛠️ 2) When isOpen is false, Dialog doesn't render IconButton
+🛠️ Write two tests that check the following
+🛠️ 1) When isOpen is true, Dialog renders its children.
+🛠️ 2) When isOpen is false, Dialog doesn't render its children.
 
 🚨 Head over to the React Testing Library docs
 🚨 (https://testing-library.com/docs/react-testing-library/api)
@@ -98,8 +95,14 @@ const Dialog = ({ isOpen, children }) => {
   return isOpen ? <div>{children}</div> : null;
 };
 
-test('Dialog renders button text when open and nothing when not open', () => {
-  // Your code here...
+test('Dialog renders children when open', () => {
+  // Your code here, remove the following expect before starting.
+  expect(1).toBe(2);
+});
+
+test('Dialog does NOT render children when not open', () => {
+  // Your code here, remove the following expect before starting.
+  expect(1).toBe(2);
 });
 
 `📚 Exercise 4 - Testing more complex UI 📚
@@ -109,14 +112,14 @@ already tested the open and close functionality of the
 Dialog, the IconButton, and the Icon individually,
 we only need to test what's unique about this particular component
 
-🛠️ Write a test for 3 things
-🛠️ 1) SalesDialog renders the copy within the P tag.
-🛠️ 2) Contains two Icon Buttons
-🛠️ 3) Each button renders the text passed to it
+🛠️ Write tests for the following:
+🛠️ 1) SalesDialog renders the copy within the <p> tag.
+🛠️ 2) Contains two IconButtons with the text passed into them
+🛠️ 3) isOpen is passed to the Dialog
 
 You will need some new tricks for this -
 if you just assert on the text of the entire Dialog component,
-as it will be a jumbled mess.
+it will be a jumbled mess.
 
 💡 You will need to find each individual element
 💡 in the SalesDialog to validate them on their own.
@@ -135,16 +138,10 @@ const SalesDialog = ({ isOpen }) => {
         <p className="Dialog-salesText" data-testid="ComplexDialogText">
           If you buy now, get 25% off on our finest widgets!
         </p>
-        <IconButton
-          iconType="check"
-          altText="Check Mark"
-        >
+        <IconButton iconType="check" altText="Check Mark">
           Buy Now
         </IconButton>
-        <IconButton
-          iconType="x"
-          altText="Dismiss X"
-        >
+        <IconButton iconType="x" altText="Dismiss X">
           Dismiss
         </IconButton>
       </div>
@@ -152,23 +149,24 @@ const SalesDialog = ({ isOpen }) => {
   );
 };
 
-test('SalesDialog renders sales text and button text', () => {
-  const { queryByTestId, queryByText, queryByAltText } = render(
-    <SalesDialog isOpen />
-  );
-  // Your code here ...
+test('SalesDialog renders sales text and button text when isOpen is true', () => {
+  // Your code here, remove the following expect before starting.
+  expect(1).toBe(2);
+});
+
+test('SalesDialog renders nothing when isOpen is false', () => {
+  // Your code here, remove the following expect before starting.
+  expect(1).toBe(2);
 });
 
 `
 ✅✅✅
 
-OUTTRO - Not an exercise
+OUTRO - Not an exercise
 
 By now you should feel comfortable sorting through the React Testing Library docs
 and testing the output of components.
 
-As you get more comfortable, we suggest looking into replace the above text-matching
-tests with Jest tools like "toMatchInlineSnapshot() and toMatchSnapshot()".
 Make sure to check out the Jest docs as well as the React Testing Library docs
 to see all the methods you can apply to your tests.
 

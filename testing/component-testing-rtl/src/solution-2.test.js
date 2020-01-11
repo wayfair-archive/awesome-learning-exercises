@@ -1,9 +1,9 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import PropTypes from 'prop-types';
+import { render, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import '../test/setup';
 
-// Exercise 1
 const Icon = ({ iconType, altText }) => (
   <img
     src={`https://cdn.wayfair.com/static/icons/${iconType}.svg`}
@@ -11,98 +11,88 @@ const Icon = ({ iconType, altText }) => (
   />
 );
 
-test.skip('Icon has the right props and type', () => {
-  const { queryByAltText } = render(<Icon iconType="trash" altText="Delete" />);
-  const image = queryByAltText(/delete/i);
-  expect(image.src).toMatch('trash.svg');
-});
-
-// Exercise 2
-const IconButton = ({ iconType, altText, children }) => (
-  <button>
-    <Icon iconType={iconType} altText={altText} />
-    {children}
+const IconButton = ({ iconType, altText, children, onClick, isDisabled }) => (
+  <button onClick={onClick} disabled={isDisabled}>
+    <Icon iconType={iconType} altText={altText} /> {children}
   </button>
 );
 
-test.skip('IconButton renders an Icon and button text', () => {
-  const { queryByAltText, queryByText } = render(
-    <IconButton iconType="trash" altText="Delete">
-      Click Me
-    </IconButton>
+// Exercise 1
+test.skip("IconButton's onClick() is called when the button is clicked", () => {
+  const mockOnClick = jest.fn();
+
+  const { queryByText } = render(
+    <IconButton iconType="check" onClick={mockOnClick}>Click Me</IconButton>
   );
-  const image = queryByAltText(/delete/i);
-  const button = queryByRole('button');
-  expect(image.src).toMatch('trash.svg');
-  expect(button.textContent).toBe('Click Me');
+  expect(mockOnClick).toHaveBeenCalledTimes(0);
+  fireEvent.click(queryByText(/click me/i));
+  expect(mockOnClick).toHaveBeenCalledTimes(1);
 });
 
-// Exercise 3
-const Dialog = ({ isOpen, children }) => {
-  return isOpen ? <div>{children}</div> : null;
+class NameDialog extends React.Component {
+  state = { name: '' };
+
+  handleNameChange = e => {
+    this.setState({ name: e.target.value });
+  };
+
+  handleSaveClick = () => {
+    this.props.onSave(this.state.name);
+  };
+
+  render() {
+    return (
+      <form onSubmit={this.handleSaveClick}>
+        <p>What is your name?</p>
+        <input
+          type="text"
+          placeholder="Enter your name"
+          value={this.state.name}
+          onChange={this.handleNameChange}
+        />
+        <IconButton
+          iconType="submit"
+          isDisabled={!this.state.name}
+        >Save</IconButton>
+      </form>
+    );
+  }
+}
+
+NameDialog.propTypes = {
+  onSave: PropTypes.func.isRequired,
 };
 
-// This is one way to test the Dialog component without repeating this code
-// code in the test. Note that you have to be careful when you create helpers
-// in tests to avoid repetition, because you can introduce bugs into your
-// test code. Make sure you can trust your tests!
-const TestComponent = ({ isOpen }) => {
-  return (
-    <Dialog isOpen={isOpen}>
-      <IconButton iconType="trash" altText="Delete">
-        Click Me
-      </IconButton>
-    </Dialog>
-  );
-};
+// Exercise 2a
+test.skip('NameDialog displays text input and onSave() is called when the button is clicked', () => {
+  const mockOnSave = jest.fn();
 
-test.skip('Dialog renders button text when open and null when not open', () => {
-  const { queryByText, queryByAltText, rerender } = render(
-    <TestComponent isOpen />
+  const { queryByText, queryByPlaceholderText, queryByDisplayValue } = render(
+    <NameDialog onSave={mockOnSave} />
   );
-  const icon = queryByAltText(/delete/i);
-  const button = queryByText(/click me/i);
-  expect(icon).toBeInTheDocument();
-  expect(button).toBeInTheDocument();
-  rerender(<TestComponent isOpen={false} />);
-  expect(icon).not.toBeInTheDocument();
-  expect(button).not.toBeInTheDocument();
+
+  expect(queryByDisplayValue('Taylor')).not.toBeInTheDocument();
+  fireEvent.change(queryByPlaceholderText(/enter your name/i), {
+    target: { value: 'Taylor' },
+  });
+  expect(queryByDisplayValue('Taylor')).toBeInTheDocument();
+
+  expect(mockOnSave).toHaveBeenCalledTimes(0);
+  fireEvent.submit(queryByText(/save/i));
+  expect(mockOnSave).toHaveBeenCalledTimes(1);
+  expect(mockOnSave).toHaveBeenCalledWith('Taylor');
 });
 
-// Exercise 4
-const SalesDialog = ({ isOpen }) => {
-  return (
-    <Dialog isOpen={isOpen}>
-      <div className="Dialog-contentWrapper">
-        <p className="Dialog-salesText" data-testid="ComplexDialogText">
-          If you buy now, get 25% off on our finest widgets!
-        </p>
-        <IconButton
-          iconType="check"
-          altText="Check Mark"
-        >
-          Buy Now
-        </IconButton>
-        <IconButton
-          iconType="x"
-          altText="Dismiss X"
-        >
-          Dismiss
-        </IconButton>
-      </div>
-    </Dialog>
+// Exercise 2b
+test.skip("NameDialog's button is disabled until a user inputs text", () => {
+  const { queryByText, queryByPlaceholderText } = render(
+    <NameDialog onSave={() => {}} />
   );
-};
 
-test.skip('SalesDialog renders sales text and button text', () => {
-  const { queryByTestId, queryByText, queryByAltText } = render(
-    <SalesDialog isOpen />
-  );
-  expect(queryByTestId('ComplexDialogText').textContent).toBe(
-    'If you buy now, get 25% off on our finest widgets!'
-  );
-  expect(queryByText('Buy Now')).toBeInTheDocument();
-  expect(queryByText('Dismiss')).toBeInTheDocument();
-  expect(queryByAltText('Check Mark')).toBeInTheDocument();
-  expect(queryByAltText('Dismiss X')).toBeInTheDocument();
+  const button = queryByText(/save/i);
+  const input = queryByPlaceholderText(/enter your name/i);
+
+  expect(button.disabled).toBe(true);
+  fireEvent.change(input, { target: { value: 'Kris' } });
+  expect(button.disabled).toBe(false);
 });

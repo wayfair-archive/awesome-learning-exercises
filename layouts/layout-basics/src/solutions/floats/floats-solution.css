@@ -1,0 +1,16 @@
+/* 
+  Question 1
+
+*/
+.article {
+  border: 3px solid brown;
+  background: sandybrown;
+}
+.article::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.article-image {
+  float: right;
+}

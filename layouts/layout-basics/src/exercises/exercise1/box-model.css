@@ -1,0 +1,91 @@
+/* 
+  📚 Learn CSS - the Box Model 📚
+
+  ✅ Here you're going to test out your knowledge of the box-model,
+  ✅ including how margins, padding, widths, and the display property work together.
+
+  🚨  Remember, you should only be ADDING new lines of code to 
+  🚨  solve each exercise, not changing any of the pre-set widths and heights etc.
+*/
+
+/* 
+  👉 Question 1
+
+  🛠️ Add the proper CSS rules to make the green child element fill the entire
+  🛠️ height and width of the orange parent container (the white area only)
+
+  💡 Consult the JSX to see what HTML tags are being used. Not all elements
+  💡 have with the same default display value
+*/
+.boxModelQ1-container {
+  border: 15px solid darkorange;
+  height: 150px;
+  width: 150px;
+}
+
+.boxModelQ1-child {
+  padding: 10px;
+  background: limegreen;
+}
+
+/* 
+  👉 Question 2
+
+  🛠️ Make the child image element fit inside of the dark blue parent 
+  🛠️ container without overflowing.
+
+  💡 Empty spaces between elements the HTML or JSX are
+  💡 treated as inline text, which can render as white space 
+*/
+.boxModelQ2-container {
+  border: 15px solid midnightblue;
+  width: 300px;
+}
+
+.boxModelQ2-image {
+  padding: 10px;
+  background-color: salmon;
+}
+
+/* 
+  👉 Question 3
+
+  🛠️ Align all three blocks onto one line with equal widths, 
+  🛠️ spanning the full available space of the parent.
+*/
+.boxModelQ3-container {
+  background: lightseagreen;
+  padding: 10px;
+}
+.boxModelQ3-block1 {
+  background: gold;
+}
+.boxModelQ3-block2 {
+  background-color: cyan;
+}
+.boxModelQ3-block3 {
+  background-color: fuchsia;
+}
+.boxModelQ3-block1,
+.boxModelQ3-block2,
+.boxModelQ3-block3 {
+  height: 40px;
+  padding: 10px;
+}
+
+/* 
+  👉 Question 4 - BONUS 🎉
+
+  🛠️ Re-do question 3 add 20px of spacing in between each of the items.
+
+  💡The 'width' property also accepts a value of 'calc()'
+  💡for calculating CSS values of mixed units ex: 'calc(100% + 10px)'
+*/
+
+/*
+  ➡️➡️➡️➡️➡️➡️➡️➡️➡️➡️➡️➡️➡️➡️
+
+  When you've completed all of the questions, proceed to the next section
+
+  ➡️➡️➡️➡️➡️➡️➡️➡️➡️➡️➡️➡️➡️➡️
+*/

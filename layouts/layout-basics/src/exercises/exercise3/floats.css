@@ -1,0 +1,49 @@
+/* 
+  📚 Learn CSS - Floats 📚
+
+  ✅ Here you're going to test out your knowledge of floating content
+  ✅ and clearing it after
+
+  🚨  Remember, you should only be ADDING new lines of code to 
+  🚨  solve each exercise, not changing any of the pre-set widths and heights etc.
+*/
+
+/* 
+  👉 Question 1
+
+  🛠️ Align the menu content so that the icon is on the far right, and the title text is left aligned.
+*/
+.menubar {
+  background: steelblue;
+  height: 50px;
+  padding: 10px;
+  text-align: center;
+}
+.menubar-title {
+  color: white;
+  margin: 0;
+  padding-top: 5px;
+}
+.menubar-icon {
+  background: lightsteelblue;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* 
+  👉 Question 2
+
+  🛠️ Fix the article block so that the image is contained within
+  🛠️ the brown body and borders.
+
+  💡 While you can simply shrink the image, there are other ways of expanding
+  💡 the area that the article covers
+*/
+.article {
+  border: 3px solid brown;
+  background: sandybrown;
+  width: 600px;
+}
+.article-image {
+  float: right;
+}

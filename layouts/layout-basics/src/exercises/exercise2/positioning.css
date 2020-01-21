@@ -46,8 +46,7 @@
   🛠️  Make the green bar stick to the top of the box when you scroll past it
 
   💡 Note: position: sticky does not have the best support across browsers
-  💡 Older browsers often need a polyfill that leverages position: fixed
-  💡 For now, try to use a modern browser like Chrome or Firefox
+  💡 For this exercise, be sure use a modern browser like Chrome or Firefox
   
 */
 

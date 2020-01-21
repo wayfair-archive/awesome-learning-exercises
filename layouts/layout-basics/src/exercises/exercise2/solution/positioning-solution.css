@@ -79,7 +79,7 @@
 
   🛠️ Affix the yellow box to the bottom right side of the window
 
-  ✅ Add position: fixed to green bar
+  ✅ Add position: fixed to yellow box
   ✅ Set bottom and right to 0px
 
 */
@@ -100,7 +100,10 @@
 
   ✅ Add position: sticky to green bar
   ✅ Set top distance to 0px
-  ✅ Set width to 100%
+
+  💡 When developing web pages, you may need to find a polyfill for `position: sticky`
+  💡 for support on older browsers. Usually this relies on applying `position: fixed` 
+  💡 when the user scrolls past a certain point
 */
 
 .wrapper {
@@ -117,5 +120,4 @@
   width: 100%;
   position: sticky;
   top: 0;
-  width: 100%;
 }

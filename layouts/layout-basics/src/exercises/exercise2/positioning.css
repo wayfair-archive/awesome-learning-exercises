@@ -1,5 +1,5 @@
 /* 
-  📚 Learn CSS - the Box Model 📚
+  📚 Learn CSS - Exercise 2: Positioning 📚
 
   ✅ Here you're going to test out your knowledge of the CSS positioning
 
@@ -50,7 +50,7 @@
   
 */
 
-/* No need to mess with these properties */
+/* No need to mess with these `.wrapper` properties */
 .wrapper {
   max-height: 200px;
   max-width: 300px;

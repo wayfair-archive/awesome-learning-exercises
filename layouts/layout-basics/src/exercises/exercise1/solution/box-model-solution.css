@@ -59,7 +59,7 @@
 
   ❗ Solution
 
-  ✅ Make items display: inline block so they sit on the same line
+  ✅ Make items display: inline-block so they sit on the same line
   ✅ Set width to 1/3 of the parent
   ✅ Add box-sizing: border box so padding is computed in width
 

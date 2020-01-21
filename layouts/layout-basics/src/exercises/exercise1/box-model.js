@@ -1,7 +1,7 @@
 import React from "react";
 /* 
-  CSS rules for this component and exercise should be added
-  to the CSS file below
+  💡 CSS rules for this component and exercise should be added
+  💡 to the CSS file below
 */
 import "./box-model.css";
 

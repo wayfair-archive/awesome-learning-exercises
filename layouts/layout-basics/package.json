@@ -1,7 +1,7 @@
 {
-  "name": "new",
+  "name": "css-layouts",
   "version": "1.0.0",
-  "description": "",
+  "description": "CSS Layouts sandbox and exercises",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
@@ -11,9 +11,6 @@
     "react-dom": "16.11.0",
     "react-router-dom": "5.1.2",
     "react-scripts": "3.0.1"
-  },
-  "devDependencies": {
-    "typescript": "3.3.3"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -5,8 +5,8 @@
 
   ❗ Solution
 
-  ✅ Add position: relative to blue rectange
-  ✅ Add position: absolute to red dot
+  ✅ Add position: relative to the blue rectange
+  ✅ Add position: absolute to the red dot
   ✅ Specify exact left/right values
 
 */
@@ -25,61 +25,103 @@
   position: absolute;
   top: 40px;
   left: 80px;
-
+}
   /*
     ❗ Alternate Solution 1
 
-  ✅ Add position: relative to blue rectange
-  ✅ Add position: absolute to red dot
+  ✅ Add position: relative to the blue rectange
+  ✅ Add position: absolute to the red dot
   ✅ Set top/left/right/bottom to 0
   ✅ Add margin: auto
 
   */
   /*
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
+    .blue-rectangle {
+      background-color: cornflowerblue;
+      height: 100px;
+      width: 200px;
+      position: relative;
+    }
 
+    .red-dot {
+      background-color: crimson;
+      border-radius: 20px;
+      height: 20px;
+      width: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
   */
   /*
     ❗ Alternate Solution 2
 
-  ✅ Add position: relative to blue rectange
-  ✅ Add position: absolute to red dot
+  ✅ Add position: relative to the blue rectange
+  ✅ Add position: absolute to the red dot
   ✅ Set top/left to 50%
   ✅ Add negative margin to center dot
 
   */
   /*
-    top: 50%;
-    left: 50%;
-    margin-top: -10px
-    margin-left: -10px
+    .blue-rectangle {
+      background-color: cornflowerblue;
+      height: 100px;
+      width: 200px;
+      position: relative;
+    }
+
+    .red-dot {
+      background-color: crimson;
+      border-radius: 20px;
+      height: 20px;
+      width: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -10px
+      margin-left: -10px
+    }
+    
   */
   /*
     ❗ Alternate Solution 3 (Advanced)
 
-  ✅ Add position: relative to blue rectange
-  ✅ Add position: absolute to red dot
+  ✅ Add position: relative to the blue rectange
+  ✅ Add position: absolute to the red dot
   ✅ Set top/left to 50%
   ✅ Add transform to center dot
 
   */
   /*
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    .blue-rectangle {
+      background-color: cornflowerblue;
+      height: 100px;
+      width: 200px;
+      position: relative;
+    }
+
+    .red-dot {
+      background-color: crimson;
+      border-radius: 20px;
+      height: 20px;
+      width: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   */
-}
+
 
 /* 
   👉 Question 2
 
   🛠️ Affix the yellow box to the bottom right side of the window
 
-  ✅ Add position: fixed to yellow box
+  ✅ Add position: fixed to the yellow box
   ✅ Set bottom and right to 0px
 
 */
@@ -98,7 +140,7 @@
 
   🛠️  Make the green bar stick to the top of the box when you scroll past it
 
-  ✅ Add position: sticky to green bar
+  ✅ Add position: sticky to the green bar
   ✅ Set top distance to 0px
 
   💡 When developing web pages, you may need to find a polyfill for `position: sticky`

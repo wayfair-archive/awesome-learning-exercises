@@ -1,7 +1,10 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, cleanup } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import '../test/setup';
+
+// RTL should clean up automatically, but for some reason does not.
+beforeEach(cleanup);
 
 // Exercise 1
 const Icon = ({ iconType, altText }) => (

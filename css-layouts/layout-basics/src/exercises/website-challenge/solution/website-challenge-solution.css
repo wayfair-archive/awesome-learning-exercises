@@ -133,7 +133,7 @@
 /* Image row wrapper with negative margins to account for the padding
   on the first and last images */
 .exMainContent-row1-imageWrap {
-  margin: 20px -10px 0;
+  margin: 30px -10px 0;
 }
 
 /* Wrapper for the images */
@@ -184,6 +184,6 @@
 
 /* Utility wrapper to keep match the design mock size */
 .exPageWrapper {
-  max-width: 1280px;
+  width: 1280px;
   margin: auto;
 }

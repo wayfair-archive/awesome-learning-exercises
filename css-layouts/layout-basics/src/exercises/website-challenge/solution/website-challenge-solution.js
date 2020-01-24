@@ -86,7 +86,7 @@ const MainContent = () => {
 };
 
 const ChallengeSolution = () => (
-  <div>
+  <div className="exPageWrapper">
     <Navbar />
     <Hero />
     <MainContent />

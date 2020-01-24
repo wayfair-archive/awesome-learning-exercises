@@ -181,3 +181,9 @@
   /* Reset text align on headings */
   text-align: center;
 }
+
+/* Utility wrapper to keep match the design mock size */
+.exPageWrapper {
+  max-width: 1280px;
+  margin: auto;
+}

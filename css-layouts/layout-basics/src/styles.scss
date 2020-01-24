@@ -53,14 +53,15 @@ html {
     background: #a5359d;
     text-decoration: none;
     padding: 15px;
-    height: 50px;
     border-radius: 10px;
+    display: inline-block;
   }
   &-navButton {
     border-radius: 10px 10px 0 0;
     text-decoration: none;
     font-size: 15px;
     transition: .3s all;
+    height: 50px;
     text-align: center;
     display: block;
     display: flex;

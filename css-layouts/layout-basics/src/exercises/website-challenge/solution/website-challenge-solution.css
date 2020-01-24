@@ -67,6 +67,7 @@
 
 .exNavbar-logoWrap img {
   width: 150px;
+  margin-left: 20px;
 }
 .exNavbar-linkWrap {
   float: left;
@@ -86,8 +87,11 @@
 .exNavbar-link {
   /* Force the links to sit together on the same line */
   display: inline-block;
-  margin: 10px;
-  padding: 10px;
+  margin: 10px 15px;
+  /* Padding instead of margin to increase click area of link */
+  padding: 10px 15px; 
+  font-size: 18px;
+  line-height: 20px;
 }
 
 .exNavbar-link a {
@@ -117,9 +121,9 @@
 .exMainContent-row1 {
   background-color: #f3be46;
   /* Padding shorthand for top / left & right / bottom */
-  padding: 40px;
+  padding: 60px 40px;
 }
-.exMainContant-row1 h2 {
+.exMainContent-row1 h2 {
   text-align: center;
 }
 
@@ -128,9 +132,6 @@
 .exMainContent-row1-container {
   max-width: 90%;
   margin: 0 auto;
-}
-.exMainContent-row1-container:nth-of-type(1) {
-  padding: 0 10px;
 }
 
 /* Wrapper for the images */

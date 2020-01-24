@@ -18,8 +18,8 @@ import "./website-challenge.css";
 */
 const Hero = () => (
   <div>
-    <img src="resources/corrados-logo.png" alt="Corrados Cantina" />
-    <img src="resources/Hero.jpg" alt="" />
+    <img src="https://i.imgur.com/xtfNe8M.png" alt="Corrados Cantina" />
+    <img src="https://i.imgur.com/UNBAao6.jpg" alt="" />
   </div>
 );
 
@@ -37,7 +37,7 @@ const LINKS = ["Home", "Reservations", "Contact"];
 const Navbar = () => {
   return (
     <nav>
-      <img src="resources/small-logo.png" alt="" />
+      <img src="https://i.imgur.com/1It2Ytj.png" alt="Corrados Cantina" />
       <ul>
         {LINKS.map(link => (
           <li key={link}>
@@ -59,9 +59,9 @@ const Navbar = () => {
 const MainContent = () => (
   <div>
     <section>
-      <img src="resources/Locations.jpg" alt="Locations" />
-      <img src="resources/Menu.jpg" alt="Menu" />
-      <img src="resources/Giftcards.jpg" alt="Gift Cards" />
+      <img src="https://i.imgur.com/AaJSCbu.jpg" alt="Locations" />
+      <img src="https://i.imgur.com/CoHeohO.jpg" alt="Menu" />
+      <img src="https://i.imgur.com/bf3Odc6.jpg" alt="Gift Cards" />
     </section>
     <section>
       <h2>About Us</h2>

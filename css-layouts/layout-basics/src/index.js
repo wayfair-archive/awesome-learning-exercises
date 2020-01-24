@@ -14,7 +14,7 @@ import Floats from "./exercises/exercise3/floats";
 import Challenge from "./exercises/website-challenge/website-challenge";
 import Solution from "./exercises/website-challenge/solution/website-challenge-solution";
 
-import "./normalize.css";
+import "./reset.css";
 import "./styles.scss";
 
 const NAV_LINKS = [
@@ -119,7 +119,7 @@ const ChallengeLanding = () => {
         <NavLink
           activeClassName="PageHeader-button--isActive"
           className="PageHeader-button"
-          to="/website-challenge"
+          to="/website-solution"
         >
           View Solution
         </NavLink>

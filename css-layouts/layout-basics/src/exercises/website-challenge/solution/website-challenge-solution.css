@@ -41,7 +41,7 @@
     like background, padding, and border
   */
   background-color: white;
-  padding: 20px;
+  padding: 20px 0;
   border-bottom: 5px solid #f3be46;
   box-sizing: border-box;
   /* Fixed positioning to keep the navbar pinned to the screen
@@ -69,6 +69,7 @@
   width: 150px;
   margin-left: 20px;
 }
+
 .exNavbar-linkWrap {
   float: left;
   width: 80%;
@@ -76,12 +77,6 @@
   /* Reset default margin/padding on ul items */
   margin: 0;
   padding: 0;
-}
-
-.exNavbar-title {
-  color: red;
-  margin-top: 20px;
-  float: right;
 }
 
 .exNavbar-link {
@@ -124,6 +119,8 @@
   padding: 60px 0;
 }
 .exMainContent-row1 h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
@@ -136,7 +133,7 @@
 /* Image row wrapper with negative margins to account for the padding
   on the first and last images */
 .exMainContent-row1-imageWrap {
-  margin: 0 -10px;
+  margin: 20px -10px 0;
 }
 
 /* Wrapper for the images */
@@ -180,7 +177,7 @@
   /* Override background color on second cell */
   background: #3d7d55;
 }
-.exMainContent-row2 h2 {
+.exMainContent-row2 h3 {
   /* Reset text align on headings */
   text-align: center;
 }

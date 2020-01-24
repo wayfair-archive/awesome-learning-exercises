@@ -135,7 +135,7 @@
 
 /* Need to have an extra container to limit the width of the copy size. */
 .exMainContent-row1-container {
-  max-width: 90%;
+  max-width: 80%;
   margin: 0 auto;
 }
 

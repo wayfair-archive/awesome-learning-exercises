@@ -66,13 +66,7 @@ const MainContent = () => (
     <section>
       <h2>About Us</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pretium nibh ipsum consequat nisl vel pretium lectus quam id. Hac habitasse platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Facilisi morbi tempus iaculis urna id volutpat lacus. Sed adipiscing diam donec adipiscing. Morbi tristique senectus et netus et malesuada fames ac turpis. Arcu non odio euismod lacinia at. Nulla aliquet porttitor lacus luctus accumsan. Porttitor leo a diam sollicitudin. Dolor morbi non arcu risus quis. Bibendum ut tristique et egestas. Pellentesque elit eget gravida cum sociis. Quam vulputate dignissim suspendisse in. Mauris ultrices eros in cursus turpis. 
       </p>
       <button>Learn More</button>
     </section>

@@ -5,6 +5,13 @@
   
   🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼
 */
+/* Utility wrapper to keep match the design mock size */
+.exPageWrapper {
+  max-width: 1280px;
+  min-width: 800px;
+  margin: auto;
+  position: relative;
+}
 
 .exHero {
   /* Making the wrapper relative positioned allows us to 
@@ -16,9 +23,10 @@
 
 .exHero-logo {
   position: absolute;
-  top: 25%;
-  left: 25%;
-  width: 50%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .exHero-background {
@@ -180,10 +188,7 @@
 .exMainContent-row2 h3 {
   /* Reset text align on headings */
   text-align: center;
-}
-
-/* Utility wrapper to keep match the design mock size */
-.exPageWrapper {
-  width: 1280px;
-  margin: auto;
+  /* Size and spacing according to mocks */
+  font-size: 24px;
+  margin-bottom: 15px;
 }

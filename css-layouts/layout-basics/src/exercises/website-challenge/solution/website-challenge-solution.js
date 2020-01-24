@@ -59,7 +59,7 @@ const MainContent = () => {
       </section>
       <section className="exMainContent-row2">
         <div className="exMainContent-row2-left">
-          <h2>Store Hours</h2>
+          <h3>Store Hours</h2>
           <ul>
             <li>Monday 12:00 AM - 9:00 PM</li>
             <li>Tuesday 12:00 AM - 9:00 PM</li>
@@ -71,7 +71,7 @@ const MainContent = () => {
           </ul>
         </div>
         <div className="exMainContent-row2-right">
-          <h2>Our Location</h2>
+          <h3>Our Location</h2>
           <p>
             520 West Main Street
             <br />

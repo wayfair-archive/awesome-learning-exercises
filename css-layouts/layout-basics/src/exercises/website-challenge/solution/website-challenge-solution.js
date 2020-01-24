@@ -4,8 +4,8 @@ import "./website-challenge-solution.css";
 const Hero = () => {
   return (
     <div className="exHero">
-      <img src="resources/corrados-logo.png" className="exHero-logo" alt="" />
-      <img src="resources/Hero.jpg" className="exHero-background" alt="" />
+      <img src="https://i.imgur.com/xtfNe8M.png" className="exHero-logo" alt="" />
+      <img src="https://i.imgur.com/UNBAao6.jpg" className="exHero-background" alt="" />
     </div>
   );
 };
@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <nav className="exNavbar">
       <div className="exNavbar-logoWrap">
-        <img src="resources/small-logo.png" />
+        <img src="https://i.imgur.com/1It2Ytj.png" alt="Corrados Cantina" />
       </div>
       <ul className="exNavbar-linkWrap">
         {LINKS.map(link => (
@@ -47,13 +47,13 @@ const MainContent = () => {
         </div>
         <div className="exMainContent-row1-container">
           <figure className="exMainContent-row1-image">
-            <img src="resources/Locations.jpg" alt="Locations" />
+            <img src="https://i.imgur.com/AaJSCbu.jpg" alt="Locations" />
           </figure>
           <figure className="exMainContent-row1-image">
-            <img src="resources/Menu.jpg" alt="Menu" />
+            <img src="https://i.imgur.com/CoHeohO.jpg" alt="Menu" />
           </figure>
           <figure className="exMainContent-row1-image">
-            <img src="resources/Giftcards.jpg" alt="Gift Cards" />
+            <img src="https://i.imgur.com/bf3Odc6.jpg" alt="Gift Cards" />
           </figure>
         </div>
       </section>
@@ -71,7 +71,7 @@ const MainContent = () => {
           </ul>
         </div>
         <div className="exMainContent-row2-right">
-          <h2>Me</h2>
+          <h2>Our Location</h2>
           <p>
             520 West Main Street
             <br />

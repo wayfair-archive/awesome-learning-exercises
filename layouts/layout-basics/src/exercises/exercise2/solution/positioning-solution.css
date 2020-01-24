@@ -143,6 +143,7 @@
   ✅ Add position: sticky to the green bar
   ✅ Set top distance to 0px
 
+  💡 Note: position: sticky does not have the best support across browsers
   💡 When developing web pages, you may need to find a polyfill for `position: sticky`
   💡 for support on older browsers. Usually this relies on applying `position: fixed` 
   💡 when the user scrolls past a certain point

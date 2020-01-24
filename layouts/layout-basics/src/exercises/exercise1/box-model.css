@@ -4,6 +4,11 @@
   ✅ Here you're going to test out your knowledge of the box-model,
   ✅ including how margins, padding, widths, and the display property work together.
 
+  💡 People who are already familiar with CSS may be tempted to use `display: flex`
+  💡 and Flexbox properties to solve some of these, but the intent here is to
+  💡 use more fundamental CSS properties. 
+  💡 Stay tuned, Flexbox will be covered in a later course!
+
   🚨  Remember, you should only be ADDING new lines of code to 
   🚨  solve each exercise, not changing any of the preset widths and heights etc.
 */
@@ -14,8 +19,8 @@
   🛠️ Add the necessary CSS rules to make the green child element fill the entire
   🛠️ height and width of the orange parent container (the white area only)
 
-  💡 Consult the JSX to see what HTML tags are being used. Not all elements
-  💡 have with the same default display value
+  💡 Consult the JSX to see what HTML tags are being used. 
+  💡 Not all elements have with the same default display value
 */
 .boxModelQ1-container {
   border: 15px solid darkorange;
@@ -54,11 +59,11 @@
   🛠️ spanning the full available space of the parent.
 */
 .boxModelQ3-container {
-  background: lightseagreen;
+  background-color: lightseagreen;
   padding: 10px;
 }
 .boxModelQ3-block1 {
-  background: gold;
+  background-color: gold;
 }
 .boxModelQ3-block2 {
   background-color: cyan;
@@ -76,7 +81,7 @@
 /* 
   👉 Question 4 - BONUS 🎉
 
-  🛠️ Re-do question 3 add 20px of spacing in between each of the items.
+  🛠️ Re-do question 3 add 10px of spacing around each of the items.
 
   💡The 'width' property also accepts a value of 'calc()'
   💡for calculating CSS values of mixed units ex: 'calc(100% + 10px)'

@@ -19,7 +19,7 @@ import "./website-challenge.css";
 const Hero = () => (
   <div>
     <img src="https://i.imgur.com/xtfNe8M.png" alt="Corrados Cantina" />
-    <img src="https://i.imgur.com/UNBAao6.jpg" alt="" />
+    <img src="https://i.imgur.com/jrV3VwL.jpg" alt="" />
   </div>
 );
 

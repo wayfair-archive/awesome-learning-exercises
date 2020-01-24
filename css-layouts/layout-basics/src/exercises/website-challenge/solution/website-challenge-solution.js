@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <div className="exHero">
       <img src="https://i.imgur.com/xtfNe8M.png" className="exHero-logo" alt="" />
-      <img src="https://i.imgur.com/UNBAao6.jpg" className="exHero-background" alt="" />
+      <img src="https://i.imgur.com/jrV3VwL.jpg" className="exHero-background" alt="" />
     </div>
   );
 };

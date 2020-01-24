@@ -121,17 +121,22 @@
 .exMainContent-row1 {
   background-color: #f3be46;
   /* Padding shorthand for top / left & right / bottom */
-  padding: 60px 40px;
+  padding: 60px 0;
 }
 .exMainContent-row1 h2 {
   text-align: center;
 }
 
-/* Need to have an extra container to limit the width of the copy size.
-  It's important to re-use classes whenever possible! */
+/* Need to have an extra container to limit the width of the copy size. */
 .exMainContent-row1-container {
   max-width: 90%;
   margin: 0 auto;
+}
+
+/* Image row wrapper with negative margins to account for the padding
+  on the first and last images */
+.exMainContent-row1-imageWrap {
+  margin: 0 -10px;
 }
 
 /* Wrapper for the images */

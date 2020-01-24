@@ -44,17 +44,17 @@ const MainContent = () => {
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
-        </div>
-        <div className="exMainContent-row1-container">
-          <figure className="exMainContent-row1-image">
-            <img src="https://i.imgur.com/AaJSCbu.jpg" alt="Locations" />
-          </figure>
-          <figure className="exMainContent-row1-image">
-            <img src="https://i.imgur.com/CoHeohO.jpg" alt="Menu" />
-          </figure>
-          <figure className="exMainContent-row1-image">
-            <img src="https://i.imgur.com/bf3Odc6.jpg" alt="Gift Cards" />
-          </figure>
+          <div className="exMainContent-row1-imageWrap">
+            <figure className="exMainContent-row1-image">
+              <img src="https://i.imgur.com/AaJSCbu.jpg" alt="Locations" />
+            </figure>
+            <figure className="exMainContent-row1-image">
+              <img src="https://i.imgur.com/CoHeohO.jpg" alt="Menu" />
+            </figure>
+            <figure className="exMainContent-row1-image">
+              <img src="https://i.imgur.com/bf3Odc6.jpg" alt="Gift Cards" />
+            </figure>
+          </div>
         </div>
       </section>
       <section className="exMainContent-row2">

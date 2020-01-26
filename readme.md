@@ -93,7 +93,7 @@ If you are relying on jest tests, test files must be contained within a `__tests
 ```
 {
   "name": "data-types-types-all-exercises",
-  "version": "1.0.0",
+  
   "description": "Group and pair exercises.",
   "main": "./src/exercises/1-types.test.js",
   ,

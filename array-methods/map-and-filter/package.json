@@ -1,6 +1,5 @@
 {
   "name": "awesome-learning-array-methods-map-and-filter",
-  "version": "1.0.0",
   "description": "Awesome Learning: Array Methods: Map and Filter Exercises",
   "dependencies": {
     "jest": "23.6.0"

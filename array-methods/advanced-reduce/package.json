@@ -1,6 +1,5 @@
 {
   "name": "awesome-learning-array-methods-advanced-reduce",
-  "version": "1.0.0",
   "description": "Awesome Learning: Array Methods: Advanced Reduce Exercises",
   "dependencies": {
     "jest": "23.6.0"

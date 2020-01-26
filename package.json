@@ -1,7 +1,8 @@
 {
   "name": "awesome-learning-exercises",
   "version": "1.0.0",
-  "description": "AL exercises",
+  "description": "Awesome Learning Exercises",
+  "homepage": "https://wayfair.github.io/awesome-learning/",
   "main": "readme.md",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

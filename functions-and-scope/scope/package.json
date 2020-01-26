@@ -1,6 +1,5 @@
 {
   "name": "awesome-learning-functions-and-scope-scope",
-  "version": "1.0.0",
   "description": "Awesome Learning: Functions and Scope: Scope Exercises",
   "dependencies": {
     "jest": "23.6.0"

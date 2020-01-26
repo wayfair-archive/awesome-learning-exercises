@@ -1,6 +1,5 @@
 {
   "name": "awesome-learning-react-hooks-usestate-useeffect",
-  "version": "1.0.0",
   "description": "Awesome Learning: React Hooks: useState and useEffect Exercises",
   "main": "src/App.js",
   "author": "Awesome Learning <awesomelearning@wayfair.com>",

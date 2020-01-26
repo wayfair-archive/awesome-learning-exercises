@@ -1,6 +1,5 @@
 {
   "name": "awesome-learning-advanced-promises-with-debugging",
-  "version": "1.0.0",
   "description": "Awesome Learning: Promises: Advanced Promises Exercises",
   "dependencies": {
     "jest": "23.6.0",

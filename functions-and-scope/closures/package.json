@@ -1,6 +1,5 @@
 {
   "name": "awesome-learning-functions-and-scope-closures",
-  "version": "1.0.0",
   "description": "Awesome Learning: Functions and Scope: Closures Exercises",
   "dependencies": {
     "jest": "23.6.0"

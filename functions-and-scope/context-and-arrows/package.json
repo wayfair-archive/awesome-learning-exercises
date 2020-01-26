@@ -1,6 +1,5 @@
 {
   "name": "awesome-learning-functions-and-scope-context-and-arrows",
-  "version": "1.0.0",
   "description": "Awesome Learning: Functions and Scope: Context and Arrows Exercises",
   "dependencies": {
     "jest": "23.6.0"

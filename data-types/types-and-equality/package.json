@@ -1,6 +1,5 @@
 {
   "name": "awesome-learning-data-types-types-and-equality",
-  "version": "1.0.0",
   "description": "Awesome Learning: Data Types: Types and Equality Exercises",
   "dependencies": {
     "jest": "24.1.0"

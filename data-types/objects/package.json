@@ -1,6 +1,5 @@
 {
   "name": "awesome-learning-data-types-objects",
-  "version": "1.0.0",
   "description": "Awesome Learning: Data Types: Objects Exercises",
   "dependencies": {
     "jest": "23.6.0"

@@ -1,8 +1,7 @@
 {
-  "name": "array-methods-forEach",
+  "name": "awesome-learning-array-methods-foreach",
   "version": "1.0.0",
-  "description": "",
-  "main": "/src/__tests__/1_forEach_exercises.test.js",
+  "description": "Awesome Learning: Array Methods: forEach Exercises",
   "dependencies": {
     "jest": "23.6.0",
     "jest-html-reporter": "2.5.0"
@@ -15,6 +14,5 @@
     "env": {
       "jest": true
     }
-  },
-  "keywords": []
+  }
 }

@@ -1,15 +1,12 @@
 {
-  "name": "array-methods-advanced-reduce-all-exercises",
+  "name": "awesome-learning-array-methods-advanced-reduce",
   "version": "1.0.0",
-  "description": "Advanced reduce exercises",
-  "main": "/src/__tests__/1_advanced_reduce_exercises.test.js",
-  "scripts": {},
+  "description": "Awesome Learning: Array Methods: Advanced Reduce Exercises",
   "dependencies": {
     "jest": "23.6.0"
   },
   "devDependencies": {
     "@types/jest": "23.3.13",
     "jest": "23.6.0"
-  },
-  "keywords": []
+  }
 }

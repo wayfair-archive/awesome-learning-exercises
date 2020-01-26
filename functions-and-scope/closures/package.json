@@ -1,15 +1,12 @@
 {
-  "name": "simple-javascript-exercise-template",
+  "name": "awesome-learning-functions-and-scope-closures",
   "version": "1.0.0",
-  "description": "Simple template for JS exercises. Please fork when creating a new exercise!",
-  "main": "/src/__tests__/1_closure_exercises.test.js",
-  "scripts": {},
+  "description": "Awesome Learning: Functions and Scope: Closures Exercises",
   "dependencies": {
     "jest": "23.6.0"
   },
   "devDependencies": {
     "@types/jest": "23.3.13",
     "jest": "23.6.0"
-  },
-  "keywords": ["template", "javascript"]
+  }
 }

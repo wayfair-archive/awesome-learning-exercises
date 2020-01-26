@@ -1,9 +1,8 @@
 {
-  "name": "testing-components-react-testing-library",
+  "name": "awesome-learning-testing-react-testing-library",
   "version": "1.0.0",
-  "description": "Simple template for JS exercises. Please fork when creating a new exercise!",
-  "main": "/src/__tests__/1-components-elements.test.js",
-  "scripts": {},
+  "description": "Awesome Learning: Testing: React Testing Library Exercises",
+  "main": "index.html",
   "dependencies": {
     "jest": "23.6.0",
     "react": "16.8.5",
@@ -14,6 +13,5 @@
   "devDependencies": {
     "@types/jest": "23.3.13",
     "jest": "23.6.0"
-  },
-  "keywords": []
+  }
 }

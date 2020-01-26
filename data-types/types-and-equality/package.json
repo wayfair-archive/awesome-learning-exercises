@@ -1,9 +1,7 @@
 {
-  "name": "data-types-types-all-exercises",
+  "name": "awesome-learning-data-types-types-and-equality",
   "version": "1.0.0",
-  "description": "Group and pair exercises.",
-  "main": "/src/exercises/__tests__/1-types.test.js",
-  "scripts": {},
+  "description": "Awesome Learning: Data Types: Types and Equality Exercises",
   "dependencies": {
     "jest": "24.1.0"
   },
@@ -11,7 +9,6 @@
     "@types/jest": "23.3.13",
     "jest": "23.6.0"
   },
-  "keywords": [],
   "eslintConfig": {
     "env": {
       "jest": true

@@ -1,15 +1,12 @@
 {
-  "name": "data-types-objects-all-exercises",
+  "name": "awesome-learning-data-types-objects",
   "version": "1.0.0",
-  "description": "Group and pair exercises.",
-  "main": "./src/exercises.test.js",
-  "scripts": {},
+  "description": "Awesome Learning: Data Types: Objects Exercises",
   "dependencies": {
     "jest": "23.6.0"
   },
   "devDependencies": {
     "@types/jest": "23.3.13",
     "jest": "23.6.0"
-  },
-  "keywords": []
+  }
 }

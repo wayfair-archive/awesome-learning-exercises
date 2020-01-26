@@ -1,15 +1,12 @@
 {
-  "name": "array-methods-sort-all-exercises",
+  "name": "awesome-learning-array-methods-sort",
   "version": "1.0.0",
-  "description": "Group and pair exercises.",
-  "main": "index.html",
-  "scripts": {},
+  "description": "Awesome Learning: Array Methods: Sort Exercises",
   "dependencies": {
     "jest": "23.6.0"
   },
   "devDependencies": {
     "@types/jest": "23.3.13",
     "jest": "23.6.0"
-  },
-  "keywords": []
+  }
 }

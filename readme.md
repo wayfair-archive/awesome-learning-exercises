@@ -96,7 +96,7 @@ If you are relying on jest tests, test files must be contained within a `__tests
   "version": "1.0.0",
   "description": "Group and pair exercises.",
   "main": "./src/exercises/1-types.test.js",
-  "scripts": {},
+  ,
   "dependencies": {
     "jest": "24.1.0"
   },
@@ -104,7 +104,7 @@ If you are relying on jest tests, test files must be contained within a `__tests
     "@types/jest": "23.3.13",
     "jest": "23.6.0"
   },
-  "keywords": [],
+  ,
   "eslintConfig": {
     "env": {
       "jest": true

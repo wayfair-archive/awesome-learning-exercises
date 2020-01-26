@@ -7,10 +7,5 @@
   "devDependencies": {
     "@types/jest": "23.3.13",
     "jest": "23.6.0"
-  },
-  "eslintConfig": {
-    "env": {
-      "jest": true
-    }
   }
 }

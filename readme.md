@@ -92,23 +92,15 @@ If you are relying on jest tests, test files must be contained within a `__tests
 #### Example package.json for a lesson
 ```
 {
-  "name": "data-types-types-all-exercises",
-  
-  "description": "Group and pair exercises.",
+  "name": "awesome-learning-[course-name]-[lesson-name]",
+  "description": "Awesome Learning: [Course Name]: [Lesson Name] Exercises",
   "main": "./src/exercises/1-types.test.js",
-  ,
   "dependencies": {
     "jest": "24.1.0"
   },
   "devDependencies": {
     "@types/jest": "23.3.13",
     "jest": "23.6.0"
-  },
-  ,
-  "eslintConfig": {
-    "env": {
-      "jest": true
-    }
   }
 }
 ```

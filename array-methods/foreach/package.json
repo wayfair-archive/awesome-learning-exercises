@@ -2,7 +2,6 @@
   "name": "awesome-learning-array-methods-foreach",
   "version": "1.0.0",
   "description": "Awesome Learning: Array Methods: forEach Exercises",
-  "homepage": "https://wayfair.github.io/awesome-learning/courses/Array-Methods/forEach",
   "dependencies": {
     "jest": "23.6.0",
     "jest-html-reporter": "2.5.0"

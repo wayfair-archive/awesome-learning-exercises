@@ -1,7 +1,6 @@
 {
   "name": "awesome-learning-array-methods-foreach",
   "description": "Awesome Learning: Array Methods: forEach Exercises",
-  "main": "README.md",
   "dependencies": {
     "jest": "23.6.0",
     "jest-html-reporter": "2.5.0"

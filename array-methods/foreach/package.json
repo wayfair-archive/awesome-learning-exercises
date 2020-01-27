@@ -1,8 +1,6 @@
 {
-  "name": "array-methods-forEach",
-  "version": "1.0.0",
-  "description": "",
-  "main": "/src/__tests__/1_forEach_exercises.test.js",
+  "name": "awesome-learning-array-methods-foreach",
+  "description": "Awesome Learning: Array Methods: forEach Exercises",
   "dependencies": {
     "jest": "23.6.0",
     "jest-html-reporter": "2.5.0"
@@ -10,11 +8,5 @@
   "devDependencies": {
     "@types/jest": "23.3.13",
     "jest": "23.6.0"
-  },
-  "eslintConfig": {
-    "env": {
-      "jest": true
-    }
-  },
-  "keywords": []
+  }
 }

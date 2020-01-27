@@ -1,9 +1,6 @@
 {
-  "name": "async-patterns-promises",
-  "version": "1.0.0",
-  "description": "Group and pair exercises.",
-  "main": "./src/exercises/__tests__/1-intro-to-promises.test.js",
-  "scripts": {},
+  "name": "awesome-learning-promises",
+  "description": "Awesome Learning: Promises Exercises",
   "dependencies": {
     "jest": "23.6.0",
     "jest-html-reporter": "2.5.0"
@@ -11,11 +8,5 @@
   "devDependencies": {
     "@types/jest": "23.3.13",
     "jest": "23.6.0"
-  },
-  "eslintConfig": {
-    "env": {
-      "jest": true
-    }
-  },
-  "keywords": []
+  }
 }

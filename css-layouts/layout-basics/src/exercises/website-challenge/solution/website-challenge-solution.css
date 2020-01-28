@@ -1,0 +1,195 @@
+/*
+  🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽
+
+  Example solution styles for hero image
+  
+  🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼
+*/
+/* Utility wrapper to keep match the design mock size */
+.exPageWrapper {
+  max-width: 1280px;
+  min-width: 800px;
+  margin: auto;
+  position: relative;
+}
+
+.exHero {
+  /* Making the wrapper relative positioned allows us to 
+    position the children item relative to it's dimensions */
+  position: relative;
+  /* Leave room for the navbar */
+  padding-top: 100px;
+}
+
+.exHero-logo {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.exHero-background {
+  /* Remove white-space under image */
+  display: block;
+  margin: auto;
+}
+
+/*
+  🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽
+
+  Example solution styles for site navigation bar
+
+  🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼
+*/
+
+.exNavbar {
+  /*
+    Set the visual properties according to the design
+    like background, padding, and border
+  */
+  background-color: white;
+  padding: 20px 0;
+  border-bottom: 5px solid #f3be46;
+  box-sizing: border-box;
+  /* Fixed positioning to keep the navbar pinned to the screen
+   (as mentioned in the mocks! */
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+/* 
+  Behold the magic of the clear float!
+  Disable any line and watch the layout break
+*/
+.exNavbar::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.exNavbar-logoWrap {
+  float: left;
+  width: 20%;
+}
+
+.exNavbar-logoWrap img {
+  width: 150px;
+  margin-left: 20px;
+}
+
+.exNavbar-linkWrap {
+  float: left;
+  width: 80%;
+  text-align: right;
+  /* Reset default margin/padding on ul items */
+  margin: 0;
+  padding: 0;
+}
+
+.exNavbar-link {
+  /* Force the links to sit together on the same line */
+  display: inline-block;
+  margin: 10px 15px;
+  /* Padding instead of margin to increase click area of link */
+  padding: 10px 15px; 
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.exNavbar-link a {
+  color: black;
+  text-decoration: none;
+}
+
+/* 
+  It's always important to have focus and hover states
+ for intractive content! More on this in another module...
+*/
+.exNavbar-link a:hover,
+.exNavbar-link a:focus {
+  color: darkblue;
+  text-decoration: underline;
+}
+
+/*
+  🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽
+
+  Example solution styles for main site content
+  
+  🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼
+*/
+
+/* Style the first row */
+.exMainContent-row1 {
+  background-color: #f3be46;
+  /* Padding shorthand for top / left & right / bottom */
+  padding: 60px 0;
+}
+.exMainContent-row1 h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Need to have an extra container to limit the width of the copy size. */
+.exMainContent-row1-container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+/* Image row wrapper with negative margins to account for the padding
+  on the first and last images */
+.exMainContent-row1-imageWrap {
+  margin: 30px -10px 0;
+}
+
+/* Wrapper for the images */
+.exMainContent-row1-image {
+  /* Set the width to be 1/3 of the wrapping element */
+  width: 33.33%;
+  /* Allow images to sit next to each other */
+  display: inline-block;
+  margin: auto;
+  padding: 0 10px;
+  /* Set the box-sizing to border-box
+    So the padding is part of the calculated image width */
+  box-sizing: border-box;
+}
+
+.exMainContent-row1-image img {
+  border: 5px solid white;
+  /* Limit the image to it's container */
+  display: block;
+  max-width: 100%;
+  /* Set the box-sizing to border-box
+     So the border is part of the calculated image width */
+  box-sizing: border-box;
+}
+
+/* Style the third row */
+.exMainContent-row2 {
+  /* Instead of floats, we can use a table-based layout */
+  display: table;
+  width: 100%;
+  text-align: left;
+}
+.exMainContent-row2-left,
+.exMainContent-row2-right {
+  display: table-cell;
+  width: 50%;
+  padding: 50px;
+  background: #01b0c5;
+}
+.exMainContent-row2-right {
+  /* Override background color on second cell */
+  background: #3d7d55;
+}
+.exMainContent-row2 h3 {
+  /* Reset text align on headings */
+  text-align: center;
+  /* Size and spacing according to mocks */
+  font-size: 24px;
+  margin-bottom: 15px;
+}

@@ -1,0 +1,105 @@
+/* 
+  👉 Question 1
+
+  🛠️ Add the proper CSS rules to make the green child element fill the entire
+  🛠️ height and width of the orange parent container (the white area only)
+
+  ❗ Solution
+
+  ✅ Add box-sizing: border box so padding is computed in height
+  ✅ Make the span block level for full width
+  ✅ Set the height to 100%
+
+*/
+.boxModelQ1-container {
+  border: 15px solid darkorange;
+  height: 150px;
+  width: 150px;
+}
+
+.boxModelQ1-child {
+  padding: 10px;
+  background: limegreen;
+  display: block;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* 
+  👉 Question 2
+
+  🛠️ Make the child image element fit inside of the dark blue parent 
+  🛠️ container without overflowing.
+
+  ❗ Solution
+
+  ✅ Add width: 100% to image
+  ✅ Add box-sizing: border box so border is computed in width
+  ✅ Set the image to display: block to remove white-space underneath
+
+*/
+.boxModelQ2-container {
+  border: 15px solid midnightblue;
+  width: 300px;
+}
+
+.boxModelQ2-image {
+  padding: 10px;
+  background-color: salmon;
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+}
+
+/* 
+  👉 Question 3
+
+  🛠️ Align all three blocks onto one line with equal widths, 
+  🛠️ spanning the full available space of the parent.
+
+  ❗ Solution
+
+  ✅ Make items display: inline-block so they sit on the same line
+  ✅ Set width to 1/3 of the parent
+  ✅ Add box-sizing: border box so padding is computed in width
+
+*/
+.boxModelQ3-container {
+  background: lightseagreen;
+  padding: 10px;
+}
+.boxModelQ3-block1 {
+  background: gold;
+}
+.boxModelQ3-block2 {
+  background-color: cyan;
+}
+.boxModelQ3-block3 {
+  background-color: fuchsia;
+}
+.boxModelQ3-block1,
+.boxModelQ3-block2,
+.boxModelQ3-block3 {
+  height: 40px;
+  padding: 10px;
+  display: inline-block;
+  width: 33.33%;
+  box-sizing: border-box;
+}
+
+/* 
+  👉 Question 4 - BONUS 🎉
+
+  🛠️ Re-do question 3 add 20px of spacing in between each of the items.
+
+  ✅ Add 10px left/right margin to each item
+  ✅ Use calc() to accomodate margin in item widths
+
+*/
+
+.boxModelQ3-block1,
+.boxModelQ3-block2,
+.boxModelQ3-block3 {
+  width: calc(33.33% - 20px);
+  margin: 0 10px;
+}

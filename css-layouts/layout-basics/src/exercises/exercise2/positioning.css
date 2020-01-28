@@ -1,0 +1,74 @@
+/* 
+  📚 Learn CSS - Exercise 2: Positioning 📚
+
+  ✅ Here you're going to test out your knowledge of the CSS positioning
+
+  🚨  Remember, you should only be ADDING new lines of code to 
+  🚨  solve each exercise, not changing any of the pre-set widths and heights etc.
+
+*/
+
+/* 
+  👉 Question 1
+
+  🛠️ Add the necessary CSS properties to position the red dot in the center of the blue rectangle
+
+*/
+.blue-rectangle {
+  background-color: cornflowerblue;
+  height: 100px;
+  width: 200px;
+}
+
+.red-dot {
+  background-color: crimson;
+  border-radius: 20px;
+  height: 20px;
+  width: 20px;
+}
+
+/* 
+  👉 Question 2
+
+  🛠️ Affix the yellow box to the bottom right side of the window
+
+*/
+.yellow-box {
+  background-color: goldenrod;
+  border-radius: 10px 0 0 10px;
+  height: 200px;
+  width: 50px;
+}
+
+/* 
+  👉 Question 3
+
+  🛠️  Make the green bar stick to the top of the box when you scroll past it
+
+  💡 For this exercise, be sure use a modern browser like Chrome or Firefox
+*/
+
+/* No need to mess with these `.wrapper` properties */
+.wrapper {
+  max-height: 200px;
+  max-width: 300px;
+  overflow-y: scroll;
+  background-color: #eee;
+  border: 1px solid #ddd;
+}
+
+.green-bar {
+  background-color: seagreen;
+  height: 10px;
+  width: 100%;
+}
+
+/*
+  ✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅
+
+  When you've completed all of the questions, proceed to the next section
+
+  `exercises/exercise3/floats.css`
+
+  ✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅
+*/

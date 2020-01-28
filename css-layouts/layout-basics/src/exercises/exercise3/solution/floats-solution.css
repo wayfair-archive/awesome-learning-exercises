@@ -1,0 +1,53 @@
+/* 
+  👉 Question 1
+
+  🛠️ Align the menu content so that the icon is on the far right, and the title text is left aligned.
+
+  ❗ Solution
+
+  ✅ Float the title left
+  ✅ Float the icon right
+*/
+.menubar {
+  background: steelblue;
+  height: 36px;
+  padding: 10px;
+  text-align: center;
+}
+.menubar-title {
+  color: white;
+  margin: 5px 0 0;
+  padding-top: 5px;
+  float: left;
+}
+.menubar-icon {
+  background: lightsteelblue;
+  padding: 10px;
+  border-radius: 5px;
+  float: right;
+}
+
+/* 
+  👉 Question 2
+
+  🛠️ Fix the article block so that the image is contained within
+  🛠️ the brown body and borders.
+
+  ❗ Solution
+
+  ✅ Use a clearfix!
+
+*/
+.article {
+  border: 3px solid brown;
+  background: sandybrown;
+  width: 600px;
+}
+.article::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.article-image {
+  float: right;
+}

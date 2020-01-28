@@ -1,0 +1,80 @@
+/*
+  These are the main app styles!
+  This is not where to put CSS for the exercises
+*/
+html {
+  font-family: sans-serif;
+}
+
+.PageHeader {
+  * {
+    box-sizing: border-box;
+  }
+  &-topWrap {
+    text-align: center;
+    background: linear-gradient(to bottom, #ff78c3, #ef4ea5) no-repeat;
+    padding: 50px 0 0;
+  }
+  // Kinda weird but this is how we get padding
+  // Around the body of the questions, but leave the challenge alone
+  &--withBody + &-routeWrap {
+    max-width: 1320px;
+    margin: auto;
+    padding: 20px;
+  }
+  &-title {
+    color: white;
+    font-family: 'Pacifico';
+    text-shadow: 1px 2px 3px rgba(0,0,0,.3);
+    font-size: 50px;
+    margin: 0;
+  }
+  &-subtitle {
+    color: #7b1460;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 30px;
+  }
+  &-menu {
+    margin: 0 auto;
+    width: 90%;
+    padding: 0; // Remove default padding
+    display: flex;
+  }
+  &-menuItem {
+    list-style-type: none;
+    width: calc(25% - 10px);
+    display: inline-block;
+    margin: 0 5px;
+  }
+  &-button,
+  &-navButton {
+    color: white;
+    background: #a5359d;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 10px;
+    display: inline-block;
+  }
+  &-navButton {
+    border-radius: 10px 10px 0 0;
+    text-decoration: none;
+    font-size: 15px;
+    transition: .3s all;
+    height: 50px;
+    text-align: center;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      color: white;
+      background: #882180;
+    }
+    &:focus,
+    &--isActive {
+      color: #882180;
+      background: white;
+    }
+  }
+}

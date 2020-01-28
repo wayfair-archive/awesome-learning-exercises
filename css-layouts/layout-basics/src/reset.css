@@ -19,7 +19,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font: inherit;
+	font-family: inherit;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -47,6 +47,7 @@ table {
 }
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
+  margin-bottom: 1em;
 }
 p {
   line-height: 1.3em;

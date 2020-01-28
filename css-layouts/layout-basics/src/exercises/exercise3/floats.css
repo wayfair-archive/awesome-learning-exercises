@@ -34,19 +34,6 @@
 /* 
   👉 Question 2
 
-  🛠️ Add the necessary property or properties to prevent the green text 
-  🛠️ from floating next to the image and instead wrap to a new line.
-*/
-.text-block img {
-  float: left;
-}
-.text-block p {
-  color: green;
-}
-
-/* 
-  👉 Question 3
-
   🛠️ Fix the article block so that the image is contained within
   🛠️ the brown body and borders.
 

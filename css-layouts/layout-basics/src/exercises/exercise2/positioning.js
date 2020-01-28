@@ -11,16 +11,19 @@ const Positioning = () => (
       1. Add the necessary CSS properties to position the red dot in the center
       of the blue rectangle
     </p>
+    <br />
     <div className="blue-rectangle">
       <div className="red-dot" />
     </div>
     <br />
     <p>2. Affix the yellow box to the bottom right side of the window</p>
+    <br />
     <div className="yellow-box" />
     <br />
     <p>
       3. Make the green bar stick to the top of the box when you scroll past it
     </p>
+    <br />
     <div className="wrapper">
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

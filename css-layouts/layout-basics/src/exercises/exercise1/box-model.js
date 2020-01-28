@@ -12,6 +12,7 @@ const BoxModel = () => (
       entire height and width of the orange parent container (the white area
       only)
     </p>
+    <br />
     <div className="boxModelQ1-container">
       <span className="boxModelQ1-child">Child</span>
     </div>
@@ -20,6 +21,7 @@ const BoxModel = () => (
       2. Make the child image element fit inside of the dark blue parent
       container without overflowing.
     </p>
+    <br />
     <div className="boxModelQ2-container">
       <div className="boxModelQ2-child">
         <img
@@ -34,6 +36,7 @@ const BoxModel = () => (
       3. Align all three blocks onto one line with equal widths, spanning the
       full available space of the parent.
     </p>
+    <br />
     <div className="boxModelQ3-container">
       <div className="boxModelQ3-block1">1</div>
       <div className="boxModelQ3-block2">2</div>

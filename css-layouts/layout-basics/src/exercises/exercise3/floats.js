@@ -16,7 +16,7 @@ const Floats = () => (
       <span className="menubar-icon" role="img" aria-label="Search">
         🔍
       </span>
-      <h2 className="menubar-title">Dom's Blog</h2>
+      <h3 className="menubar-title">Dom's Blog</h3>
     </nav>
     <br />
     <p>

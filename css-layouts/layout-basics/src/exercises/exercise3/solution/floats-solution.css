@@ -10,13 +10,13 @@
 */
 .menubar {
   background: steelblue;
-  height: 50px;
+  height: 56px;
   padding: 10px;
   text-align: center;
 }
 .menubar-title {
   color: white;
-  margin: 0;
+  margin: 5px 0 0;
   padding-top: 5px;
   float: left;
 }

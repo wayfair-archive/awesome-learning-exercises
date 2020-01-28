@@ -1,6 +1,6 @@
 {
   "name": "awesome-learning-css-layouts",
-  "description": "CSS Layouts sandbox and exercises",
+  "description": "Awesome Learning: CSS: Layouts and Box Model",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {

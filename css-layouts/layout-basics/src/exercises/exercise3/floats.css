@@ -2,16 +2,17 @@
   📚 Learn CSS - Exercise 3: Floats 📚
 
   ✅ Here you're going to test out your knowledge of floating content
-  ✅ and clearing it after
+  ✅ and clearing it after.
 
-  🚨  Remember, you should only be ADDING new lines of code to 
-  🚨  solve each exercise, not changing any of the pre-set widths and heights etc.
+  🚨 Remember, you should only be ADDING new lines of code to 
+  🚨 solve each exercise, not changing any of the pre-set widths and heights etc.
 */
 
 /* 
   👉 Question 1
 
-  🛠️ Align the menu content so that the icon is on the far right, and the title text is left aligned.
+  🛠️ Align the menu content so that the icon is on the far right, 
+  🛠️ and the title text is left aligned.
 */
 .menubar {
   background: steelblue;
@@ -32,6 +33,19 @@
 
 /* 
   👉 Question 2
+
+  🛠️ Add the necessary property or properties to prevent the green text 
+  🛠️ from floating next to the image and instead wrap to a new line.
+*/
+.text-block img {
+  float: left;
+}
+.text-block p {
+  color: green;
+}
+
+/* 
+  👉 Question 3
 
   🛠️ Fix the article block so that the image is contained within
   🛠️ the brown body and borders.

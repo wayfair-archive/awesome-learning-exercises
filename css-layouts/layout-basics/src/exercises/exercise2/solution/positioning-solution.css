@@ -5,7 +5,7 @@
 
   ❗ Solution
 
-  ✅ Add position: relative to the blue rectange
+  ✅ Add position: relative to the blue rectangle
   ✅ Add position: absolute to the red dot
   ✅ Specify exact left/right values
 
@@ -29,7 +29,7 @@
   /*
     ❗ Alternate Solution 1
 
-  ✅ Add position: relative to the blue rectange
+  ✅ Add position: relative to the blue rectangle
   ✅ Add position: absolute to the red dot
   ✅ Set top/left/right/bottom to 0
   ✅ Add margin: auto
@@ -59,7 +59,7 @@
   /*
     ❗ Alternate Solution 2
 
-  ✅ Add position: relative to the blue rectange
+  ✅ Add position: relative to the blue rectangle
   ✅ Add position: absolute to the red dot
   ✅ Set top/left to 50%
   ✅ Add negative margin to center dot
@@ -89,7 +89,7 @@
   /*
     ❗ Alternate Solution 3 (Advanced)
 
-  ✅ Add position: relative to the blue rectange
+  ✅ Add position: relative to the blue rectangle
   ✅ Add position: absolute to the red dot
   ✅ Set top/left to 50%
   ✅ Add transform to center dot

@@ -1,6 +1,5 @@
 {
-  "name": "css-layouts",
-  "version": "1.0.0",
+  "name": "awesome-learning-css-layouts",
   "description": "CSS Layouts sandbox and exercises",
   "keywords": [],
   "main": "src/index.js",

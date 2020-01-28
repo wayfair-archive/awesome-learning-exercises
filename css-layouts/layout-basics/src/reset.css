@@ -22,6 +22,12 @@ time, mark, audio, video {
 	font-family: inherit;
 	vertical-align: baseline;
 }
+h1, h2, h3, h4, h5, h6 {
+	padding: 0;
+	border: 0;
+	font-family: inherit;
+	vertical-align: baseline;
+}
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -44,10 +50,6 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-}
-h1, h2, h3, h4, h5, h6 {
-  font-weight: bold;
-  margin-bottom: 1em;
 }
 p {
   line-height: 1.3em;

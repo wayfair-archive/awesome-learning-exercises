@@ -162,7 +162,7 @@ describe("exercise 5", () => {
 
 `📚 Exercise #6 -  Out of Stock! 📚
 
-🛠️ Implement getPopularProducts below. 
+🛠️ Implement getOutOfStockProducts below. 
 🛠️ This function takes an array of products and 
 🛠️ filters out products with an outOfStock value of true, 
 🛠️ and return an array of objects with 

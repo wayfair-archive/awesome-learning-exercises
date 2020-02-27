@@ -54,7 +54,7 @@ test('the promise rejects with a string "promise rejected!"', () => {
 `
 📚 Exercise 3 - Converting to a promise 📚 
  
-  We have an old callback-powered aysync function in our codebase
+  We have an old callback-powered async function in our codebase
   called fetchUser. This function takes in a user id and a callback,
   and hits an endpoint with the id.
   fetchUser then calls it's provided callback with the response.
@@ -170,7 +170,7 @@ test("getBasketItems catches an error in getBasketId when invalid basketId is pa
   🛠 empty array if they don't, return any errors resulting from 
   🛠 any part of this operation.
 
-  🚨 This will require you to call both the getUserBasket and
+  🚨 This will require you to call both the getBasketId and
   getBasketItems functions you have written.
  `;
 

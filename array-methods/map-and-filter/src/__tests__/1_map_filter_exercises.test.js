@@ -3,14 +3,14 @@ import { products, customers } from "../mockData";
 `
 ⬇️
 
-Welcome to Array Methods - Map and Filter! 
+Welcome to Array Methods - Map and Filter!
 
-In the following exercises, we will utilize map, 
+In the following exercises, we will utilize map,
 filter, and forEach to manipulate collections of data.
 
 💡 We import a mock data object used for testing your functions.
-💡 If you are interested in the shape of the data, please 
-💡 feel free to look at the mockData.js file. 
+💡 If you are interested in the shape of the data, please
+💡 feel free to look at the mockData.js file.
 
 ⬆️
 `;
@@ -19,14 +19,14 @@ filter, and forEach to manipulate collections of data.
 `📚 Exercise #1 - Write a vanilla JS implementation of map 📚
 
 In order to better understand map, we want you to write a
-bare bones vanilla JS version of it. This will by no means 
-be an exhaustive version of map; it's meant as a instructional 
-tool to understand how the real prototype method works. 
+bare bones vanilla JS version of it. This will by no means
+be an exhaustive version of map; it's meant as a instructional
+tool to understand how the real prototype method works.
 
 🛠️ Implement vanillaMap below.
-🛠️ It should take two inputs: 
+🛠️ It should take two inputs:
 🛠️ An array and a 'callback' function.
-🛠️ vanillaMap should return a new array populated with the results of calling the 
+🛠️ vanillaMap should return a new array populated with the results of calling the
 🛠️ provided callback on every element of the input array.
 `
 
@@ -52,15 +52,15 @@ describe("Exercise 1", () => {
 
 `📚 Exercise #2 - Write a vanilla JS implementation of filter 📚
 
-In order to better understand filter, we want you to write 
-a bare bones vanilla JS version of it. This will by no means be 
+In order to better understand filter, we want you to write
+a bare bones vanilla JS version of it. This will by no means be
 an exhaustive version of filter, it's meant as a instructional
-tool to understand how the real prototype method works. 
+tool to understand how the real prototype method works.
 
 🛠️ Implement vanillaFilter below.
-🛠️ It should take two inputs: 
+🛠️ It should take two inputs:
 🛠️ An array and a callback.
-🛠️ vanillaFilter should return a new array populated 
+🛠️ vanillaFilter should return a new array populated
 🛠️ with all elements from the input array that return true
 🛠️ when passed to the callback function.
 
@@ -89,9 +89,9 @@ describe("Exercise 2", () => {
 `📚 Exercise #3 - New Product Objects via Map 📚
 
 🛠️ Implement getProductMetaData below.
-🛠️ This function takes an array of product objects with many 
-🛠️ properties, and returns a new array of new product objects with 
-🛠️ only 'productName' and 'productId' as properties. 
+🛠️ This function takes an array of product objects with many
+🛠️ properties, and returns a new array of new product objects with
+🛠️ only 'productName' and 'productId' as properties.
 
 💡 The return array should be populated with objects of the shape
 💡 {'productName': product.name, 'productId': product.id}
@@ -118,8 +118,8 @@ describe("Exercise 3", () => {
 `📚 Exercise #4 - Filtering Customers 📚
 
 🛠️ Implement filterByTotalOver150 below.
-🛠️ This function takes an array of customer objects and 
-🛠️ returns an array of customer objects 
+🛠️ This function takes an array of customer objects and
+🛠️ returns an array of customer objects
 🛠️ whose total (cart * quantity) exceeded $150
 `
 const filterByTotalOver150 = customersArray => {
@@ -145,7 +145,7 @@ describe("Exercise 4", () => {
 `📚 Exercise #5 -  Lets Chain! 📚
 
 🛠️ Implement getPopularProducts below.
-🛠️ This function takes an array of products and 
+🛠️ This function takes an array of products and
 🛠️ returns an array of product ids of every item with a rating over 4.
 `
 
@@ -162,14 +162,14 @@ describe("exercise 5", () => {
 
 `📚 Exercise #6 -  Out of Stock! 📚
 
-🛠️ Implement getOutOfStockProducts below. 
-🛠️ This function takes an array of products and 
-🛠️ filters out products with an outOfStock value of true, 
-🛠️ and return an array of objects with 
-🛠️ only 'productId' and 'inStockDate' as properties. 
+🛠️ Implement getOutOfStockProducts below.
+🛠️ This function takes an array of products and
+🛠️ filters out products with an outOfStock value of false,
+🛠️ and return an array of objects with
+🛠️ only 'productId' and 'inStockDate' as properties.
 
-💡 The return array should be populated with objects of the shape 
-💡 { productId: <item.productId>, inStockDate: <item.inStockDate> }
+💡 The return array should be populated with objects of the shape
+💡 { productId: <item.id>, inStockDate: <item.inStockDate> }
 `
 
 const getOutOfStockProducts = productsArray => {
@@ -191,17 +191,17 @@ describe("exercise 6", () => {
 This exercise will require some complex map and filter chaining, so get ready!
 Of note, this function will be a bit different in that it won't return a new array.
 
-🛠️ Implement alertOutOfStock below. 
+🛠️ Implement alertOutOfStock below.
 🛠️ This function takes 3 parameters:
 🛠️ an array of products, an array of customers, and a callback function.
-🛠️ For each customer with a savedItems field, check if any of productIds 
-🛠️ within the savedItems field are out of stock. If they are, 
+🛠️ For each customer with a savedItems field, check if any of productIds
+🛠️ within the savedItems field are out of stock. If they are,
 🛠️ call the callback with the customer email and productId.
 🛠️ Do this for every out of stock item in their savedItems array.
 
 🚨 Not all customers will have saved items.
 
-💡 Note: each product in the product array passed in will have 
+💡 Note: each product in the product array passed in will have
 💡 both an 'id' field and an 'outOfStock' field.
 
 */

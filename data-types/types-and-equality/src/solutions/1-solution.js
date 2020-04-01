@@ -35,7 +35,7 @@ const dataTypeD = () => {
   return typeof D;
 };
 // Assign the correct type to returnedDValue
-let returnedDValue = "null";
+let returnedDValue = "object";
 
 test("should have correct value for dataTypeD", () => {
   expect(dataTypeD() == returnedDValue).toBe(true);

@@ -1,0 +1,12 @@
+.Exercise2 form {
+  width: 100%;
+}
+
+.Exercise2 fieldset {
+  display: flex;
+}
+
+.Exercise2 label,
+.Exercise2 input {
+  width: 100%;
+}

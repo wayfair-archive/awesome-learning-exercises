@@ -1,0 +1,6 @@
+.Exercise1-listItem {
+  cursor: pointer;
+}
+.Exercise1-listItem:hover {
+  text-decoration: underline;
+}

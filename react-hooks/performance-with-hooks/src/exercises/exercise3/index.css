@@ -1,0 +1,63 @@
+.Exercise3-pokeballRow,
+.Exercise3-activePokemon {
+  display: flex;
+}
+
+.Exercise3-pokeballRow {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.Exercise3-activePokemon {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-height: 80%;
+  max-width: 80%;
+  margin: auto;
+}
+
+.Exercise3-pokeballRow img {
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+
+.Exercise3-activePokemon img {
+  max-height: 100px;
+  max-width: 100px;
+  /* display: block; */
+  margin: auto;
+}
+
+.Exercise3-modal {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 80vw;
+  height: 90vh;
+  background-color: white;
+  border: 1px solid black;
+  text-align: center;
+}
+.Exercise3-modal a:focus,
+.Exercise3-modal a:active {
+  outline: 3px solid red;
+}
+
+.Exercise3-modal button {
+  display: block;
+  font-size: 25px;
+  margin: auto;
+  height: 35px;
+  width: 50%;
+}
+
+.Exercise3 button:active,
+.Exercise3 button:focus {
+  border: 2px solid red;
+}

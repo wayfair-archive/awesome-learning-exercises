@@ -1,6 +1,6 @@
 {
-  "name": "awesome-learning-react-hooks-usestate-useeffect",
-  "description": "Awesome Learning: React Hooks: useState and useEffect Exercises",
+  "name": "awesome-learning-react-hooks-performance",
+  "description": "Awesome Learning: React Hooks: Performance Exercises",
   "main": "src/App.js",
   "author": "Awesome Learning <awesomelearning@wayfair.com>",
   "dependencies": {

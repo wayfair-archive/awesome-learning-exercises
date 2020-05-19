@@ -1,0 +1,18 @@
+{
+  "name": "awesome-learning-react-hooks-usestate-useeffect",
+  "description": "Awesome Learning: React Hooks: useState and useEffect Exercises",
+  "main": "src/App.js",
+  "author": "Awesome Learning <awesomelearning@wayfair.com>",
+  "dependencies": {
+    "prop-types": "15.7.2",
+    "react": "16.9.0",
+    "react-dom": "16.9.0",
+    "react-rangeslider": "2.2.0",
+    "react-router-dom": "5.0.1",
+    "react-scripts": "3.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  }
+}

@@ -1,0 +1,32 @@
+.Exercise3 {
+  cursor: none;
+  user-select: none;
+}
+
+.Exercise3-nav {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0;
+  margin: 0;
+}
+
+.Exercise3-nav a {
+  font-size: 16px;
+  border: none;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+}
+
+.Exercise3-nav a:hover,
+.Exercise3-nav a:focus {
+  text-decoration: none;
+}
+
+.Exercise3-pageTitle {
+  text-align: center;
+}
+
+.Exercise3 img {
+  max-width: 70%;
+}

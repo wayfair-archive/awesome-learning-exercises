@@ -1,0 +1,9 @@
+/* ⛔ You should not need to modify any CSS ⛔ */
+.Exercise1 {
+  cursor: none;
+  user-select: none;
+}
+
+.Exercise1-image {
+  height: 200px;
+}

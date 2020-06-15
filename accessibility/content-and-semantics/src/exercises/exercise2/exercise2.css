@@ -1,0 +1,17 @@
+/* ⛔ You should not need to modify any CSS ⛔ */
+.Exercise2 {
+  cursor: none;
+  user-select: none;
+}
+.Exercise2:not(.lights-on)::before {
+  background-color: rgb(50, 50, 50);
+  content: "";
+  height: 150%;
+  max-width: 1600px;
+  position: absolute;
+  width: 100%;
+}
+
+.Exercise2-image {
+  height: 200px;
+}

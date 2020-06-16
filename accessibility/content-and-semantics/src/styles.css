@@ -1,0 +1,38 @@
+.App {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  display: block;
+  margin: 0 auto;
+  max-width: 1600px;
+  font-size: 16px;
+}
+
+.App-navWrapper {
+  text-align: center;
+}
+
+.App-nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.App-navLink {
+  padding: 0 5px;
+}
+
+.App-navLink:focus,
+.App-navLink:hover {
+  text-decoration: none;
+}
+
+.App-navLink--isActive {
+  font-weight: bold;
+}
+
+.App button {
+  font-size: 16px;
+}
+
+.App hr {
+  margin: 20px 0;
+}

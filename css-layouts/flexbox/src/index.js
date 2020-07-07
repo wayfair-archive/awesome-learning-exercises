@@ -14,6 +14,8 @@ const Start = () => {
   return (
     <div style={{ border: "10px solid purple" }}>
       <p>This will become the landing page</p>
+
+      <p>To start, take a look at the "grid-components" files.</p>
     </div>
   );
 };

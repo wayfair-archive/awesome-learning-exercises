@@ -116,6 +116,7 @@ export const Block = ({
   alignContent,
   justifyItems,
   justifyContent,
+  ...rest
 }) => {
 
   const responsiveClassNames = [
@@ -136,6 +137,7 @@ export const Block = ({
       className={cx(CLASSNAME_PREFIX, 
         ...responsiveClassNames
       )}
+      {...rest}
     >
       {children}
     </div>

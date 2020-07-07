@@ -7,12 +7,8 @@ import {
   Route,
   Switch
 } from "react-router-dom";
-import {
-  Block
-} from './grid-components';
-import {
-  ExerciseOne
-} from './exercises/exercise1/index';
+import { Block } from "./grid-components";
+import { ExerciseOne } from "./exercises/exercise1/index";
 
 const Start = () => {
   return (
@@ -30,7 +26,7 @@ class App extends React.Component {
           <NavLink
             activeClassName="PageHeader-navButton--isActive"
             className="PageHeader-navButton"
-            to="/start"
+            to="/"
           >
             <span>Home</span>
           </NavLink>
@@ -42,7 +38,7 @@ class App extends React.Component {
             <span>Exercise 1</span>
           </NavLink>
           <Switch>
-            <Route exact path="/start" component={Start} />
+            <Route exact path="/" component={Start} />
             <Route exact path="/exercise1" component={ExerciseOne} />
           </Switch>
         </BrowserRouter>

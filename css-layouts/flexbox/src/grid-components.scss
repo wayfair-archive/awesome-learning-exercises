@@ -1,0 +1,185 @@
+$breakpoints: (
+  all: 'all',
+  sm: '400px',
+  md: '800px',
+  lg: '1200px',
+);
+
+$rootClassName: 'Block';
+
+// Shared mixin for formatting this repetitive code
+@mixin ResponsiveClassnames(
+  // The values of the property we want to provide classnames for
+  $settings,
+  // The name of the JS prop, used for generating the classname
+  $propName,
+  // The name of the css property for the styles, defaults to the prop name
+  // can additionally be a list of properties to apply
+  // e.g. $property: 'margin' or $property: ('margin-right', 'margin-left')
+  $property
+) {
+  @each $bpLabel, $bp in $breakpoints {
+    // If we are at the all breakpoint, don't wrap in a media query
+    @if ($bpLabel == 'all') {
+      // Iterate through each value we offer
+      @each $name, $setting in $settings {
+        // Drop the `-all` flag appended to the classname above in cases where its
+        // a set of styles applied outside of a breakpoint
+        $classname: '#{$rootClassName}--#{$propName}-#{$name}';
+        .#{$classname} {
+          // if the property is a list of values, we want to apply each value with the setting
+          @if (type-of($property) == list) {
+            @each $prop in $property {
+              #{$prop}: #{$setting};
+            }
+          } @else {
+            #{$property}: #{$setting};
+          }
+        }
+      }
+    } @else {
+      // Otherwise wrap in a min-width breakpoint
+      @media screen and (min-width: $bp) {
+        // Iterate through each value we offer
+        @each $name, $setting in $settings {
+          // Construct our classname
+          $classname: '#{$rootClassName}--#{$bpLabel}-#{$propName}-#{$name}';
+          .#{$classname} {
+            // if the property is a list of values, we want to apply each value with the setting
+            @if (type-of($property) == list) {
+              @each $prop in $property {
+                #{$prop}: #{$setting};
+              }
+            } @else {
+              #{$property}: #{$setting};
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.#{$rootClassName} {
+  display: flex;
+}
+
+/// Flex Direction
+$flexDirection-settings: (
+  'row': 'row',
+  'column': 'column',
+  'row-reverse': 'row-reverse',
+  'column-reverse': 'column-reverse',
+);
+
+@include ResponsiveClassnames(
+  $settings: $flexDirection-settings,
+  $propName: 'flexDirection',
+  $property: 'flex-direction'
+);
+
+/// Flex Wrap
+$flexWrap-settings: (
+  'wrap': 'wrap',
+  'nowrap': 'nowrap',
+  'wrap-reverse': 'wrap-reverse'
+);
+
+@include ResponsiveClassnames(
+  $settings: $flexWrap-settings,
+  $propName: 'flexWrap',
+  $property: 'flex-wrap'
+);
+
+/// Align Items
+$alignItems-settings: (
+  'center': 'center',
+  'flex-start': 'flex-start',
+  'flex-end': 'flex-end',
+  'baseline': 'baseline'
+);
+
+@include ResponsiveClassnames(
+  $settings: $alignItems-settings,
+  $propName: 'alignItems',
+  $property: 'align-items'
+);
+
+/// Align Content
+$alignContent-settings: (
+  'center': 'center',
+  'flex-start': 'flex-start',
+  'flex-end': 'flex-end',
+  'baseline': 'baseline'
+);
+
+@include ResponsiveClassnames(
+  $settings: $alignContent-settings,
+  $propName: 'alignContent',
+  $property: 'align-content'
+);
+
+/// Justify Items
+$justifyItems-settings: (
+  'center': 'center',
+  'flex-start': 'flex-start',
+  'flex-end': 'flex-end',
+  'space-between': 'space-between',
+  'space-evenly': 'space-evenly',
+  'space-around': 'space-around',
+);
+
+@include ResponsiveClassnames(
+  $settings: $justifyItems-settings,
+  $propName: 'justifyItems',
+  $property: 'justify-items'
+);
+
+/// Justify Content
+$justifyContent-settings: (
+  'center': 'center',
+  'flex-start': 'flex-start',
+  'flex-end': 'flex-end',
+  'space-between': 'space-between',
+  'space-evenly': 'space-evenly',
+  'space-around': 'space-around',
+);
+
+@include ResponsiveClassnames(
+  $settings: $justifyContent-settings,
+  $propName: 'justifyContent',
+  $property: 'justify-content'
+);
+
+// Total number of grid items, for use with the Grid component
+$gridItems: 12;
+
+// Calculates the flex-basis of the grid item
+@function calculateFlexBasis($gridItemsSize) {
+  @return calc(100% / #{$gridItems} * #{$gridItemsSize});
+}
+
+// Flex-basis
+$flex-basis-settings: (
+  1: calculateFlexBasis(1),
+  2: calculateFlexBasis(2),
+  3: calculateFlexBasis(3),
+  4: calculateFlexBasis(4),
+  5: calculateFlexBasis(5),
+  6: calculateFlexBasis(6),
+  7: calculateFlexBasis(7),
+  8: calculateFlexBasis(8),
+  9: calculateFlexBasis(9),
+  10: calculateFlexBasis(10),
+  11: calculateFlexBasis(11),
+  12: calculateFlexBasis(12),
+);
+
+@include ResponsiveClassnames(
+  $settings: $flex-basis-settings,
+  $propName: 'size',
+  $property: (
+    'flex-basis',
+    'max-width',
+  )
+);

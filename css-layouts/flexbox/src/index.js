@@ -7,6 +7,9 @@ import {
   Route,
   Switch
 } from "react-router-dom";
+import {
+  Block
+} from 'grid-components';
 
 const Start = () => {
   <p>Hello Walt</p>

@@ -1,6 +1,31 @@
-.NavButton {
-  color: red;
-  &--isActive {
-    border:  1px dotted limegreen;
+/*
+  Main Style Sheet
+*/
+
+$main-color: navy;
+$button-color: white;
+$button-color--active: grey;
+$button-bg--active: darkblue;
+
+.NavBar {
+  background-color: $main-color;
+  padding: 10px;
+  text-align: center;
+  &-button {
+    color: $button-color;
+    transition: background .25s ease-in, color .25s ease-in;
+    display: inline-block;
+    &:not(:first-child) {
+      margin-left: 10px;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      color: $button-color--active;
+      background-color: $button-bg--active;
+    }
+    &--isActive {
+      border:  1px dotted limegreen;
+    }
   }
 }

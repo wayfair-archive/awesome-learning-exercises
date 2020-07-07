@@ -23,18 +23,18 @@ const Start = () => {
 class App extends React.Component {
   render() {
     return (
-      <div>
+      <nav className="NavBar">
         <BrowserRouter>
           <NavLink
-            activeClassName="NavButton--isActive"
-            className="NavButton"
+            activeClassName="NavBar-button--isActive"
+            className="NavBar-button"
             to="/"
           >
-            <span>Home</span>
+            <span>Start</span>
           </NavLink>
           <NavLink
-            activeClassName="NavButton--isActive"
-            className="NavButton"
+            activeClassName="NavBar-button--isActive"
+            className="NavBar-button"
             to="/exercise1"
           >
             <span>Exercise 1</span>
@@ -44,7 +44,7 @@ class App extends React.Component {
             <Route exact path="/exercise1" component={ExerciseOne} />
           </Switch>
         </BrowserRouter>
-      </div>
+      </nav>
     );
   }
 }

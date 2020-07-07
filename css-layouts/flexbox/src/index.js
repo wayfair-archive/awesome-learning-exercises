@@ -12,14 +12,15 @@ import {
 } from './grid-components';
 import {
   ExerciseOne
-} from './exercise/exercise1/index';
-
+} from './exercises/exercise1/index';
 
 const Start = () => {
-  <div style={{border: '10px solid purple'}}>
-    <p>This will become the landing page</p>
-  </div>
-}
+  return (
+    <div style={{ border: "10px solid purple" }}>
+      <p>This will become the landing page</p>
+    </div>
+  );
+};
 
 class App extends React.Component {
   render() {

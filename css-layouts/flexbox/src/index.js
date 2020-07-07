@@ -7,8 +7,8 @@ import {
   Route,
   Switch
 } from "react-router-dom";
-import { Block } from "./grid-components";
 import ExerciseOne from "./exercises/exercise1/exercise1";
+import "./styles.scss";
 
 const Start = () => {
   return (
@@ -26,15 +26,15 @@ class App extends React.Component {
       <div>
         <BrowserRouter>
           <NavLink
-            activeClassName="PageHeader-navButton--isActive"
-            className="PageHeader-navButton"
+            activeClassName="NavButton--isActive"
+            className="NavButton"
             to="/"
           >
             <span>Home</span>
           </NavLink>
           <NavLink
-            activeClassName="PageHeader-navButton--isActive"
-            className="PageHeader-navButton"
+            activeClassName="NavButton--isActive"
+            className="NavButton"
             to="/exercise1"
           >
             <span>Exercise 1</span>

@@ -1,0 +1,6 @@
+.NavButton {
+  color: red;
+  &--isActive {
+    border:  1px dotted limegreen;
+  }
+}

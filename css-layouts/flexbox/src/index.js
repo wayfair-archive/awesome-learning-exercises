@@ -8,7 +8,7 @@ import {
   Switch
 } from "react-router-dom";
 import { Block } from "./grid-components";
-import { ExerciseOne } from "./exercises/exercise1/exercise1";
+import ExerciseOne from "./exercises/exercise1/exercise1";
 
 const Start = () => {
   return (

@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import ExerciseOne from "./exercises/exercise1/exercise1";
 import "./styles.scss";
+import "./reset.css";
 
 const Start = () => {
   return (

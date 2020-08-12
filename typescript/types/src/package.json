@@ -1,0 +1,12 @@
+{
+  "name": "awesome-learning-typescript-types",
+  "description": "Awesome Learning: TypeScript Types Exercises",
+  "main": "index.html",
+  "dependencies": {
+    "jest": "23.6.0"
+  },
+  "devDependencies": {
+    "@types/jest": "23.3.13",
+    "jest": "23.6.0"
+  }
+}

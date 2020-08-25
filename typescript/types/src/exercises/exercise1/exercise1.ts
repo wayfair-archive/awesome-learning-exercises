@@ -10,12 +10,8 @@
 💡 As you type your code, any invalid parameters should show up in
 💡 your IDE, so that you're immediately aware that function parameters are invalid
 `
-
-
-
-const addTogether = (num1, num2) => {
+export const addTogether = (num1, num2) => {
 	return num1 + num2;
 }
-
-addTogether(5, 10) // results in 15
-addTogether(5, '10') // results in '510'
+// addTogether(5, 10) // results in 15
+// addTogether(5, '10') // results in '510'

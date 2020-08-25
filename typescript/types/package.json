@@ -3,20 +3,32 @@
   "description": "Awesome Learning: TypeScript Types Exercises",
   "main": "src/App.js",
   "dependencies": {
-    "jest": "23.6.0",
+    "jest": "24.7.1",
     "prop-types": "15.7.2",
     "react": "16.9.0",
     "react-dom": "16.9.0",
     "react-rangeslider": "2.2.0",
     "react-router-dom": "5.0.1",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "typescript": "^4.0.2"
   },
   "devDependencies": {
-    "@types/jest": "23.3.13",
-    "jest": "23.6.0"
+    "@types/jest": "23.3.13"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

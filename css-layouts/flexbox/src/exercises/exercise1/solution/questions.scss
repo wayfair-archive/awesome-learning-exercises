@@ -1,0 +1,108 @@
+$color1: red;
+$color2: blue;
+$color3: green;
+$color4: orange;
+
+$equilateral-triangle-ratio: 0.866;
+
+// @TODO We should make mixins for all of the shapes...
+@mixin star {
+  border: 0 !important;
+  height: 36px;
+  width: 36px;
+  &::before {
+    content: "\2605";
+    color: $color4;
+    position: absolute;
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+@mixin square {
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
+  border-width: 2px;
+  border-style: dashed;
+}
+
+@mixin triangle {
+  border-radius: 0;
+  border-top: 0;
+	border-right: 20px solid  transparent; 
+	border-left: 20px solid  transparent; 
+	border-bottom: (40px * $equilateral-triangle-ratio) solid salmon;
+}
+@mixin circle {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background-color: navy;
+}
+
+.ExerciseOneWrapper {
+  padding: 15px;
+  background: #fff;
+  border: 2px solid #ddd;
+  margin: 20px 10px;
+  position: relative;
+  min-height: 80px;
+  &-inner {
+    padding: 15px;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .Marker {
+    opacity: .3;
+    &--one {
+      border-color: $color1;
+    }
+    &--two {
+      border-color: $color2;
+    }
+    &--three {
+      border-color: $color3;
+    }
+  }
+
+  &--question1 {
+    .Marker {
+      @include square;
+    }
+    .ExerciseOneWrapper-inner {
+      justify-content: space-evenly;
+    }
+  }
+
+  &--question2 {
+    // Should this be done in JS?
+    .ExerciseOneWrapper-inner {
+      flex-direction: row-reverse;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    .Marker--one {
+      @include star;
+    }
+    .Marker--two {
+      @include triangle;
+    }
+    .Marker--three {
+      @include circle;
+    }
+  }
+
+  &--question3 {
+    .ExerciseOneWrapper-inner {
+      flex-direction: column;
+    }
+  }
+}

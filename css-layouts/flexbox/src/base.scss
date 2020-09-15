@@ -1,0 +1,16 @@
+.PageHeader {
+  &-nav {
+    border-bottom: 2px solid lightblue;
+  }
+  &-navButton {
+    padding: 10px 15px;
+    color: cornflowerblue;
+    display: inline-block;
+    border-right: 2px solid lightblue;
+    text-decoration: none;
+    &:hover {
+      color: white;
+      background: cornflowerblue;
+    }
+  }
+}

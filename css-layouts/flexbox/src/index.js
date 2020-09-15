@@ -7,16 +7,15 @@ import {
   Route,
   Switch
 } from "react-router-dom";
-import ExerciseOne from "./exercises/exercise1/exercise1";
-import "./styles.scss";
+import { Block } from "./grid-components";
+import ExerciseOne from "./exercises/exercise1/index";
 import "./reset.css";
+import "./base.scss";
 
 const Start = () => {
   return (
     <div style={{ border: "10px solid purple" }}>
       <p>This will become the landing page</p>
-
-      <p>To start, take a look at the "grid-components" files.</p>
     </div>
   );
 };
@@ -24,28 +23,30 @@ const Start = () => {
 class App extends React.Component {
   render() {
     return (
-      <nav className="NavBar">
+      <div>
         <BrowserRouter>
-          <NavLink
-            activeClassName="NavBar-button--isActive"
-            className="NavBar-button"
-            to="/"
-          >
-            <span>Start</span>
-          </NavLink>
-          <NavLink
-            activeClassName="NavBar-button--isActive"
-            className="NavBar-button"
-            to="/exercise1"
-          >
-            <span>Exercise 1</span>
-          </NavLink>
+          <nav className="PageHeader-nav">
+            <NavLink
+              activeClassName="PageHeader-navButton--isActive"
+              className="PageHeader-navButton"
+              to="/start"
+            >
+              <span>Home</span>
+            </NavLink>
+            <NavLink
+              activeClassName="PageHeader-navButton--isActive"
+              className="PageHeader-navButton"
+              to="/exercise1"
+            >
+              <span>Exercise 1</span>
+            </NavLink>
+          </nav>
           <Switch>
-            <Route exact path="/" component={Start} />
+            <Route exact path="/start" component={Start} />
             <Route exact path="/exercise1" component={ExerciseOne} />
           </Switch>
         </BrowserRouter>
-      </nav>
+      </div>
     );
   }
 }

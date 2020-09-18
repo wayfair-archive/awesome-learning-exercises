@@ -1,5 +1,7 @@
 import React from "react";
 import { Block } from "../../../grid-components";
+import { Square } from "../../../utilities/shapes";
+
 import "./questions.scss";
 
 export const ExerciseOneWrapper = (props) => {
@@ -9,6 +11,11 @@ export const ExerciseOneWrapper = (props) => {
       className={`ExerciseOneWrapper ExerciseOneWrapper--question${question}`}
     >
       <div className="ExerciseOneWrapper-inner">
+        {/* <Block>
+          <Square size="large" color="red" />
+          <Square size="large" color="green" />
+          <Square size="large" color="blue" />
+        </Block> */}
         <div className="Marker Marker--one" />
         <div className="Marker Marker--two" />
         <div className="Marker Marker--three" />

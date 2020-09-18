@@ -9,8 +9,8 @@ import {
 } from "react-router-dom";
 import { Block } from "./grid-components";
 import ExerciseOne from "./exercises/exercise1/index";
-import "./reset.css";
-import "./base.scss";
+import "./utilities/reset.css";
+import "./utilities/base.scss";
 
 const Start = () => {
   return (

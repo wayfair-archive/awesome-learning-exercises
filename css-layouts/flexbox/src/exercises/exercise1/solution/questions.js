@@ -1,8 +1,18 @@
 import React from "react";
 import { Block } from "../../../grid-components";
-import { Square } from "../../../utilities/shapes";
+import { Square, Star, Heart, Circle } from "../../../utilities/shapes";
 
 import "./questions.scss";
+
+const QuestionWrapper = (props) => {
+  const { children, solution } = props;
+  return (
+    <div className="QuestionWrapper">
+      <div className="QuestionWrapper-underlay">{solution}</div>
+      {children}
+    </div>
+  );
+};
 
 export const ExerciseOneWrapper = (props) => {
   const { children, question } = props;
@@ -26,17 +36,46 @@ export const ExerciseOneWrapper = (props) => {
 };
 
 export const QuestionOne = ({ children }) => (
-  <ExerciseOneWrapper question={1}>{children}</ExerciseOneWrapper>
+  <QuestionWrapper
+    solution={
+      <Block size="12" justifyContent="space-evenly">
+        <Square size="large" color="red" isMasked />
+        <Square size="large" color="blue" isMasked />
+        <Square size="large" color="green" isMasked />
+      </Block>
+    }
+  >
+    {children}
+  </QuestionWrapper>
 );
 
 export const QuestionTwo = ({ children }) => (
-  <ExerciseOneWrapper question={2}>{children}</ExerciseOneWrapper>
+  <QuestionWrapper
+    solution={
+      <Block
+        size="12"
+        flexDirection="row-reverse"
+        justifyContent="flex-start"
+        alignItems="center"
+      >
+        <Star size="large" color="red" isMasked />
+        <Circle size="small" color="blue" isMasked />
+        <Heart size="large" color="green" isMasked />
+      </Block>
+    }
+  >
+    {children}
+  </QuestionWrapper>
 );
 
 export const QuestionThree = ({ children }) => (
-  <ExerciseOneWrapper question={3}>{children}</ExerciseOneWrapper>
-);
-
-export const QuestionFour = ({ children }) => (
-  <ExerciseOneWrapper question={4}>{children}</ExerciseOneWrapper>
+  <QuestionWrapper
+    solution={
+      <Block size="12" flexDirection="row-reverse">
+        <Circle size="medium" color="red" isMasked />
+      </Block>
+    }
+  >
+    {children}
+  </QuestionWrapper>
 );

@@ -1,5 +1,5 @@
 import React from "react";
-import { Block, RedBlock, BlueBlock, GreenBlock } from "../../grid-components";
+import { Block } from "../../grid-components";
 import { QuestionOne, QuestionTwo, QuestionThree } from "./solution/questions";
 import { Triangle, Heart, Square, Star, Circle } from "../../utilities/shapes";
 
@@ -15,7 +15,7 @@ const ExerciseOne = () => {
         <Block>
           <Square color="red" size="large" />
           <Square color="blue" size="large" />
-          <Square color="green" size="large" isMasked />
+          <Square color="green" size="large" />
         </Block>
       </QuestionOne>
 
@@ -23,9 +23,11 @@ const ExerciseOne = () => {
         Question 2
       */}
       <QuestionTwo>
-        <Heart size="large" color="green" isMasked />
-        <Circle size="small" color="blue" />
-        <Star size="large" color="red" isMasked />
+        <Block>
+          <Heart size="large" color="green" />
+          <Circle size="small" color="blue" />
+          <Star size="large" color="red" />
+        </Block>
       </QuestionTwo>
 
       {/*
@@ -33,9 +35,7 @@ const ExerciseOne = () => {
       */}
       <QuestionThree>
         <Block>
-          <RedBlock />
-          <BlueBlock />
-          <GreenBlock />
+          <Circle color="red" size="medium" />
         </Block>
       </QuestionThree>
     </div>

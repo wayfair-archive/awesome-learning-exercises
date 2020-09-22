@@ -14,8 +14,12 @@ import "./utilities/base.scss";
 
 const Start = () => {
   return (
-    <div style={{ border: "10px solid purple" }}>
-      <p>This will become the landing page</p>
+    <div className="content">
+      <h1>CSS Flexbox</h1>
+      <p>
+        Welcome to the CSS Awesome Learning Flexbox Exercises! Start with
+        "Exercise 1" from the above navigation tabs to begin.
+      </p>
     </div>
   );
 };

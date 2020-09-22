@@ -14,8 +14,6 @@ $colors: (
   yellow: 'gold'
 );
 
-$equilateral-triangle-ratio: 0.866;
-
 .Shape {
   display: inline-block;
 
@@ -24,9 +22,9 @@ $equilateral-triangle-ratio: 0.866;
   }
 
   &-triangle {
-    svg {
-      width: 100%;
-    }
+    // svg {
+    //   width: 100%;
+    // }
     @each $sizeLabel, $sizePx in $sizes {
       &--#{$sizeLabel} {
         width: #{$sizePx};
@@ -37,8 +35,9 @@ $equilateral-triangle-ratio: 0.866;
     }
     @each $colorLabel, $colorValue in $colors {
       &--#{$colorLabel} {
-        fill: #{$colorLabel}
+        fill: #{$colorLabel};
         // border-bottom-color: #{$colorValue};
+        stroke: #{$colorLabel};
       }
     }
   }

@@ -1,6 +1,13 @@
 import React from "react";
 import { Block } from "../../grid-components";
-import { QuestionOne, QuestionTwo, QuestionThree } from "./solution/questions";
+import {
+  QuestionOne,
+  QuestionTwo,
+  QuestionThree,
+  QuestionFour,
+  QuestionFive,
+  QuestionSix
+} from "./solution/questions";
 import { Triangle, Heart, Square, Star, Circle } from "../../utilities/shapes";
 
 const ExerciseOne = () => {
@@ -38,6 +45,35 @@ const ExerciseOne = () => {
           <Circle color="red" size="medium" />
         </Block>
       </QuestionThree>
+
+      {/* 
+        Question 4
+      */}
+      <QuestionFour>
+        <Block>
+          <Square color="green" size="medium" />
+          <Square color="blue" size="medium" />
+          <Square color="yellow" size="medium" />
+        </Block>
+      </QuestionFour>
+
+      {/* 
+        Question 5 
+      */}
+      <QuestionFive>
+        <Block>
+          <Circle size="large" color="blue" />
+          <Circle size="small" color="green" />
+          <Star size="small" color="red" />
+        </Block>
+      </QuestionFive>
+
+      {/* 
+        Question 6
+      */}
+      <QuestionSix>
+        <Block></Block>
+      </QuestionSix>
     </div>
   );
 };

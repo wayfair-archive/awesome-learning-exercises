@@ -6,13 +6,18 @@ export const Triangle = ({ size, color, isMasked }) => (
   <div
     className={`Shape Shape-triangle Shape-triangle--${size} Shape-triangle--${color}`}
   >
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-      <polygon
-        points="50, 13.397 100, 100 0, 100"
-        stroke="black"
-        stroke-dasharray="2"
-        fill={isMasked ? "none" : "inherit"}
-      />
+    <svg viewBox="0 0 53 53">
+      {isMasked ? (
+        <path
+          stroke-dasharray="4"
+          fill-opacity="0"
+          stroke-opacity="1"
+          stroke-width="3"
+          d="M22.169872981078 5.5192378864668a5 5 0 0 1 8.6602540378444 0l21.339745962156 36.961524227066a5 5 0 0 1 -4.3301270189222 7.5l-42.679491924311 0a5 5 0 0 1 -4.3301270189222 -7.5"
+        ></path>
+      ) : (
+        <path d="M22.169872981078 5.5192378864668a5 5 0 0 1 8.6602540378444 0l21.339745962156 36.961524227066a5 5 0 0 1 -4.3301270189222 7.5l-42.679491924311 0a5 5 0 0 1 -4.3301270189222 -7.5"></path>
+      )}
     </svg>
   </div>
 );

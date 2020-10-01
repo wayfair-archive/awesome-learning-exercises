@@ -187,37 +187,3 @@ Block.defaultProps = {
   justifyItems: null,
   justifyContent: null
 };
-
-export const RedBlock = () => (
-  <div
-    style={{
-      background: "crimson",
-      height: "50px",
-      width: "50px",
-      borderRadius: "5px",
-      display: "block"
-    }}
-  />
-);
-
-export const BlueBlock = () => (
-  <div
-    style={{
-      background: "skyblue",
-      height: "50px",
-      width: "50px",
-      borderRadius: "5px"
-    }}
-  />
-);
-
-export const GreenBlock = () => (
-  <div
-    style={{
-      background: "seagreen",
-      height: "50px",
-      width: "50px",
-      borderRadius: "5px"
-    }}
-  />
-);

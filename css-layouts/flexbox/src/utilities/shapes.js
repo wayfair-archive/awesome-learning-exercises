@@ -86,3 +86,20 @@ export const Heart = ({ size, color, isMasked }) => (
     )}
   </div>
 );
+
+export const NumberedBrick = ({ number, isMasked }) => (
+  <div
+    className={cx("NumberedBrick", {
+      "is-masked": isMasked
+    })}
+  >
+    <span className="NumberedBrick-number">{number}</span>
+  </div>
+);
+
+export const BrickOne = () => <NumberedBrick number={1} />;
+export const BrickTwo = () => <NumberedBrick number={2} />;
+export const BrickThree = () => <NumberedBrick number={3} />;
+export const BrickFour = () => <NumberedBrick number={4} />;
+export const BrickFive = () => <NumberedBrick number={5} />;
+export const BrickSix = () => <NumberedBrick number={6} />;

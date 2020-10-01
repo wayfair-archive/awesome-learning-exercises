@@ -14,29 +14,10 @@ const QuestionWrapper = (props) => {
   const { children, solution } = props;
   return (
     <div className="QuestionWrapper">
-      <div className="QuestionWrapper-underlay">{solution}</div>
-      {children}
-    </div>
-  );
-};
-
-export const ExerciseOneWrapper = (props) => {
-  const { children, question } = props;
-  return (
-    <div
-      className={`ExerciseOneWrapper ExerciseOneWrapper--question${question}`}
-    >
-      <div className="ExerciseOneWrapper-inner">
-        {/* <Block>
-          <Square size="large" color="red" />
-          <Square size="large" color="green" />
-          <Square size="large" color="blue" />
-        </Block> */}
-        <div className="Marker Marker--one" />
-        <div className="Marker Marker--two" />
-        <div className="Marker Marker--three" />
+      <div className="QuestionWrapper-inner">
+        <div className="QuestionWrapper-underlay">{solution}</div>
+        {children}
       </div>
-      <div>{children}</div>
     </div>
   );
 };

@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import { Block } from "./grid-components";
 import ExerciseOne from "./exercises/exercise1/index";
+import ExerciseTwo from "./exercises/exercise2/index";
 import "./utilities/reset.css";
 import "./utilities/base.scss";
 
@@ -44,10 +45,18 @@ class App extends React.Component {
             >
               <span>Exercise 1</span>
             </NavLink>
+            <NavLink
+              activeClassName="PageHeader-navButton--isActive"
+              className="PageHeader-navButton"
+              to="/exercise2"
+            >
+              <span>Exercise 2</span>
+            </NavLink>
           </nav>
           <Switch>
             <Route exact path="/start" component={Start} />
             <Route exact path="/exercise1" component={ExerciseOne} />
+            <Route exact path="/exercise2" component={ExerciseTwo} />
           </Switch>
         </BrowserRouter>
       </div>

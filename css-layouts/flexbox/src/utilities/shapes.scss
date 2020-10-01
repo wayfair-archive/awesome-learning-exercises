@@ -118,3 +118,32 @@ $colors: (
     }
   }
 }
+
+.NumberedBrick {
+  background: #cb4154;
+  border: 5px solid #a7293a;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  flex: 1 1 0;
+  transition: background .3s;
+  @media screen and (min-width: 800px) {
+    background: blue;
+  }
+  &-number {
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+    background: rgba(255,255,255,.5);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    vertical-align: center;
+    display: inline-block;
+  }
+  &.is-masked {
+    border-style: dashed;
+    background: #e69ea8;
+  }
+}

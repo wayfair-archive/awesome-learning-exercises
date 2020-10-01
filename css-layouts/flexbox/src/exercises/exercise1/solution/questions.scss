@@ -1,11 +1,15 @@
 .QuestionWrapper {
-  padding: 15px;
   background: #fff;
   border: 2px solid #ddd;
   margin: 20px 10px;
-  position: relative;
+  &-inner {
+    position: relative;
+  }
+  &-inner,
   &-underlay {
     padding: 15px;
+  }
+  &-underlay {
     display: flex;
     position: absolute;
     top: 0;

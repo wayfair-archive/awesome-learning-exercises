@@ -86,3 +86,95 @@ export const QuestionOne = ({ children }) => (
     {children}
   </QuestionTwoWrapper>
 );
+
+export const QuestionTwo = ({ children }) => (
+  <QuestionTwoWrapper
+    solution={
+      <Block>
+        <Block
+          size={{
+            all: 12,
+            small: 12,
+            medium: 4,
+            large: 2
+          }}
+        >
+          <NumberedBrick number={1} isMasked />
+        </Block>
+        <Block
+          size={{
+            all: 6,
+            small: 6,
+            medium: 4,
+            large: 2
+          }}
+        >
+          <NumberedBrick number={2} isMasked />
+        </Block>
+        <Block
+          size={{
+            all: 6,
+            small: 6,
+            medium: 4,
+            large: 2
+          }}
+        >
+          <NumberedBrick number={3} isMasked />
+        </Block>
+        <Block
+          size={{
+            all: 12,
+            small: 12,
+            medium: 4,
+            large: 2
+          }}
+        >
+          <NumberedBrick number={4} isMasked />
+        </Block>
+        <Block
+          size={{
+            all: 6,
+            small: 6,
+            medium: 4,
+            large: 2
+          }}
+        >
+          <NumberedBrick number={5} isMasked />
+        </Block>
+        <Block
+          size={{
+            all: 6,
+            small: 6,
+            medium: 4,
+            large: 2
+          }}
+        >
+          <NumberedBrick number={6} isMasked />
+        </Block>
+      </Block>
+    }
+  >
+    {children}
+  </QuestionTwoWrapper>
+);
+
+export const QuestionThree = ({ children }) => (
+  <QuestionTwoWrapper
+    solution={
+      <Block>
+        <Block
+          size={{
+            all: 6,
+            small: 6,
+            medium: 4,
+            large: 2
+          }}
+        >
+          <NumberedBrick number={6} isMasked />
+        </Block>
+      </Block>
+    }
+  >
+    {children}
+  </QuestionTwoWrapper>
+);

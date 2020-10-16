@@ -1,6 +1,6 @@
 import React from "react";
 import { Block } from "../../grid-components";
-import { QuestionOne } from "./solution/questions";
+import { QuestionOne, QuestionTwo } from "./solution/questions";
 import {
   BrickOne,
   BrickTwo,
@@ -68,6 +68,23 @@ const ExerciseTwo = () => {
           </Block>
         </Block>
       </QuestionOne>
+
+      <QuestionTwo>
+        <Block>
+          <Block>
+            <BrickOne />
+          </Block>
+          <Block>
+            <BrickTwo />
+          </Block>
+          <Block>
+            <BrickThree />
+          </Block>
+          <Block>
+            <BrickFour />
+          </Block>
+        </Block>
+      </QuestionTwo>
     </div>
   );
 };

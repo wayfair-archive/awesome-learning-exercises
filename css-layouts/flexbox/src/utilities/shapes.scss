@@ -119,16 +119,30 @@ $colors: (
   }
 }
 
+$default-bg-color: crimson;
+$small-bg-color: seagreen;
+$medium-bg-color: gold;
+$large-bg-color: skyblue;
+
 .NumberedBrick {
-  background: #cb4154;
-  border: 5px solid #a7293a;
   border-radius: 10px;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
   flex: 1 1 0;
   transition: background .3s;
-  @media screen and (min-width: 800px) {
-    background: blue;
+  background: $default-bg-color;
+  border: 5px solid darken($default-bg-color, 10%);
+  @media screen and (min-width: 300px) {
+    background: $small-bg-color;
+    border-color: darken($small-bg-color, 10%);
+  }
+  @media screen and (min-width: 600px) {
+    background: $medium-bg-color;
+    border-color: darken($medium-bg-color, 10%);
+  }
+  @media screen and (min-width: 900px) {
+    background: $large-bg-color;
+    border-color: darken($large-bg-color, 10%);
   }
   &-number {
     font-size: 30px;
@@ -144,6 +158,15 @@ $colors: (
   }
   &.is-masked {
     border-style: dashed;
-    background: #e69ea8;
+    background: lighten($default-bg-color, 10%);
+    @media screen and (min-width: 300px) {
+      background: lighten($small-bg-color, 10%);
+    }
+    @media screen and (min-width: 600px) {
+      background: lighten($medium-bg-color, 10%);
+    }
+    @media screen and (min-width: 900px) {
+      background: lighten($large-bg-color, 10%);
+    }
   }
 }

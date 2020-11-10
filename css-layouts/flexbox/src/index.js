@@ -34,7 +34,7 @@ class App extends React.Component {
             <NavLink
               activeClassName="PageHeader-navButton--isActive"
               className="PageHeader-navButton"
-              to="/start"
+              to="/"
             >
               <span>Home</span>
             </NavLink>
@@ -54,7 +54,7 @@ class App extends React.Component {
             </NavLink>
           </nav>
           <Switch>
-            <Route exact path="/start" component={Start} />
+            <Route exact path="/" component={Start} />
             <Route exact path="/exercise1" component={ExerciseOne} />
             <Route exact path="/exercise2" component={ExerciseTwo} />
           </Switch>

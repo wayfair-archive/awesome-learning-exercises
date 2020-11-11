@@ -1,0 +1,30 @@
+{
+  "name": "awesome-learning-typescript-basics-typescript-types",
+  "description": "Awesome Learning: TypeScript Basics: TypeScript Types Exercises",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "jest",
+    "test-cover": "jest --coverage"
+  },
+  "keywords": ["typescript", "babel", "jest"],
+  "author": "eidng8",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "@babel/preset-typescript": "^7.8.3",
+    "@typescript-eslint/eslint-plugin": "^2.24.0",
+    "@typescript-eslint/parser": "^2.24.0",
+    "babel-jest": "^25.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "jest": "^25.1.0",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {}
+}

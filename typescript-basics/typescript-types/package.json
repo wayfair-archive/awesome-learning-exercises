@@ -7,9 +7,6 @@
     "test": "jest",
     "test-cover": "jest --coverage"
   },
-  "keywords": ["typescript", "babel", "jest"],
-  "author": "eidng8",
-  "license": "GPL-3.0",
   "devDependencies": {
     "@babel/core": "^7.8.7",
     "@babel/preset-env": "^7.8.7",

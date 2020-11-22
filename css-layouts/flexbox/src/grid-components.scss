@@ -60,10 +60,6 @@ $rootClassName: 'Block';
   }
 }
 
-.#{$rootClassName} {
-  display: flex;
-}
-
 /// Flex Direction
 $flexDirection-settings: (
   'row': 'row',
@@ -174,6 +170,29 @@ $flex-basis-settings: (
   11: calculateFlexBasis(11),
   12: calculateFlexBasis(12),
 );
+
+// Loop for hidden size
+@each $bpLabel, $bp in $breakpoints {
+  @if ($bpLabel == 'all') {
+    .#{$rootClassName} {
+      display: flex;
+    }
+    .#{$rootClassName}--size-0 {
+      display: none;
+    }
+  } @else {
+    @media screen and (min-width: $bp) {
+      // Need this here so blocks default back to be visible
+      // At higher breakpoints
+      .#{$rootClassName} {
+        display: flex;
+      }
+      .#{$rootClassName}--#{$bpLabel}-size-0 {
+        display: none;
+      }
+    }
+  }
+}
 
 @include ResponsiveClassnames(
   $settings: $flex-basis-settings,

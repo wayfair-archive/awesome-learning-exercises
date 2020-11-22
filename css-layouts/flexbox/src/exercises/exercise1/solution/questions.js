@@ -1,26 +1,7 @@
 import React from "react";
 import { Block } from "../../../grid-components";
-import {
-  Square,
-  Star,
-  Heart,
-  Circle,
-  Triangle
-} from "../../../utilities/shapes";
-
-import "./questions.scss";
-
-const QuestionWrapper = (props) => {
-  const { children, solution } = props;
-  return (
-    <div className="QuestionWrapper">
-      <div className="QuestionWrapper-inner">
-        <div className="QuestionWrapper-underlay">{solution}</div>
-        {children}
-      </div>
-    </div>
-  );
-};
+import { Square, Star, Heart, Circle } from "../../../utilities/shapes";
+import { QuestionWrapper } from "../../../utilities/containers";
 
 export const QuestionOne = ({ children }) => (
   <QuestionWrapper

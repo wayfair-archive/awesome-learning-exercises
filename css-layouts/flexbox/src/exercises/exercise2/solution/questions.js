@@ -2,60 +2,7 @@ import React, { useState } from "react";
 import cx from "classnames";
 import { Block } from "../../../grid-components";
 import { BrickOne, NumberedBrick } from "../../../utilities/shapes";
-import "./questions.scss";
-
-const ExerciseTwoWrapper = (props) => {
-  const { title, children, solution } = props;
-  const [showAsOverlay, toggleOverlay] = useState(false);
-
-  return (
-    <div className="ExerciseTwoWrapper">
-      <div
-        className={cx("ExerciseTwoWrapper-inner", {
-          //"is-hidden": !showAsOverlay
-          "is-overlay": showAsOverlay
-        })}
-      >
-        <div className="ExerciseTwoWrapper-header">
-          {title}
-          <button
-            type="button"
-            className="ExerciseTwoWrapper-button"
-            onClick={() => toggleOverlay(!showAsOverlay)}
-          >
-            {showAsOverlay ? "Show side by side" : "Show as overlay"}
-          </button>
-        </div>
-        <div className="ExerciseTwoWrapper-body">
-          <Block>
-            <Block size={showAsOverlay ? 12 : 6}>
-              <div
-                className={cx("ExerciseTwoWrapper-userInput", {
-                  "is-sideBySide": !showAsOverlay
-                })}
-              >
-                {children}
-              </div>
-            </Block>
-            <Block size={showAsOverlay ? 12 : 6}>
-              <div
-                className={cx("ExerciseTwoWrapper-solution", {
-                  //"is-hidden": !showAsOverlay
-                  "is-overlay": showAsOverlay
-                })}
-                size={6}
-              >
-                <div className="ExerciseTwoWrapper-solution-wrap">
-                  {solution}
-                </div>
-              </div>
-            </Block>
-          </Block>
-        </div>
-      </div>
-    </div>
-  );
-};
+import { ExerciseTwoWrapper } from "../../../utilities/containers";
 
 export const QuestionOne = ({ children }) => (
   <ExerciseTwoWrapper
@@ -76,7 +23,7 @@ export const QuestionOne = ({ children }) => (
           size={{
             all: 12,
             small: 6,
-            medium: 4,
+            medium: 0,
             large: 8
           }}
         >

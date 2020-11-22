@@ -1,29 +1,39 @@
+$primary-color: #1AC8ED;
+$secondary-color: #FF9B71;
+$dark: #2D3047;
+
 body {
-  background-color: lightcyan;
-  font-family: sans-serif;
+  background-color: #1AC8ED;
+  font-family: 'Tahoma', sans-serif;
 }
 
-h1 {
+.MainContent {
+  padding: 25px 15px;
 
-}
-
-.content {
-  margin: 15px;
+  &-welcome {
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+  }
 }
 
 .PageHeader {
   &-nav {
-    border-bottom: 2px solid lightblue;
+    padding: 15px 15px 0;
+    background: #FF9B71;
   }
   &-navButton {
-    padding: 10px 15px;
-    color: cornflowerblue;
+    background: white;
+    padding: 10px 20px;
+    color: $dark;
     display: inline-block;
-    border-right: 2px solid lightblue;
     text-decoration: none;
+    border-radius: 5px;
+    margin: 0 15px 15px 0;
+    border: 3px solid #e47648;
+    transition: background 300ms;
     &:hover {
-      color: white;
-      background: cornflowerblue;
+      background: #ededed;
     }
   }
 }

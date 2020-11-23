@@ -77,7 +77,29 @@ export const QuestionFive = ({ children }) => (
 );
 
 export const QuestionSix = ({ children }) => (
-  <QuestionWrapper solution={<Block size="12"></Block>}>
+  <QuestionWrapper
+    solution={
+      <Block size="12" flexDirection="row-reverse">
+        <Heart size="large" color="red" isMasked />
+        <Heart size="large" color="green" isMasked />
+        <Square size="large" color="blue" isMasked />
+      </Block>
+    }
+  >
+    {children}
+  </QuestionWrapper>
+);
+
+export const QuestionSeven = ({ children }) => (
+  <QuestionWrapper
+    solution={
+      <Block size="12" justifyContent="space-around">
+        <Star size="large" color="yellow" isMasked />
+        <Heart size="small" color="blue" isMasked />
+        <Square size="medium" color="red" isMasked />
+      </Block>
+    }
+  >
     {children}
   </QuestionWrapper>
 );

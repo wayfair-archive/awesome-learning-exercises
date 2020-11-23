@@ -43,7 +43,7 @@
 
 import React from "react";
 import { Block } from "../../grid-components";
-import { QuestionOne, QuestionTwo, QuestionThree } from "./solution/questions";
+import { QuestionOne, QuestionTwo, QuestionThree, QuestionFour } from "./solution/questions";
 import {
   BrickOne,
   BrickTwo,
@@ -108,6 +108,23 @@ const ExerciseTwo = () => {
           </Block>
         </Block>
       </QuestionThree>
+
+      <QuestionFour>
+        <Block>
+          <Block>
+            <BrickOne />
+          </Block>
+          <Block>
+            <BrickTwo />
+          </Block>
+          <Block>
+            <BrickThree />
+          </Block>
+          <Block>
+            <BrickFour />
+          </Block>
+        </Block>
+      </QuestionFour>
     </div>
   );
 };

@@ -108,8 +108,23 @@ const ExerciseOne = () => {
         Question 6
       */}
       <QuestionSix>
-        <Block></Block>
+        <Block>
+          <Heart size="large" color="red" />
+          <Heart size="large" color="green" />
+          <Square size="large" color="blue" />
+        </Block>
       </QuestionSix>
+
+      {/*
+        Question 7
+      */}
+      <QuestionSeven>
+        <Block>
+          <Star size="large" color="yellow" />
+          <Heart size="small" color="blue" />
+          <Square size="medium" color="red" />
+        </Block>
+      </QuestionSeven>
     </div>
   );
 };

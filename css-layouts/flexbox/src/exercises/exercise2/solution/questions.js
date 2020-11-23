@@ -1,7 +1,6 @@
-import React, { useState } from "react";
-import cx from "classnames";
+import React from "react";
 import { Block } from "../../../grid-components";
-import { BrickOne, NumberedBrick } from "../../../utilities/shapes";
+import { NumberedBrick } from "../../../utilities/shapes";
 import { ExerciseTwoWrapper } from "../../../utilities/containers";
 
 export const QuestionOne = ({ children }) => (
@@ -23,7 +22,7 @@ export const QuestionOne = ({ children }) => (
           size={{
             all: 12,
             small: 6,
-            medium: 0,
+            medium: 4,
             large: 8
           }}
         >
@@ -191,25 +190,25 @@ export const QuestionThree = ({ children }) => (
 
 export const QuestionFour = ({ children }) => (
   <ExerciseTwoWrapper
-    title="Question 3"
+    title="Question 4"
     solution={
       <Block>
         <Block
           size={{
-            all: 6,
-            small: 6,
+            all: 12,
+            small: 8,
             medium: 4,
-            large: 1
+            large: 6
           }}
         >
           <NumberedBrick number={1} isMasked />
         </Block>
         <Block
           size={{
-            all: 6,
-            small: 6,
+            all: 12,
+            small: 4,
             medium: 8,
-            large: 8
+            large: 6
           }}
         >
           <NumberedBrick number={2} isMasked />
@@ -217,9 +216,9 @@ export const QuestionFour = ({ children }) => (
         <Block
           size={{
             all: 6,
-            small: 12,
-            medium: 4,
-            large: 3
+            small: 4,
+            medium: 8,
+            large: 6
           }}
         >
           <NumberedBrick number={3} isMasked />
@@ -227,7 +226,7 @@ export const QuestionFour = ({ children }) => (
         <Block
           size={{
             all: 6,
-            small: 12,
+            small: 8,
             medium: 4,
             large: 6
           }}
@@ -241,19 +240,7 @@ export const QuestionFour = ({ children }) => (
             medium: 4,
             large: 5
           }}
-        >
-          <NumberedBrick number={5} isMasked />
-        </Block>
-        <Block
-          size={{
-            all: 6,
-            small: 7,
-            medium: 12,
-            large: 1
-          }}
-        >
-          <NumberedBrick number={6} isMasked />
-        </Block>
+        ></Block>
       </Block>
     }
   >

@@ -5,6 +5,8 @@
   background: #ACC18A;
   display: flex;
   justify-content: space-between;
+  max-width: 500px;
+  margin: auto;
   code {
     background-color: rgba(0,0,0,.1);
     border-radius: 3px;
@@ -12,17 +14,16 @@
   }
 }
 
-
-$wrapper-main-color: #ddd;
+$wrapper-main-color: #A1E7F7;
 
 .QuestionWrapper {
-  margin: 0 10px;
   &-inner {    
     background: #fff;
     border: 2px solid $wrapper-main-color;
     margin: 20px auto;
     width: 100%;
     max-width: 1600px;
+    border-radius: 5px;
     &.is-overlay {
       max-width: 800px;
     }
@@ -33,6 +34,7 @@ $wrapper-main-color: #ddd;
     display: flex;
     justify-content: space-between;
   }
+
   &-body {
     position: relative;
   }
@@ -48,7 +50,7 @@ $wrapper-main-color: #ddd;
   }
   &-userInput,
   &-solution {
-    padding: 15px;
+    padding: 20px;
     width: 100%;
   }
   &-userInput {

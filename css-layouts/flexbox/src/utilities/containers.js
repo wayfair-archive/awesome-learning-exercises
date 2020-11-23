@@ -1,5 +1,8 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
+import cx from "classnames";
 import "./containers.scss";
+import { Block } from "../grid-components";
 
 export const Alert = ({ children }) => {
   const [showAlert, setShowAlert] = useState(true);
@@ -16,45 +19,38 @@ export const Alert = ({ children }) => {
   );
 };
 
-export const QuestionWrapper = (props) => {
-  const { children, solution } = props;
+export const QuestionWrapper = ({
+  title,
+  children,
+  solution,
+  showOverlayToggle
+}) => {
+  const [showAsOverlay, toggleOverlay] = useState(!showOverlayToggle);
+
   return (
     <div className="QuestionWrapper">
-      <div className="QuestionWrapper-inner">
-        <div className="QuestionWrapper-underlay">{solution}</div>
-        {children}
-      </div>
-    </div>
-  );
-};
-
-export const ExerciseTwoWrapper = (props) => {
-  const { title, children, solution } = props;
-  const [showAsOverlay, toggleOverlay] = useState(false);
-
-  return (
-    <div className="ExerciseTwoWrapper">
       <div
-        className={cx("ExerciseTwoWrapper-inner", {
-          //"is-hidden": !showAsOverlay
+        className={cx("QuestionWrapper-inner", {
           "is-overlay": showAsOverlay
         })}
       >
-        <div className="ExerciseTwoWrapper-header">
+        <div className="QuestionWrapper-header">
           {title}
-          <button
-            type="button"
-            className="ExerciseTwoWrapper-button"
-            onClick={() => toggleOverlay(!showAsOverlay)}
-          >
-            {showAsOverlay ? "Show side by side" : "Show as overlay"}
-          </button>
+          {showOverlayToggle && (
+            <button
+              type="button"
+              className="QuestionWrapper-button"
+              onClick={() => toggleOverlay(!showAsOverlay)}
+            >
+              {showAsOverlay ? "Show side by side" : "Show as overlay"}
+            </button>
+          )}
         </div>
-        <div className="ExerciseTwoWrapper-body">
+        <div className="QuestionWrapper-body">
           <Block>
             <Block size={showAsOverlay ? 12 : 6}>
               <div
-                className={cx("ExerciseTwoWrapper-userInput", {
+                className={cx("QuestionWrapper-userInput", {
                   "is-sideBySide": !showAsOverlay
                 })}
               >
@@ -63,15 +59,12 @@ export const ExerciseTwoWrapper = (props) => {
             </Block>
             <Block size={showAsOverlay ? 12 : 6}>
               <div
-                className={cx("ExerciseTwoWrapper-solution", {
-                  //"is-hidden": !showAsOverlay
+                className={cx("QuestionWrapper-solution", {
                   "is-overlay": showAsOverlay
                 })}
                 size={6}
               >
-                <div className="ExerciseTwoWrapper-solution-wrap">
-                  {solution}
-                </div>
+                <div className="QuestionWrapper-solution-wrap">{solution}</div>
               </div>
             </Block>
           </Block>
@@ -79,4 +72,20 @@ export const ExerciseTwoWrapper = (props) => {
       </div>
     </div>
   );
+};
+
+QuestionWrapper.propTypes = {
+  title: PropTypes.string,
+  children: PropTypes.node,
+  solution: PropTypes.node,
+  showAsOverlay: PropTypes.bool,
+  showOverlayToggle: PropTypes.boolean
+};
+
+QuestionWrapper.defaultProps = {
+  title: "",
+  children: null,
+  solution: null,
+  showAsOverlay: true,
+  showOverlayToggle: false
 };

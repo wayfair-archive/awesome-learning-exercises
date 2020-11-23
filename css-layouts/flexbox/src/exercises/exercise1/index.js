@@ -40,7 +40,8 @@ import {
   QuestionThree,
   QuestionFour,
   QuestionFive,
-  QuestionSix
+  QuestionSix,
+  QuestionSeven
 } from "./solution/questions";
 import { Alert } from "../../utilities/containers";
 import { Heart, Square, Star, Circle } from "../../utilities/shapes";

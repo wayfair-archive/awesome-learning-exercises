@@ -45,13 +45,11 @@ const JUSTIFY_CONTENT_PROPERTIES = [
   "space-evenly"
 ];
 
-const ALL = "all";
 const SMALL = "sm";
 const MEDIUM = "md";
 const LARGE = "lg";
 
 export const BREAKPOINTS = {
-  ALL: ALL,
   SMALL: SMALL,
   MEDIUM: MEDIUM,
   LARGE: LARGE
@@ -76,7 +74,7 @@ export function convertPropsToClassNames({ classNameModifier, propValue }) {
       let className;
       // If the breakpoint is the `all` value, then we remove the -all modifier
       // to match the naming scheme above and indicate the styles apply at all breakpoints
-      if (breakpoint === BREAKPOINTS.ALL) {
+      if (breakpoint === BREAKPOINTS.SMALL) {
         className = `${CLASSNAME_PREFIX}--${classNameModifier}-${value}`;
       } else {
         className = `${CLASSNAME_PREFIX}--${breakpoint}-${classNameModifier}-${value}`;

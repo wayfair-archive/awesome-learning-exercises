@@ -18,7 +18,6 @@
 
   ```
   size={{
-    all: 12,
     small: 12
     medium: 6
     large: 4
@@ -43,7 +42,12 @@
 
 import React from "react";
 import { Block } from "../../grid-components";
-import { QuestionOne, QuestionTwo, QuestionThree, QuestionFour } from "./solution/questions";
+import {
+  QuestionOne,
+  QuestionTwo,
+  QuestionThree,
+  QuestionFour
+} from "./solution/questions";
 import {
   BrickOne,
   BrickTwo,

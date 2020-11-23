@@ -1,11 +1,12 @@
 import React from "react";
 import { Block } from "../../../grid-components";
 import { NumberedBrick } from "../../../utilities/shapes";
-import { ExerciseTwoWrapper } from "../../../utilities/containers";
+import { QuestionWrapper } from "../../../utilities/containers";
 
 export const QuestionOne = ({ children }) => (
-  <ExerciseTwoWrapper
+  <QuestionWrapper
     title="Question 1"
+    showOverlayToggle
     solution={
       <Block>
         <Block
@@ -41,12 +42,13 @@ export const QuestionOne = ({ children }) => (
     }
   >
     {children}
-  </ExerciseTwoWrapper>
+  </QuestionWrapper>
 );
 
 export const QuestionTwo = ({ children }) => (
-  <ExerciseTwoWrapper
+  <QuestionWrapper
     title="Question 2"
+    showOverlayToggle
     solution={
       <Block>
         <Block
@@ -113,12 +115,13 @@ export const QuestionTwo = ({ children }) => (
     }
   >
     {children}
-  </ExerciseTwoWrapper>
+  </QuestionWrapper>
 );
 
 export const QuestionThree = ({ children }) => (
-  <ExerciseTwoWrapper
+  <QuestionWrapper
     title="Question 3"
+    showOverlayToggle
     solution={
       <Block>
         <Block
@@ -185,12 +188,13 @@ export const QuestionThree = ({ children }) => (
     }
   >
     {children}
-  </ExerciseTwoWrapper>
+  </QuestionWrapper>
 );
 
 export const QuestionFour = ({ children }) => (
-  <ExerciseTwoWrapper
+  <QuestionWrapper
     title="Question 4"
+    showOverlayToggle
     solution={
       <Block>
         <Block
@@ -245,5 +249,5 @@ export const QuestionFour = ({ children }) => (
     }
   >
     {children}
-  </ExerciseTwoWrapper>
+  </QuestionWrapper>
 );

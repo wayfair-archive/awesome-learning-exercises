@@ -119,8 +119,7 @@ $colors: (
   }
 }
 
-$default-bg-color: crimson;
-$small-bg-color: seagreen;
+$small-bg-color: crimson;
 $medium-bg-color: gold;
 $large-bg-color: skyblue;
 $brick-circle-size: 30px;
@@ -131,8 +130,8 @@ $brick-circle-size: 30px;
   text-align: center;
   flex: 1 1 0;
   transition: background .3s;
-  background: $default-bg-color;
-  border: 5px solid darken($default-bg-color, 10%);
+  background: $small-bg-color;
+  border: 5px solid darken($small-bg-color, 10%);
   @media screen and (min-width: 300px) {
     background: $small-bg-color;
     border-color: darken($small-bg-color, 10%);
@@ -159,10 +158,7 @@ $brick-circle-size: 30px;
   }
   &.is-masked {
     border-style: dashed;
-    background: lighten($default-bg-color, 10%);
-    @media screen and (min-width: 300px) {
-      background: lighten($small-bg-color, 10%);
-    }
+    background: lighten($small-bg-color, 10%);
     @media screen and (min-width: 600px) {
       background: lighten($medium-bg-color, 10%);
     }

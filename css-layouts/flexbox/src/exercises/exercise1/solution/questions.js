@@ -22,12 +22,7 @@ export const QuestionTwo = ({ children }) => (
   <QuestionWrapper
     title="Question 2"
     solution={
-      <Block
-        size={12}
-        flexDirection="row-reverse"
-        justifyContent="flex-start"
-        alignItems="center"
-      >
+      <Block size={12} flexDirection="row-reverse" alignItems="baseline">
         <Star size="large" color="red" isMasked />
         <Circle size="small" color="blue" isMasked />
         <Heart size="large" color="green" isMasked />
@@ -42,8 +37,13 @@ export const QuestionThree = ({ children }) => (
   <QuestionWrapper
     title="Question 3"
     solution={
-      <Block size={12} flexDirection="row-reverse">
+      <Block
+        size={12}
+        flexDirection="column-reverse"
+        justifyContent="space-evenly"
+      >
         <Circle size="medium" color="red" isMasked />
+        <Circle size="medium" color="blue" isMasked />
       </Block>
     }
   >
@@ -55,7 +55,7 @@ export const QuestionFour = ({ children }) => (
   <QuestionWrapper
     title="Question 4"
     solution={
-      <Block size={12} justifyContent="space-between">
+      <Block size={12} justifyContent="space-between" alignContent="flex-end">
         <Square size="medium" color="green" isMasked />
         <Square size="medium" color="blue" isMasked />
         <Square size="medium" color="yellow" isMasked />
@@ -70,7 +70,12 @@ export const QuestionFive = ({ children }) => (
   <QuestionWrapper
     title="Question 5"
     solution={
-      <Block size={12} justifyContent="center" alignItems="flex-end">
+      <Block
+        size={12}
+        flexDirection="column"
+        alignItems="flex-end"
+        justifyItems="flex-end"
+      >
         <Circle size="large" color="blue" isMasked />
         <Circle size="small" color="green" isMasked />
         <Star size="small" color="red" isMasked />
@@ -100,7 +105,12 @@ export const QuestionSeven = ({ children }) => (
   <QuestionWrapper
     title="Question 7"
     solution={
-      <Block size={12} justifyContent="space-around">
+      <Block
+        size={12}
+        justifyContent="space-around"
+        alignItems="center"
+        alignContent="flex-end"
+      >
         <Star size="large" color="yellow" isMasked />
         <Heart size="small" color="blue" isMasked />
         <Square size="medium" color="red" isMasked />

@@ -80,6 +80,7 @@ const ExerciseOne = () => {
       <QuestionThree>
         <Block>
           <Circle color="red" size="medium" />
+          <Circle color="blue" size="medium" />
         </Block>
       </QuestionThree>
 

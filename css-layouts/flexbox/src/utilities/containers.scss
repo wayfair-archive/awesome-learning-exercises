@@ -37,6 +37,8 @@ $wrapper-main-color: #A1E7F7;
 
   &-body {
     position: relative;
+    min-height: 200px;
+    display: flex;
   }
   &-button {
     border-radius: 15px;
@@ -62,6 +64,7 @@ $wrapper-main-color: #A1E7F7;
     border-left: 1px solid $wrapper-main-color;
     &-wrap {
       width: 100%;
+      
     }
     &.is-overlay {
       border-left: 0; // Remove border

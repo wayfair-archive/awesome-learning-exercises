@@ -103,10 +103,3 @@ export const BrickThree = () => <NumberedBrick number={3} />;
 export const BrickFour = () => <NumberedBrick number={4} />;
 export const BrickFive = () => <NumberedBrick number={5} />;
 export const BrickSix = () => <NumberedBrick number={6} />;
-
-export const Page = ({ children }) => <main className="Page">{children}</main>;
-const MobileNav = () => <div />;
-const DesktopNav = () => <div />;
-const HeroImage = () => <div />;
-const CallToAction = () => <div />;
-export const Divider = () => <hr className="Divider" />;

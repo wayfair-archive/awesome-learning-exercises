@@ -1,6 +1,6 @@
 import React from "react";
 import { Block } from "../../grid-components";
-import { Page, Divider } from "../../utilities/shapes";
+import { Page, Divider } from "../../utilities/website-components";
 
 const ExerciseThree = () => {
   return (

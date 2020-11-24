@@ -167,26 +167,3 @@ $brick-circle-size: 30px;
     }
   }
 }
-
-.Page {
-  background: #AA4465;
-  padding: 100px;
-}
-.Divider {
-  overflow: visible;
-  height: 30px;
-  border-style: solid;
-  border-color: black;
-  border-width: 3px 0 0 0;
-  border-radius: 20px;
-  &:before {
-    display: block;
-    content: "";
-    height: 30px;
-    margin-top: -33px;
-    border-style: solid;
-    border-color: black;
-    border-width: 0 0 3px 0;
-    border-radius: 20px;
-  }
-}

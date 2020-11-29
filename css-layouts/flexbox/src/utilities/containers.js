@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
 import "./containers.scss";
-import { Block } from "../grid-components";
 
 export const Alert = ({ children }) => {
   const [showAlert, setShowAlert] = useState(true);
@@ -23,17 +22,19 @@ export const QuestionWrapper = ({
   title,
   children,
   solution,
-  showOverlayToggle
+  showOverlayToggle,
+  hasFixedHeight
 }) => {
   const [showAsOverlay, toggleOverlay] = useState(!showOverlayToggle);
 
   return (
-    <div className="QuestionWrapper">
-      <div
-        className={cx("QuestionWrapper-inner", {
-          "is-overlay": showAsOverlay
-        })}
-      >
+    <div
+      className={cx("QuestionWrapper", {
+        "is-overlay": showAsOverlay,
+        "has-fixedHeight": hasFixedHeight
+      })}
+    >
+      <div className="QuestionWrapper-inner">
         <div className="QuestionWrapper-header">
           {title}
           {showOverlayToggle && (
@@ -47,27 +48,8 @@ export const QuestionWrapper = ({
           )}
         </div>
         <div className="QuestionWrapper-body">
-          <Block>
-            <Block size={showAsOverlay ? 12 : 6}>
-              <div
-                className={cx("QuestionWrapper-userInput", {
-                  "is-sideBySide": !showAsOverlay
-                })}
-              >
-                {children}
-              </div>
-            </Block>
-            <Block size={showAsOverlay ? 12 : 6}>
-              <div
-                className={cx("QuestionWrapper-solution", {
-                  "is-overlay": showAsOverlay
-                })}
-                size={6}
-              >
-                <div className="QuestionWrapper-solution-wrap">{solution}</div>
-              </div>
-            </Block>
-          </Block>
+          <div className="QuestionWrapper-userInput">{children}</div>
+          <div className="QuestionWrapper-solution">{solution}</div>
         </div>
       </div>
     </div>
@@ -79,7 +61,8 @@ QuestionWrapper.propTypes = {
   children: PropTypes.node,
   solution: PropTypes.node,
   showAsOverlay: PropTypes.bool,
-  showOverlayToggle: PropTypes.boolean
+  showOverlayToggle: PropTypes.bool,
+  hasFixedHeight: PropTypes.bool
 };
 
 QuestionWrapper.defaultProps = {
@@ -87,5 +70,6 @@ QuestionWrapper.defaultProps = {
   children: null,
   solution: null,
   showAsOverlay: true,
-  showOverlayToggle: false
+  showOverlayToggle: false,
+  hasFixedHeight: false
 };

@@ -53,7 +53,6 @@ export const QuestionTwo = ({ children }) => (
       <Block>
         <Block
           size={{
-            all: 12,
             small: 12,
             medium: 4,
             large: 2
@@ -63,7 +62,6 @@ export const QuestionTwo = ({ children }) => (
         </Block>
         <Block
           size={{
-            all: 6,
             small: 6,
             medium: 4,
             large: 2
@@ -73,7 +71,6 @@ export const QuestionTwo = ({ children }) => (
         </Block>
         <Block
           size={{
-            all: 6,
             small: 6,
             medium: 4,
             large: 2
@@ -83,7 +80,6 @@ export const QuestionTwo = ({ children }) => (
         </Block>
         <Block
           size={{
-            all: 12,
             small: 12,
             medium: 4,
             large: 2
@@ -93,7 +89,6 @@ export const QuestionTwo = ({ children }) => (
         </Block>
         <Block
           size={{
-            all: 6,
             small: 6,
             medium: 4,
             large: 2
@@ -103,7 +98,6 @@ export const QuestionTwo = ({ children }) => (
         </Block>
         <Block
           size={{
-            all: 6,
             small: 6,
             medium: 4,
             large: 2
@@ -126,7 +120,6 @@ export const QuestionThree = ({ children }) => (
       <Block>
         <Block
           size={{
-            all: 6,
             small: 6,
             medium: 4,
             large: 1
@@ -136,7 +129,6 @@ export const QuestionThree = ({ children }) => (
         </Block>
         <Block
           size={{
-            all: 6,
             small: 6,
             medium: 8,
             large: 8
@@ -146,7 +138,6 @@ export const QuestionThree = ({ children }) => (
         </Block>
         <Block
           size={{
-            all: 6,
             small: 12,
             medium: 4,
             large: 3
@@ -156,7 +147,6 @@ export const QuestionThree = ({ children }) => (
         </Block>
         <Block
           size={{
-            all: 6,
             small: 12,
             medium: 4,
             large: 6
@@ -166,7 +156,6 @@ export const QuestionThree = ({ children }) => (
         </Block>
         <Block
           size={{
-            all: 6,
             small: 5,
             medium: 4,
             large: 5
@@ -176,7 +165,6 @@ export const QuestionThree = ({ children }) => (
         </Block>
         <Block
           size={{
-            all: 6,
             small: 7,
             medium: 12,
             large: 1
@@ -199,7 +187,6 @@ export const QuestionFour = ({ children }) => (
       <Block>
         <Block
           size={{
-            all: 12,
             small: 8,
             medium: 4,
             large: 6
@@ -209,7 +196,6 @@ export const QuestionFour = ({ children }) => (
         </Block>
         <Block
           size={{
-            all: 12,
             small: 4,
             medium: 8,
             large: 6
@@ -219,7 +205,6 @@ export const QuestionFour = ({ children }) => (
         </Block>
         <Block
           size={{
-            all: 6,
             small: 4,
             medium: 8,
             large: 6
@@ -229,7 +214,6 @@ export const QuestionFour = ({ children }) => (
         </Block>
         <Block
           size={{
-            all: 6,
             small: 8,
             medium: 4,
             large: 6
@@ -239,7 +223,6 @@ export const QuestionFour = ({ children }) => (
         </Block>
         <Block
           size={{
-            all: 6,
             small: 5,
             medium: 4,
             large: 5

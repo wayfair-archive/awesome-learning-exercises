@@ -24,9 +24,6 @@ $wrapper-main-color: #A1E7F7;
     width: 100%;
     max-width: 1600px;
     border-radius: 5px;
-    &.is-overlay {
-      max-width: 800px;
-    }
   }
   &-header {
     background: $wrapper-main-color;
@@ -34,10 +31,8 @@ $wrapper-main-color: #A1E7F7;
     display: flex;
     justify-content: space-between;
   }
-
   &-body {
     position: relative;
-    min-height: 200px;
     display: flex;
   }
   &-button {
@@ -56,26 +51,41 @@ $wrapper-main-color: #A1E7F7;
     width: 100%;
   }
   &-userInput {
-    &.is-sideBySide {
-      border-right: 1px solid $wrapper-main-color;
-    }
+    border-right: 1px solid $wrapper-main-color;
   }
   &-solution {
     border-left: 1px solid $wrapper-main-color;
-    &-wrap {
-      width: 100%;
-      
+  }
+  &.is-overlay {
+    .QuestionWrapper {
+      &-inner {
+        max-width: 800px;
+      }
+      &-userInput {
+        border-right: 0;
+      }
+      &-solution {
+        border-left: 0; // Remove border
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        opacity: .3;
+      }
     }
-    &.is-overlay {
-      border-left: 0; // Remove border
-      display: flex;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: 100%;
-      opacity: .3;
+  }
+  &.has-fixedHeight {
+    .QuestionWrapper {
+      &-body {
+        min-height: 200px;
+      }
+      &-userInput,
+      &-solution {
+        display: flex;
+      }
     }
   }
 }

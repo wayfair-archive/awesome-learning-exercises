@@ -18,11 +18,11 @@ $rootClassName: 'Block';
   $property
 ) {
   @each $bpLabel, $bp in $breakpoints {
-    // If we are at the all breakpoint, don't wrap in a media query
+    // If we are at the small breakpoint, don't wrap in a media query
     @if ($bpLabel == 'small') {
       // Iterate through each value we offer
       @each $name, $setting in $settings {
-        // Drop the `-all` flag appended to the classname above in cases where its
+        // Drop the `-small` flag appended to the classname above in cases where its
         // a set of styles applied outside of a breakpoint
         $classname: '#{$rootClassName}--#{$propName}-#{$name}';
         .#{$classname} {
@@ -172,7 +172,7 @@ $flex-basis-settings: (
 
 // Loop for hidden size
 @each $bpLabel, $bp in $breakpoints {
-  @if ($bpLabel == 'all') {
+  @if ($bpLabel == 'small') {
     .#{$rootClassName} {
       display: flex;
     }

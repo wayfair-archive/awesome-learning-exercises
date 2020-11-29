@@ -76,6 +76,9 @@ const ExerciseOne = () => {
 
       {/*
         Question 3
+
+        Note: some of these questions have a fixed height container
+        So you can take see both axes (main and cross) in action!
       */}
       <QuestionThree>
         <Block>

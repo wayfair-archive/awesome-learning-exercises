@@ -36,6 +36,7 @@ export const QuestionTwo = ({ children }) => (
 export const QuestionThree = ({ children }) => (
   <QuestionWrapper
     title="Question 3"
+    hasFixedHeight
     solution={
       <Block
         size={12}
@@ -54,6 +55,7 @@ export const QuestionThree = ({ children }) => (
 export const QuestionFour = ({ children }) => (
   <QuestionWrapper
     title="Question 4"
+    hasFixedHeight
     solution={
       <Block size={12} justifyContent="space-between" alignContent="flex-end">
         <Square size="medium" color="green" isMasked />
@@ -69,6 +71,7 @@ export const QuestionFour = ({ children }) => (
 export const QuestionFive = ({ children }) => (
   <QuestionWrapper
     title="Question 5"
+    hasFixedHeight
     solution={
       <Block
         size={12}
@@ -104,6 +107,7 @@ export const QuestionSix = ({ children }) => (
 export const QuestionSeven = ({ children }) => (
   <QuestionWrapper
     title="Question 7"
+    hasFixedHeight
     solution={
       <Block
         size={12}

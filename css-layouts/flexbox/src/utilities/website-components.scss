@@ -1,0 +1,83 @@
+$page-background: #212121;
+$page-color: lightgreen;
+
+$breakpoints: (
+  small: 'small',
+  medium: '600px',
+  large: '900px',
+);
+
+.Page {
+  color: $page-color;
+  background: $page-background;
+  padding: 15px;
+}
+
+.Divider {
+  margin: 20px 0;
+  height: 10px;
+  background: repeating-linear-gradient(
+    45deg,
+    #606dbc,
+    #606dbc 10px,
+    #465298 10px,
+    #465298 20px
+  );
+}
+
+.HeroImage {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+.HeroSideContent {
+  border: 15px solid rgba(255,255,255, .15);
+  padding: 10px;
+  color: black;
+  background: lightblue;
+}
+
+.NavigationLinks {
+  &-link {
+    padding: 10px;
+    background:  rgba(255,255,255, .15);
+    border: 2px dotted white;
+  }
+}
+
+.Logo {
+  background: blue;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.HamburgerButton {
+  width: 50px;
+  background: none;
+  padding: 5px;
+  &-patty {
+    height: 5px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    background-color: grey;
+    display: block;
+    width: 100%;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.ValueProp {
+  background: white;
+  color: navy;
+  padding: 15px;
+  margin: 10px;
+  &-image {
+    display: block;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+}

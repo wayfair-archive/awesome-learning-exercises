@@ -46,13 +46,13 @@ class App extends React.Component {
             >
               <span>Exercise 2</span>
             </NavLink>
-            {/* <NavLink
+            <NavLink
               activeClassName="PageHeader-navButton--isActive"
               className="PageHeader-navButton"
               to="/exercise3"
             >
               <span>Exercise 3</span>
-            </NavLink> */}
+            </NavLink>
           </nav>
           <div className="MainContent">
             <Switch>

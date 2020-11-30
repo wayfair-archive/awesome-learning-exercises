@@ -45,16 +45,6 @@ const JUSTIFY_CONTENT_PROPERTIES = [
   "space-evenly"
 ];
 
-const SMALL = "sm";
-const MEDIUM = "md";
-const LARGE = "lg";
-
-export const BREAKPOINTS = {
-  SMALL: SMALL,
-  MEDIUM: MEDIUM,
-  LARGE: LARGE
-};
-
 const CLASSNAME_PREFIX = "Block";
 
 export function convertPropsToClassNames({ classNameModifier, propValue }) {
@@ -72,9 +62,9 @@ export function convertPropsToClassNames({ classNameModifier, propValue }) {
   return cx(
     Object.entries(propValue).reduce((classnames, [breakpoint, value]) => {
       let className;
-      // If the breakpoint is the `all` value, then we remove the -all modifier
+      // If the breakpoint is the `small` value, then we remove the -small modifier
       // to match the naming scheme above and indicate the styles apply at all breakpoints
-      if (breakpoint === BREAKPOINTS.SMALL) {
+      if (breakpoint === "small") {
         className = `${CLASSNAME_PREFIX}--${classNameModifier}-${value}`;
       } else {
         className = `${CLASSNAME_PREFIX}--${breakpoint}-${classNameModifier}-${value}`;
@@ -117,7 +107,6 @@ export const Block = ({
 Block.propTypes = {
   size: PropTypes.oneOfType([
     PropTypes.shape({
-      all: PropTypes.oneOf(SIZE_VALUES),
       small: PropTypes.oneOf(SIZE_VALUES),
       medium: PropTypes.oneOf(SIZE_VALUES),
       large: PropTypes.oneOf(SIZE_VALUES)
@@ -126,7 +115,6 @@ Block.propTypes = {
   ]),
   flexDirection: PropTypes.oneOfType([
     PropTypes.shape({
-      all: PropTypes.oneOf(FLEX_DIRECTION_PROPERTIES),
       small: PropTypes.oneOf(FLEX_DIRECTION_PROPERTIES),
       medium: PropTypes.oneOf(FLEX_DIRECTION_PROPERTIES),
       large: PropTypes.oneOf(FLEX_DIRECTION_PROPERTIES)
@@ -135,7 +123,6 @@ Block.propTypes = {
   ]),
   flexWrap: PropTypes.oneOfType([
     PropTypes.shape({
-      all: PropTypes.oneOf(FLEX_WRAP_PROPERTIES),
       small: PropTypes.oneOf(FLEX_WRAP_PROPERTIES),
       medium: PropTypes.oneOf(FLEX_WRAP_PROPERTIES),
       large: PropTypes.oneOf(FLEX_WRAP_PROPERTIES)
@@ -144,7 +131,6 @@ Block.propTypes = {
   ]),
   alignItems: PropTypes.oneOfType([
     PropTypes.shape({
-      all: PropTypes.oneOf(ALIGN_ITEMS_PROPERTIES),
       small: PropTypes.oneOf(ALIGN_ITEMS_PROPERTIES),
       medium: PropTypes.oneOf(ALIGN_ITEMS_PROPERTIES),
       large: PropTypes.oneOf(ALIGN_ITEMS_PROPERTIES)
@@ -153,7 +139,6 @@ Block.propTypes = {
   ]),
   alignContent: PropTypes.oneOfType([
     PropTypes.shape({
-      all: PropTypes.oneOf(ALIGN_CONTENT_PROPERTIES),
       small: PropTypes.oneOf(ALIGN_CONTENT_PROPERTIES),
       medium: PropTypes.oneOf(ALIGN_CONTENT_PROPERTIES),
       large: PropTypes.oneOf(ALIGN_CONTENT_PROPERTIES)
@@ -162,7 +147,6 @@ Block.propTypes = {
   ]),
   justifyItems: PropTypes.oneOfType([
     PropTypes.shape({
-      all: PropTypes.oneOf(JUSTIFY_ITEMS_PROPERTIES),
       small: PropTypes.oneOf(JUSTIFY_ITEMS_PROPERTIES),
       medium: PropTypes.oneOf(JUSTIFY_ITEMS_PROPERTIES),
       large: PropTypes.oneOf(JUSTIFY_ITEMS_PROPERTIES)
@@ -171,7 +155,6 @@ Block.propTypes = {
   ]),
   justifyContent: PropTypes.oneOfType([
     PropTypes.shape({
-      all: PropTypes.oneOf(JUSTIFY_CONTENT_PROPERTIES),
       small: PropTypes.oneOf(JUSTIFY_CONTENT_PROPERTIES),
       medium: PropTypes.oneOf(JUSTIFY_CONTENT_PROPERTIES),
       large: PropTypes.oneOf(JUSTIFY_CONTENT_PROPERTIES)

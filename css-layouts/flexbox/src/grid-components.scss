@@ -1,10 +1,14 @@
 $breakpoints: (
   small: 'small',
-  medium: '600px',
-  large: '900px',
+  medium: 600px,
+  large: 900px,
 );
 
 $rootClassName: 'Block';
+
+.#{$rootClassName} {
+  display: flex;
+}
 
 // Shared mixin for formatting this repetitive code
 @mixin ResponsiveClassnames(
@@ -181,17 +185,29 @@ $flex-basis-settings: (
     }
   } @else {
     @media screen and (min-width: $bp) {
-      // Need this here so blocks default back to be visible
-      // At higher breakpoints
-      .#{$rootClassName} {
-        display: flex;
-      }
       .#{$rootClassName}--#{$bpLabel}-size-0 {
         display: none;
       }
     }
   }
 }
+
+// When we are hiding elements, we need to re-set the display property
+// So that they're seen at higher sizes, aligned with the `width` property
+@media screen and (min-width: map-get($breakpoints, "medium")) {
+  .#{$rootClassName}--size-0[class*="#{$rootClassName}--medium-size-"] {
+    display: flex;
+  }
+}
+@media screen and (min-width: map-get($breakpoints, "large")) {
+  .#{$rootClassName}--size-0[class*="#{$rootClassName}--large-size-"],
+  .#{$rootClassName}--medium-size-0[class*="#{$rootClassName}--medium-size-"] {
+    display: flex;
+  }
+}
+
+
+
 
 @include ResponsiveClassnames(
   $settings: $flex-basis-settings,

@@ -1,6 +1,8 @@
-export const INITIAL_NUMBER = 0;
-export const INITIAL_STRING = "";
+export const NUMBER_TO_MASH = 10;
+export const STRING_TO_MASH = "Hello";
 
-export const addAllTogether = <T>(array: Array<T>, initialValue: T): T => {
-  return array.reduce((sum, value) => sum + value, <any>initialValue);
+export const mash = <S, T>(key: S, value: T): Map<S, T> => {
+  const map = new Map<S, T>();
+  map.set(key, value);
+  return map;
 };

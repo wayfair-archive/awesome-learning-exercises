@@ -1,14 +1,17 @@
-import { addAllTogether, INITIAL_NUMBER, INITIAL_STRING } from "../exercise4";
+import { mash, NUMBER_TO_MASH, STRING_TO_MASH } from "../exercise4";
 
-test("It can add numbers together", () => {
-  expect(addAllTogether<number>([1, 2, 3], INITIAL_NUMBER)).toBe(6);
+test("It can mash a number key with a string value", () => {
+  const resultMap = new Map<number, string>();
+  resultMap.set(10, "Hello");
+  expect(mash<number, string>(NUMBER_TO_MASH, STRING_TO_MASH)).toMatchObject(
+    resultMap
+  );
 });
 
-test("It can append strings together", () => {
-  expect(
-    addAllTogether<string>(
-      ["Pineapple", "Is", "Good", "On", "Pizza"],
-      INITIAL_STRING
-    )
-  ).toBe("PineappleIsGoodOnPizza");
+test("It can mash a string key with a number value", () => {
+  const resultMap = new Map<string, number>();
+  resultMap.set("Hello", 10);
+  expect(mash<string, number>(STRING_TO_MASH, NUMBER_TO_MASH)).toMatchObject(
+    resultMap
+  );
 });

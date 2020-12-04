@@ -9,25 +9,37 @@ Bonus Exercise
 🛠️ on the way the function is typed when it is 
 🛠️ invoked.
 
-💡 Update this function to leverage generics
-💡 A developer should be able to add together
-💡 different types, such as strings or numbers
-Arrow functions & Generics: https://stackoverflow.com/a/45576880
+💡 Update this function to leverage generics!
+💡 A developer should be able to "mash" together
+💡 two items of different types, such as strings or numbers
+💡 this mash function should take in params
+💡 and return a single Map() where the key
+💡 is the first param, and the value is the second param. 
 
-Take a look at the test file to see how Generics
-are leveraged in the implemenation of addAllTogether
+Example:
+mash("hello", 123) -> {hello: 123}
+zip([2, 3, 6], [5, 4, 3]) -> [[2, 5], [3, 4], [6, 3]]
+
+💡 By using generics, we can confirm that the first input
+💡 param is the same type as the output key, and the second
+💡 input is the same type as the output value,
+💡 no matter what these values are! This shows
+💡 a good use case for generics, which is to 
+💡 help developers confirm that the input type
+💡 and output type are of the same time, without
+💡 that type having to be explicityly defined. 
+Arrow functions & Generics: https://stackoverflow.com/a/45576880
  */
 
 // After updating the function with Generics, please update
-// this value to 0 for testing purposes
-export const INITIAL_NUMBER = undefined;
+// this value to 10 for testing purposes
+export const NUMBER_TO_MASH = undefined;
 // After updating the function with Generics, please update
-// this value to "" for testing purposes
-export const INITIAL_STRING = undefined;
+// this value to "Hello" for testing purposes
+export const STRING_TO_MASH = undefined;
 
-export const addAllTogether = (
-  array: Array<number>,
-  initialValue: number
-): number => {
-  return array.reduce((sum, value) => sum + value, <any>initialValue);
+export const mash = (key, value) => {
+  const map = new Map();
+  map.set(key, value);
+  return map;
 };

@@ -16,9 +16,9 @@ Bonus Exercise
 💡 and return a single Map() where the key
 💡 is the first param, and the value is the second param. 
 
-Example:
-mash("hello", 123) -> {hello: 123}
-zip([2, 3, 6], [5, 4, 3]) -> [[2, 5], [3, 4], [6, 3]]
+💡 Example:
+💡 mash<string, number>("hello", 123) -> {hello: 123}
+💡 mash<number, string>(123, "test") -> {123: "test"}
 
 💡 By using generics, we can confirm that the first input
 💡 param is the same type as the output key, and the second
@@ -27,7 +27,7 @@ zip([2, 3, 6], [5, 4, 3]) -> [[2, 5], [3, 4], [6, 3]]
 💡 a good use case for generics, which is to 
 💡 help developers confirm that the input type
 💡 and output type are of the same time, without
-💡 that type having to be explicityly defined. 
+💡 that type having to be explicitly defined. 
 Arrow functions & Generics: https://stackoverflow.com/a/45576880
  */
 

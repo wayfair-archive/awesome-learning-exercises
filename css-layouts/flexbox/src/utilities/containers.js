@@ -73,3 +73,5 @@ QuestionWrapper.defaultProps = {
   showOverlayToggle: false,
   hasFixedHeight: false
 };
+
+export const BreakpointTracker = () => <div className="BreakpointTracker" />;

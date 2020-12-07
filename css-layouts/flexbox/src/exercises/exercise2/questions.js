@@ -1,7 +1,7 @@
 import React from "react";
-import { Block } from "../../../grid-components";
-import { NumberedBrick } from "../../../utilities/shapes";
-import { QuestionWrapper } from "../../../utilities/containers";
+import { Block } from "../../grid-components";
+import { NumberedBrick } from "../../utilities/shapes";
+import { QuestionWrapper } from "../../utilities/containers";
 
 export const QuestionOne = ({ children }) => (
   <QuestionWrapper

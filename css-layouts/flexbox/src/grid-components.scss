@@ -195,13 +195,13 @@ $flex-basis-settings: (
 // When we are hiding elements, we need to re-set the display property
 // So that they're seen at higher sizes, aligned with the `width` property
 @media screen and (min-width: map-get($breakpoints, "medium")) {
-  .#{$rootClassName}--size-0[class*="#{$rootClassName}--medium-size-"] {
+  .#{$rootClassName}--size-0[class*="#{$rootClassName}--medium-size-"]:not(.#{$rootClassName}--medium-size-0) {
     display: flex;
   }
 }
 @media screen and (min-width: map-get($breakpoints, "large")) {
-  .#{$rootClassName}--size-0[class*="#{$rootClassName}--large-size-"],
-  .#{$rootClassName}--medium-size-0[class*="#{$rootClassName}--medium-size-"] {
+  .#{$rootClassName}--size-0[class*="#{$rootClassName}--large-size-"]:not(.#{$rootClassName}--large-size-0),
+  .#{$rootClassName}--medium-size-0[class*="#{$rootClassName}--medium-size-"]:not(.#{$rootClassName}--medium-size-0) {
     display: flex;
   }
 }

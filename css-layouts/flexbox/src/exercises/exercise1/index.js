@@ -42,7 +42,7 @@ import {
   QuestionFive,
   QuestionSix,
   QuestionSeven
-} from "./solution/questions";
+} from "./questions";
 import { Alert } from "../../utilities/containers";
 import { Heart, Square, Star, Circle } from "../../utilities/shapes";
 

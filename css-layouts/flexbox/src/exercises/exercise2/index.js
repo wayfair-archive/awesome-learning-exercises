@@ -47,7 +47,7 @@ import {
   QuestionTwo,
   QuestionThree,
   QuestionFour
-} from "./solution/questions";
+} from "./questions";
 import {
   BrickOne,
   BrickTwo,

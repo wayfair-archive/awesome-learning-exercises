@@ -1,5 +1,7 @@
-$page-background: #212121;
-$page-color: lightgreen;
+$page-background: #cadcda;
+$page-color: #001524;
+$primary-color: #37718E;
+$secondary-color: #FAA613;
 
 $breakpoints: (
   small: 'small',
@@ -16,12 +18,13 @@ $breakpoints: (
 .Divider {
   margin: 20px 0;
   height: 10px;
+  border: 0;
   background: repeating-linear-gradient(
     45deg,
-    #606dbc,
-    #606dbc 10px,
-    #465298 10px,
-    #465298 20px
+    $primary-color,
+    $primary-color 10px,
+    $secondary-color 10px,
+    $secondary-color 20px
   );
 }
 
@@ -33,35 +36,47 @@ $breakpoints: (
 }
 
 .HeroSideContent {
-  border: 15px solid rgba(255,255,255, .15);
-  padding: 10px;
-  color: black;
-  background: lightblue;
+  border: 5px solid $primary-color;;
+  padding: 20px;
+  background: $secondary-color;
 }
 
 .NavigationLinks {
   &-link {
-    padding: 10px;
-    background:  rgba(255,255,255, .15);
-    border: 2px dotted white;
+    color: $primary-color;
+    padding: 10px 15px;
+    background:  white;
+    border: 2px dashed $primary-color;
+    border-radius: 5px;
+    margin: 5px;
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
 
 .Logo {
-  background: blue;
-  padding: 10px;
+  background: $secondary-color;
   border-radius: 50%;
+  width: 50px;
+  min-width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  text-align: center;
+  margin: 5px;
 }
 
 .HamburgerButton {
   width: 50px;
   background: none;
   padding: 5px;
+  border: 2px solid $primary-color;
   &-patty {
     height: 5px;
     border-radius: 5px;
     margin-bottom: 5px;
-    background-color: grey;
+    background-color: $primary-color;
     display: block;
     width: 100%;
     &:last-of-type {
@@ -72,12 +87,30 @@ $breakpoints: (
 
 .ValueProp {
   background: white;
-  color: navy;
   padding: 15px;
   margin: 10px;
+  border-radius: 15px;
+  border: 2px solid $secondary-color;
+  text-align: center;
   &-image {
     display: block;
     border-radius: 50%;
-    margin-bottom: 20px;
+    border: 5px solid $primary-color;
+    margin-bottom: 15px;
+    max-width: 150px;
+    width: 100%;
+    margin: 0 auto 15px;
+  }
+}
+
+.Testimonial {
+  background: white;
+  padding: 15px;
+  font-style: italic;
+  font-size: 13px;
+  margin: 5px;
+  border-right: 10px solid $primary-color;
+  &-author {
+    text-align: right;
   }
 }

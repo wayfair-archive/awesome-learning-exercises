@@ -4,6 +4,7 @@ import { BrowserRouter, NavLink, Route, Switch } from "react-router-dom";
 import ExerciseOne from "./exercises/exercise1/index";
 import ExerciseTwo from "./exercises/exercise2/index";
 import ExerciseThree from "./exercises/exercise3/index";
+import { BreakpointTracker } from "./utilities/containers";
 import "./utilities/reset.css";
 import "./utilities/base.scss";
 
@@ -53,6 +54,7 @@ class App extends React.Component {
             >
               <span>Exercise 3</span>
             </NavLink>
+            <BreakpointTracker />
           </nav>
           <div className="MainContent">
             <Switch>

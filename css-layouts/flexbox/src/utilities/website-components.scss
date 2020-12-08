@@ -3,12 +3,6 @@ $page-color: #001524;
 $primary-color: #37718E;
 $secondary-color: #FAA613;
 
-$breakpoints: (
-  small: 'small',
-  medium: '600px',
-  large: '900px',
-);
-
 .Page {
   color: $page-color;
   background: $page-background;

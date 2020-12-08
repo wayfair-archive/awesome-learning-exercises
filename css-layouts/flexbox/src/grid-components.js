@@ -1,11 +1,17 @@
 /*
   Multipurpose Flexbox Block component
 */
-
 import React from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
 import "./grid-components.scss";
+
+/*
+
+  ℹ️ These arrays below contain all the accepted props
+  ℹ️ for the size and assorted flex properties
+
+*/
 
 const SIZE_VALUES = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
@@ -46,6 +52,13 @@ const JUSTIFY_CONTENT_PROPERTIES = [
 ];
 
 const CLASSNAME_PREFIX = "Block";
+
+/* 
+  🛑
+  You probably don't need to read this to understand the course,
+  but proceed if you're curious! 
+  🛑
+*/
 
 export function convertPropsToClassNames({ classNameModifier, propValue }) {
   // Early return if no value

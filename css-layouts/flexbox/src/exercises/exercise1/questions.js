@@ -1,3 +1,9 @@
+/**
+ * 🛑 This is NOT where to start with the exercise!
+ *
+ * ➡️ Please click on `exercise1/index.js` to begin
+ */
+
 import React from "react";
 import { Block } from "../../grid-components";
 import { Square, Star, Heart, Circle } from "../../utilities/shapes";

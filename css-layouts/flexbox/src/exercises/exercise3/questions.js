@@ -1,7 +1,7 @@
 /**
- * This is NOT where to start with the exercise!
+ * 🛑 This is NOT where to start with the exercise!
  *
- * Please click on `exercise3/index.js` to begin
+ * ➡️ Please click on `exercise3/index.js` to begin
  */
 
 import React from "react";

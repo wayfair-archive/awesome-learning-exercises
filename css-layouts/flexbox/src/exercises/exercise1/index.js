@@ -17,17 +17,15 @@
   💡  props are available, and what values they accept. If you notice, there 
   💡 are also width props to specify the size, we will get to those in exercise 2.
 
-  If you look at the browser panel on the right, you'll see a series of solid shapes
-  of different sizes and some dotted outlines of those shapes overlaid.
+  💡 If you look at the browser panel on the right, you'll see a series of solid shapes
+  💡 of different sizes and some dotted outlines of those shapes overlaid.
 
-  Those dotted outlines represent the final location location of where we want
-  the components to line up. The goal of this first exercise is to use the flex
-  props on the Block component to line up those solid shapes with the dotted ones.
+  💡 Those dotted outlines represent the final location location of where we want
+  💡 the components to line up. The goal of this first exercise is to use the flex
+  💡 props on the Block component to line up those solid shapes with the dotted ones.
 
-  💡 Note: For this first exercise, you should not need to modify the JSX at all
-  💡  to find the solution.
-
-  Note: It may be easier to do with exercise if you open the window in a separate tab
+  💡 Note: For this first exercise, you should not need to delete or add HTML elements
+  💡 to the JSX to find a solution, only props.
 
   ⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️⬆️
 */
@@ -48,10 +46,11 @@ import { Heart, Square, Star, Circle } from "../../utilities/shapes";
 
 const ExerciseOne = () => {
   return (
-    <div>
+    <>
       <Alert>
         👀 &nbsp;Check out <code>/exercises/exercise1/index.js</code> to start!
       </Alert>
+
       <QuestionOne>
         {/*
            Add the props required to the Block component below
@@ -130,7 +129,7 @@ const ExerciseOne = () => {
           <Square size="medium" color="red" />
         </Block>
       </QuestionSeven>
-    </div>
+    </>
   );
 };
 

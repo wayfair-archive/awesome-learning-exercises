@@ -1,32 +1,30 @@
 /* eslint-disable */
 <>
+  {/*
+    Solution 1
+  */}
   <QuestionOne>
     <Block>
       <Block
         size={{
-          all: 12,
-          small: 6,
-          medium: 4,
-          large: 4
+          small: 4,
+          medium: 6
         }}
       >
         <BrickOne />
       </Block>
       <Block
         size={{
-          all: 12,
-          small: 6,
-          medium: 4,
-          large: 8
+          small: 4,
+          medium: 6
         }}
       >
         <BrickTwo />
       </Block>
       <Block
         size={{
-          small: 12,
-          medium: 4,
-          large: 12
+          small: 4,
+          medium: 12
         }}
       >
         <BrickThree />
@@ -34,70 +32,16 @@
     </Block>
   </QuestionOne>
 
+  {/*
+    Solution 2
+  */}
   <QuestionTwo>
-    <Block
-      size={{
-        small: 12,
-        medium: 4,
-        large: 2
-      }}
-    >
-      <BrickOne />
-    </Block>
-    <Block
-      size={{
-        small: 6,
-        medium: 4,
-        large: 2
-      }}
-    >
-      <BrickTwo />
-    </Block>
-    <Block
-      size={{
-        small: 6,
-        medium: 4,
-        large: 2
-      }}
-    >
-      <BrickThree />
-    </Block>
-    <Block
-      size={{
-        small: 12,
-        medium: 4,
-        large: 2
-      }}
-    >
-      <BrickFour />
-    </Block>
-    <Block
-      size={{
-        small: 6,
-        medium: 4,
-        large: 2
-      }}
-    >
-      <BrickFive />
-    </Block>
-    <Block
-      size={{
-        small: 6,
-        medium: 4,
-        large: 2
-      }}
-    >
-      <BrickSix />
-    </Block>
-  </QuestionTwo>
-
-  <QuestionThree>
     <Block>
       <Block
         size={{
-          small: 6,
+          small: 12,
           medium: 4,
-          large: 1
+          large: 3
         }}
       >
         <BrickOne />
@@ -106,15 +50,15 @@
         size={{
           small: 6,
           medium: 8,
-          large: 8
+          large: 3
         }}
       >
         <BrickTwo />
       </Block>
       <Block
         size={{
-          small: 12,
-          medium: 4,
+          small: 6,
+          medium: 8,
           large: 3
         }}
       >
@@ -124,14 +68,57 @@
         size={{
           small: 12,
           medium: 4,
-          large: 6
+          large: 3
+        }}
+      >
+        <BrickFour />
+      </Block>
+    </Block>
+  </QuestionTwo>
+
+  {/*
+    Solution 3
+  */}
+  <QuestionThree>
+    <Block>
+      <Block
+        size={{
+          small: 5,
+          medium: 4,
+          large: 2
+        }}
+      >
+        <BrickOne />
+      </Block>
+      <Block
+        size={{
+          small: 0,
+          medium: 8
+        }}
+      >
+        <BrickTwo />
+      </Block>
+      <Block
+        size={{
+          small: 7,
+          medium: 4,
+          large: 2
+        }}
+      >
+        <BrickThree />
+      </Block>
+      <Block
+        size={{
+          small: 0,
+          medium: 4,
+          large: 5
         }}
       >
         <BrickFour />
       </Block>
       <Block
         size={{
-          small: 5,
+          small: 12,
           medium: 4,
           large: 5
         }}
@@ -140,52 +127,74 @@
       </Block>
       <Block
         size={{
-          small: 7,
+          small: 0,
           medium: 12,
-          large: 1
+          large: 2
         }}
       >
-        <BrickSix />
+        <BrickSix />{" "}
       </Block>
     </Block>
   </QuestionThree>
 
+  {/*
+    Solution 4
+  */}
   <QuestionFour>
-    <Block
-      size={{
-        small: 8,
-        medium: 4,
-        large: 6
-      }}
-    >
-      <BrickOne />
-    </Block>
-    <Block
-      size={{
-        small: 4,
-        medium: 8,
-        large: 6
-      }}
-    >
-      <BrickTwo />
-    </Block>
-    <Block
-      size={{
-        small: 4,
-        medium: 8,
-        large: 6
-      }}
-    >
-      <BrickThree />
-    </Block>
-    <Block
-      size={{
-        small: 8,
-        medium: 4,
-        large: 6
-      }}
-    >
-      <BrickFour />
+    <Block>
+      <Block
+        size={{
+          small: 0,
+          large: 2
+        }}
+      >
+        <BrickOne />
+      </Block>
+      <Block
+        size={{
+          small: 4,
+          medium: 7,
+          large: 2
+        }}
+      >
+        <BrickTwo />
+      </Block>
+      <Block
+        size={{
+          small: 4,
+          medium: 8,
+          large: 2
+        }}
+      >
+        <BrickThree />
+      </Block>
+      <Block
+        size={{
+          small: 0,
+          medium: 9,
+          large: 2
+        }}
+      >
+        <BrickFour />
+      </Block>
+      <Block
+        size={{
+          small: 4,
+          medium: 10,
+          large: 2
+        }}
+      >
+        <BrickFive />
+      </Block>
+      <Block
+        size={{
+          small: 12,
+          medium: 11,
+          large: 2
+        }}
+      >
+        <BrickSix />
+      </Block>
     </Block>
   </QuestionFour>
 </>;

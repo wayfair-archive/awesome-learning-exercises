@@ -1,5 +1,4 @@
 import React from "react";
-import cx from "classnames";
 import "./website-components.scss";
 
 export const Page = ({ children }) => <main className="Page">{children}</main>;
@@ -7,7 +6,11 @@ export const Divider = () => <hr className="Divider" />;
 
 export const HeroImage = () => (
   <div>
-    <img className="HeroImage" src="books.jpg" alt="Heroic Imagery" />
+    <img
+      className="HeroImage"
+      src="https://i.imgur.com/9qTediy.jpg"
+      alt="Heroic Imagery"
+    />
   </div>
 );
 
@@ -17,12 +20,6 @@ export const HeroSideContent = () => (
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     </p>
-    {/* tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. */}
-    {/* Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. */}
   </section>
 );
 
@@ -54,21 +51,33 @@ export const HamburgerButton = () => (
 
 export const ValuePropOne = () => (
   <div className="ValueProp">
-    <img src="coins.jpg" alt="Coins" className="ValueProp-image" />
+    <img
+      src="https://i.imgur.com/aPrzBbC.jpg"
+      alt="Coins"
+      className="ValueProp-image"
+    />
     <p>Pellentesque id nibh</p>
   </div>
 );
 
 export const ValuePropTwo = () => (
   <div className="ValueProp">
-    <img src="sunflower.jpg" alt="Sunflower" className="ValueProp-image" />
+    <img
+      src="https://i.imgur.com/zJ85V8U.jpg"
+      alt="Sunflower"
+      className="ValueProp-image"
+    />
     <p>Facilisis sed odio morbi</p>
   </div>
 );
 
 export const ValuePropThree = () => (
   <div className="ValueProp">
-    <img src="knot.jpg" alt="Knot" className="ValueProp-image" />
+    <img
+      src="https://i.imgur.com/iC36MaJ.jpg"
+      alt="Knot"
+      className="ValueProp-image"
+    />
     <p>Mauris a diam maecenas</p>
   </div>
 );

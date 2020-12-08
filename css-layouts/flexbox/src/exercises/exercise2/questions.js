@@ -1,3 +1,9 @@
+/**
+ * 🛑 This is NOT where to start with the exercise!
+ *
+ * ➡️ Please click on `exercise2/index.js` to begin
+ */
+
 import React from "react";
 import { Block } from "../../grid-components";
 import { NumberedBrick } from "../../utilities/shapes";
@@ -11,29 +17,24 @@ export const QuestionOne = ({ children }) => (
       <Block>
         <Block
           size={{
-            all: 12,
-            small: 6,
-            medium: 4,
-            large: 4
+            small: 4,
+            medium: 6
           }}
         >
           <NumberedBrick number={1} isMasked />
         </Block>
         <Block
           size={{
-            all: 12,
-            small: 6,
-            medium: 4,
-            large: 8
+            small: 4,
+            medium: 6
           }}
         >
           <NumberedBrick number={2} isMasked />
         </Block>
         <Block
           size={{
-            small: 12,
-            medium: 4,
-            large: 12
+            small: 4,
+            medium: 12
           }}
         >
           <NumberedBrick number={3} isMasked />
@@ -55,7 +56,7 @@ export const QuestionTwo = ({ children }) => (
           size={{
             small: 12,
             medium: 4,
-            large: 2
+            large: 3
           }}
         >
           <NumberedBrick number={1} isMasked />
@@ -63,8 +64,8 @@ export const QuestionTwo = ({ children }) => (
         <Block
           size={{
             small: 6,
-            medium: 4,
-            large: 2
+            medium: 8,
+            large: 3
           }}
         >
           <NumberedBrick number={2} isMasked />
@@ -72,8 +73,8 @@ export const QuestionTwo = ({ children }) => (
         <Block
           size={{
             small: 6,
-            medium: 4,
-            large: 2
+            medium: 8,
+            large: 3
           }}
         >
           <NumberedBrick number={3} isMasked />
@@ -82,28 +83,10 @@ export const QuestionTwo = ({ children }) => (
           size={{
             small: 12,
             medium: 4,
-            large: 2
+            large: 3
           }}
         >
           <NumberedBrick number={4} isMasked />
-        </Block>
-        <Block
-          size={{
-            small: 6,
-            medium: 4,
-            large: 2
-          }}
-        >
-          <NumberedBrick number={5} isMasked />
-        </Block>
-        <Block
-          size={{
-            small: 6,
-            medium: 4,
-            large: 2
-          }}
-        >
-          <NumberedBrick number={6} isMasked />
         </Block>
       </Block>
     }
@@ -120,43 +103,42 @@ export const QuestionThree = ({ children }) => (
       <Block>
         <Block
           size={{
-            small: 6,
+            small: 5,
             medium: 4,
-            large: 1
+            large: 2
           }}
         >
           <NumberedBrick number={1} isMasked />
         </Block>
         <Block
           size={{
-            small: 6,
-            medium: 8,
-            large: 8
+            small: 0,
+            medium: 8
           }}
         >
           <NumberedBrick number={2} isMasked />
         </Block>
         <Block
           size={{
-            small: 12,
+            small: 7,
             medium: 4,
-            large: 3
+            large: 2
           }}
         >
           <NumberedBrick number={3} isMasked />
         </Block>
         <Block
           size={{
-            small: 12,
+            small: 0,
             medium: 4,
-            large: 6
+            large: 5
           }}
         >
           <NumberedBrick number={4} isMasked />
         </Block>
         <Block
           size={{
-            small: 5,
+            small: 12,
             medium: 4,
             large: 5
           }}
@@ -165,9 +147,9 @@ export const QuestionThree = ({ children }) => (
         </Block>
         <Block
           size={{
-            small: 7,
+            small: 0,
             medium: 12,
-            large: 1
+            large: 2
           }}
         >
           <NumberedBrick number={6} isMasked />
@@ -187,9 +169,8 @@ export const QuestionFour = ({ children }) => (
       <Block>
         <Block
           size={{
-            small: 8,
-            medium: 4,
-            large: 6
+            small: 0,
+            large: 2
           }}
         >
           <NumberedBrick number={1} isMasked />
@@ -197,8 +178,8 @@ export const QuestionFour = ({ children }) => (
         <Block
           size={{
             small: 4,
-            medium: 8,
-            large: 6
+            medium: 7,
+            large: 2
           }}
         >
           <NumberedBrick number={2} isMasked />
@@ -207,27 +188,38 @@ export const QuestionFour = ({ children }) => (
           size={{
             small: 4,
             medium: 8,
-            large: 6
+            large: 2
           }}
         >
           <NumberedBrick number={3} isMasked />
         </Block>
         <Block
           size={{
-            small: 8,
-            medium: 4,
-            large: 6
+            small: 0,
+            medium: 9,
+            large: 2
           }}
         >
           <NumberedBrick number={4} isMasked />
         </Block>
         <Block
           size={{
-            small: 5,
-            medium: 4,
-            large: 5
+            small: 4,
+            medium: 10,
+            large: 2
           }}
-        ></Block>
+        >
+          <NumberedBrick number={5} isMasked />
+        </Block>
+        <Block
+          size={{
+            small: 12,
+            medium: 11,
+            large: 2
+          }}
+        >
+          <NumberedBrick number={6} isMasked />
+        </Block>
       </Block>
     }
   >

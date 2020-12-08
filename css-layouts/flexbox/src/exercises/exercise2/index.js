@@ -43,6 +43,10 @@
   💡 components so that the layout matches the solution in the righthand
   💡 panel. 
 
+  💡 The background color of the brick components will change at each breakpoint
+  💡 to help clarify what size you're currently viewing. 
+  💡 In addition, there's an indicator on the right of the exercise navigation bar.
+
   💡 Note: since this involves re-sizing the screen to confirm your results,
   💡 it is suggested that you open the browser view in a new window by clicking
   💡 the button located on the far right of the browser toolbar

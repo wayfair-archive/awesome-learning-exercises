@@ -1,7 +1,7 @@
 /*
   ⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️
   
-  💡 Welcome to the exercise protion of this course on Flexbox and responsive layouts
+  💡 Welcome to the exercise portion of this course on Flexbox and responsive layouts
 
   💡 What you'll see below are a set of question components that contain
   💡 a Block component and some colored shape components. The Block component is the 
@@ -77,7 +77,7 @@ const ExerciseOne = () => {
         Question 3
 
         Note: some of these questions have a fixed height container
-        So you can take see both axes (main and cross) in action!
+        So you can see both axes (main and cross) in action!
       */}
       <QuestionThree>
         <Block>

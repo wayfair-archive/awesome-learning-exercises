@@ -22,8 +22,8 @@
     }}
   ```
 
-  💡 Would define the flex axis on the container to be vertical
-  💡 on small screens, and then horizontal on large screens.
+  💡 Would define the flex axis on the container to be "row" (vertically-aligned)
+  💡 on small screens, and then "column" (horizontally-aligned) on large screens.
 
   💡 You may need to nest Block components inside other Block
   💡 components to achieve the desired layout.
@@ -63,7 +63,7 @@ const ExerciseThree = () => {
         {/* 🟢 UNCOMMENT BELOW TO BEGIN 🟢 
         
         ❗ Note: if you want to confirm any of the website components behavior,
-        ❗ feel free to check the website-components JS and SCSS source files. 
+        ❗ feel free to check the "/utilities/website-components" JS and SCSS source files. 
         ❗ The styles and HTML were kept simple to avoid any confusion with flex behavior. 
         */}
 

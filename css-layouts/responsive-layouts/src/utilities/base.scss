@@ -1,0 +1,67 @@
+$primary-color: #1AC8ED;
+$secondary-color: #FF9B71;
+$dark: #2D3047;
+
+body {
+  background-color: $primary-color;
+  font-family: 'Tahoma', sans-serif;
+}
+
+.MainContent {
+  padding: 25px 15px;
+
+  &-welcome {
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    font-size: 20px;
+  }
+}
+
+.PageHeader {
+  &-nav {
+    padding: 15px 15px 0;
+    background: #FF9B71;
+    position: relative;
+  }
+  &-navButton {
+    background: white;
+    padding: 10px 20px;
+    color: $dark;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0 15px 15px 0;
+    border: 3px solid #e47648;
+    transition: background 300ms;
+    &:hover {
+      background: #ededed;
+    }
+  }
+}
+
+$breakpoints: (
+  small: 'small',
+  medium: '600px',
+  large: '900px',
+);
+
+.BreakpointTracker {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: rgba(0,0,0,.2);
+  padding: 5px;
+  border-radius: 5px 0 0 0;
+  font-size: 13px;
+  &::before {
+    content: 'Breakpoint: Small';
+    @media screen and (min-width: 600px) {
+      content: 'Breakpoint: Medium';
+    }
+    @media screen and (min-width: 900px) {
+      content: 'Breakpoint: Large';
+    }
+  }
+}

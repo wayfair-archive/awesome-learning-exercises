@@ -1,0 +1,26 @@
+{
+  "name": "awesome-learning-css-responsive-layouts",
+  "description": "Awesome Learning: CSS: Responsive Layouts",
+  "keywords": [],
+  "main": "src/index.js",
+  "dependencies": {
+    "classnames": "2.2.6",
+    "node-sass": "4.13.0",
+    "react": "16.8.6",
+    "react-dom": "16.11.0",
+    "react-router-dom": "5.1.2",
+    "react-scripts": "3.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

@@ -1,0 +1,169 @@
+/*
+  Style sheet for different shapes
+*/
+$sizes: (
+  small: '20px',
+  medium: '40px',
+  large: '60px',
+);
+
+$colors: (
+  red: 'crimson',
+  blue: 'cornflowerblue',
+  green: 'seagreen',
+  yellow: 'gold'
+);
+
+.Shape {
+  display: inline-block;
+
+  &.is-masked {
+    opacity: .75;
+  }
+
+  &-triangle {
+    // svg {
+    //   width: 100%;
+    // }
+    @each $sizeLabel, $sizePx in $sizes {
+      &--#{$sizeLabel} {
+        width: #{$sizePx};
+        // border-right: calc(#{$sizePx} *.5) solid  transparent; 
+        // border-left: calc(#{$sizePx} *.5) solid  transparent; 
+        // border-bottom: calc((#{$sizePx} * #{$equilateral-triangle-ratio})) solid black;
+      }
+    }
+    @each $colorLabel, $colorValue in $colors {
+      &--#{$colorLabel} {
+        fill: #{$colorLabel};
+        // border-bottom-color: #{$colorValue};
+        stroke: #{$colorLabel};
+      }
+    }
+  }
+
+  &-star {
+    overflow: hidden;
+    // Icon is kinda small in relation to canvas
+    svg {
+      transform: scale(2);
+    }
+    @each $sizeLabel, $sizePx in $sizes {
+      &--#{$sizeLabel} {
+        height: #{$sizePx};
+        width: #{$sizePx};
+      }
+    }
+    @each $colorLabel, $colorValue in $colors {
+      &--#{$colorLabel} {
+        fill: #{$colorValue};
+      }
+    }
+  }
+
+  &-square {
+    border-radius: 5px;
+    @each $sizeLabel, $sizePx in $sizes {
+      &--#{$sizeLabel} {
+        height: #{$sizePx};
+        width: #{$sizePx};
+      }
+    }
+    @each $colorLabel, $colorValue in $colors {
+      &--#{$colorLabel} {
+        background-color: #{$colorValue};
+      }
+      &--#{$colorLabel}.is-masked {
+        background-color: transparent;
+        border: 5px dashed #{$colorValue}; 
+      }
+    }
+  }
+
+  &-circle {
+    border-radius: 50%;
+    @each $sizeLabel, $sizePx in $sizes {
+      &--#{$sizeLabel} {
+        height: #{$sizePx};
+        width: #{$sizePx};
+      }
+    }
+    @each $colorLabel, $colorValue in $colors {
+      &--#{$colorLabel} {
+        background-color: #{$colorValue};
+      }
+      &--#{$colorLabel}.is-masked {
+        background-color: transparent;
+        border: 5px dashed #{$colorValue}; 
+      }
+    }
+  }
+
+  &-heart {
+    overflow: hidden;
+    // Icon is kinda small in relation to canvas
+    svg {
+      transform: scale(1.5);
+    }
+    @each $sizeLabel, $sizePx in $sizes {
+      &--#{$sizeLabel} {
+        height: #{$sizePx};
+        width: #{$sizePx};
+      }
+    }
+    @each $colorLabel, $colorValue in $colors {
+      &--#{$colorLabel} {
+        fill: #{$colorValue};
+      }
+    }
+  }
+}
+
+$small-bg-color: crimson;
+$medium-bg-color: gold;
+$large-bg-color: seagreen;
+$brick-circle-size: 30px;
+
+.NumberedBrick {
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  flex: 1 1 0;
+  transition: background .3s;
+  background: $small-bg-color;
+  border: 5px solid darken($small-bg-color, 10%);
+  @media screen and (min-width: 300px) {
+    background: $small-bg-color;
+    border-color: darken($small-bg-color, 10%);
+  }
+  @media screen and (min-width: 600px) {
+    background: $medium-bg-color;
+    border-color: darken($medium-bg-color, 10%);
+  }
+  @media screen and (min-width: 900px) {
+    background: $large-bg-color;
+    border-color: darken($large-bg-color, 10%);
+  }
+  &-number {
+    font-size: $brick-circle-size / 2;
+    font-weight: bold;
+    color: #333;
+    background: rgba(255,255,255,.5);
+    border-radius: 50%;
+    width: $brick-circle-size;
+    height: $brick-circle-size;
+    line-height: $brick-circle-size;
+    vertical-align: center;
+    display: inline-block;
+  }
+  &.is-masked {
+    border-style: dashed;
+    background: lighten($small-bg-color, 10%);
+    @media screen and (min-width: 600px) {
+      background: lighten($medium-bg-color, 10%);
+    }
+    @media screen and (min-width: 900px) {
+      background: lighten($large-bg-color, 10%);
+    }
+  }
+}

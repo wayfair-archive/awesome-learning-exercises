@@ -36,8 +36,8 @@
   💡 the element at that breakpoint. When developing a real-world application,
   💡 you most likely would not want to hide a component using CSS for
   💡 performance and accessibility reasons. For the sake of this exercise, 
-  💡 this prop is used  to demonstrate the concept of certain content being 
-  💡 visible or hidden for certain screen sizes or devices. 
+  💡 however, this prop is used to demonstrate the concept of certain content 
+  💡 being visible or hidden for certain screen sizes or devices.
 
   💡 In the JSX below, add the appropriate width props to the Block
   💡 components so that the layout matches the solution in the righthand

@@ -22,7 +22,7 @@
     }}
   ```
 
-  💡 Would define the flex axis on the container to be "row" (vertically-aligned)
+  💡 would define the flex axis on the container to be "row" (vertically-aligned)
   💡 on small screens, and then "column" (horizontally-aligned) on large screens.
 
   💡 You may need to nest Block components inside other Block

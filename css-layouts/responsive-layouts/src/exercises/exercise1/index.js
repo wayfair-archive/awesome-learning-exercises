@@ -1,21 +1,21 @@
 /*
   ⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️
   
-  💡 Welcome to the exercise portion of this course on Flexbox and responsive layouts
+  💡 Welcome to the exercise portion of this course on Flexbox and responsive layouts!
 
   💡 What you'll see below are a set of question components that contain
   💡 a Block component and some colored shape components. The Block component is the 
   💡 main layout component you'll be using in this course.
 
-  💡  Instead of writing CSS, you'll specify props to the Block components which
-  💡  add special CSS classes for the property. For example, if you want
-  💡  to change the flex-direction of the content, you would set the `flexDirection`
-  💡  prop to "row-reverse" (all props are camelcased, but the values are the normal 
-  💡  CSS equivalent.
+  💡 Instead of writing CSS, you'll specify props to the Block components which
+  💡 add special CSS classes for the property. For example, if you want
+  💡 to change the flex-direction of the content, you would set the `flexDirection`
+  💡 prop to "row-reverse" (all props are camelcased, but the values are the normal 
+  💡 CSS equivalent.)
 
-  💡  Take a look at the `grid-components.js` file to get a better idea of what
-  💡  props are available, and what values they accept. If you notice, there 
-  💡 are also width props to specify the size, we will get to those in exercise 2.
+  💡 Take a look at the `grid-components.js` file to get a better idea of what
+  💡 props are available and what values they accept. If you notice, there 
+  💡 are also width props to specify the size. We will get to those in exercise 2.
 
   💡 If you look at the browser panel on the right, you'll see a series of solid shapes
   💡 of different sizes and some dotted outlines of those shapes overlaid.

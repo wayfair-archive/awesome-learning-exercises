@@ -85,6 +85,10 @@ $wrapper-main-color: #A1E7F7;
       &-userInput,
       &-solution {
         display: flex;
+        // Stretch children so size prop isn't needed on ex1
+        .Block {
+          width: 100%;
+        }
       }
     }
   }

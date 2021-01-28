@@ -36,7 +36,7 @@
     Solution 4
   */}
   <QuestionFour>
-    <Block size={12} justifyContent="space-between" alignContent="flex-end">
+    <Block justifyContent="space-between" alignContent="flex-end">
       <Square size="medium" color="green" />
       <Square size="medium" color="blue" />
       <Square size="medium" color="yellow" />

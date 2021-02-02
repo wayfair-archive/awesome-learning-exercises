@@ -67,9 +67,9 @@ const ExerciseOne = () => {
       */}
       <QuestionTwo>
         <Block>
-          <Heart size="large" color="green" />
-          <Circle size="small" color="blue" />
           <Star size="large" color="red" />
+          <Circle size="small" color="blue" />
+          <Heart size="large" color="green" />
         </Block>
       </QuestionTwo>
 

@@ -1,0 +1,33 @@
+/* Feel free to edit any CSS that you think would make
+ the elements on the page more accessible. */
+
+.Exercise1-section3,
+.Exercise1-section3Button {
+  cursor: none;
+  user-select: none;
+}
+
+/* What styles can you add to this class to 
+  make the hover/focus state more obvious? */
+.Exercise1-button {
+  background-color: grey;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  display: inline;
+  line-height: 30px;
+  outline: 0;
+  padding: 10px;
+  vertical-align: middle;
+}
+
+.Exercise1-buttonIllustration {
+  height: 30px;
+  line-height: 30px;
+  vertical-align: middle;
+}
+
+.Exercise1-decorativeIllustration {
+  height: 50px;
+  width: 50px;
+}

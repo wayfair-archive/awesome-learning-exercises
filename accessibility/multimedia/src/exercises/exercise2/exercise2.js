@@ -114,7 +114,7 @@ const Exercise2 = () => {
           these text emoji are pronounced
           with assistive technology.
 
-          https://drive.google.com/file/d/18XxgAIUhs4hanvSffyfXqQTCySeG5178/view?usp=sharing
+          https://drive.google.com/file/d/1bQBPRs6K1Q34To-0sm0dv29VJTwCtRf9/view?usp=sharing
           
           How can you fix this? 
           

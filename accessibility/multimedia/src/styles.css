@@ -36,3 +36,8 @@
 .App hr {
   margin: 20px 0;
 }
+
+.TempElement {
+  font-style: italic;
+  text-decoration: underline;
+}

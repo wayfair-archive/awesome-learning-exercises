@@ -67,7 +67,7 @@ and usability of a page.
 const Exercise2 = () => {
   // You can uncomment this line to see how the
   // changes you've made will appear to screen readers!
-  // useShowAltTextAfterMedia();
+  useShowAltTextAfterMedia();
 
   `⬇️⬇️⬇️⬇️⬇️ Edit code below this line! ⬇️⬇️⬇️⬇️⬇️`;
   return (
@@ -109,31 +109,38 @@ const Exercise2 = () => {
       </section>
       {/* What would you do to label this text emoji as imagery,
           and then associate the emoji with its corresponding text? */}
+      {/* Screen readers struggle to read text like this.
+          Check out this video to see how 
+          these text emoji are pronounced
+          with assistive technology.
+
+          https://drive.google.com/file/d/18XxgAIUhs4hanvSffyfXqQTCySeG5178/view?usp=sharing
+          
+          How can you fix this? 
+          
+          🎉 Add your own labels and descriptions
+          🎉 of the characters you think are depicted
+          🎉 by these emoji! Have fun with it!
+          */}
       <section>
         <h2>TV characters as depicted by text emoji</h2>
         <div className="Exercise2-imageWrapper">
           <p>ಠ_ಠ</p>
-          <p>Squidward Tentacles</p>
         </div>
         <div className="Exercise2-imageWrapper">
           <p>(☞ﾟヮﾟ)☞ ☜(ﾟヮﾟ☜)</p>
-          <p>Spongebob Squarepants and Patrick Star</p>
         </div>
         <div className="Exercise2-imageWrapper">
           <p>¯\_(ツ)_/¯</p>
-          <p>Michael Scott</p>
         </div>
         <div className="Exercise2-imageWrapper">
           <p>(ᵔᴥᵔ)</p>
-          <p>Jim Halpert</p>
         </div>
         <div className="Exercise2-imageWrapper">
           <p>୧(•̀ᗝ•́)૭</p>
-          <p>Zuko</p>
         </div>
         <div className="Exercise2-imageWrapper">
           <p>(づ｡◕‿‿◕｡)づ</p>
-          <p>Aang</p>
         </div>
       </section>
     </main>
@@ -144,7 +151,7 @@ const Exercise2 = () => {
 ` 
 ✅✅✅ 
 
-  When you're done with Exercise 1, click on
+  When you're done with Exercise 2, click on
   "Exercise 3" in the browser! Then, open 
   'exercises/exercise3/exercise3.js' to
   begin the next exercise!
@@ -152,58 +159,9 @@ const Exercise2 = () => {
 ✅✅✅
 `;
 
-// Adds alt text, aria labels, and aria-labelledby text
-// near their respective elements. This makes it easier
-// for learners to see how alternative text is shown
-// to assistive technology so that they don't need
-// to set it up.
-// With a screen reader, this text is duplicative.
-// It's extracted to a function so learners can
-// comment it out if they want to go through this
-// exercise with a screen reader.
-function useShowAltTextAfterMedia() {
-  useEffect(() => {
-    // Get rid of all other elements that were added
-    // by previous executions of this effect
-    document
-      .querySelectorAll(".Exercise2-tempElement")
-      .forEach((element) => element.remove());
-    // Find all elements with alt text
-    const images = document.querySelectorAll("img[alt]");
-    // Next to every image with an "alt" tag, append
-    // a caption with the contents of its alt text
-    images.forEach((image) => {
-      const caption = document.createElement("span");
-      caption.setAttribute("class", "Exercise2-imageAlt Exercise2-tempElement");
-      const altText = image.getAttribute("alt");
-      // If there's alt text for this image,
-      // add it immediately after the image
-      if (!!altText) {
-        caption.innerText = altText;
-        image.insertAdjacentElement("afterend", caption);
-      }
-    });
-
-    // aria-label
-    const elementsWithLabels = document.querySelectorAll("[aria-label]");
-    elementsWithLabels.forEach((element) => {
-      const caption = document.createElement("span");
-      caption.setAttribute("class", "Exercise2-imageAlt Exercise2-tempElement");
-      const label = element.getAttribute("aria-label");
-      // If there's alt text for this image,
-      // add it immediately after the image
-      if (!!label) {
-        // Add ", image" to the end to emulate how a screenreader
-        // would announce the image
-        caption.innerText = `${label}, image`;
-        element.insertAdjacentElement("beforebegin", caption);
-      }
-    });
-  });
-}
-
 // ⛔ You should not need to modify anything below this line ⛔
-import React, { useState, useEffect } from "react";
+import React from "react";
+import useShowAltTextAfterMedia from "../../use_show_alt_text";
 import "./exercise2.css";
 
 export default Exercise2;

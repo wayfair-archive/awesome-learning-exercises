@@ -1,27 +1,45 @@
-/* Feel free to edit any CSS that you think would make
- the elements on the page more accessible. */
-
 .Exercise1-section3,
 .Exercise1-section3Button {
   cursor: none;
   user-select: none;
 }
 
-/* What styles can you add to this class to 
-   make the hover/focus state more obvious? */
 .Exercise1-button {
-  background-color: blueviolet;
+  background-color: grey;
   border: none;
   border-radius: 10px;
   color: white;
   display: inline;
-  outline: 0;
+  line-height: 30px;
+  /* ✅  We should comment out
+         the outline: 0 line so
+         the button has an outline
+         whenever it's focused on */
+  /* outline: 0; */
   padding: 10px;
+  transition: 0.3s background-color;
+  vertical-align: middle;
 }
 
-/* Solution here */
+ /* ✅  Change the background color of
+        the button when it's hovered on
+        or focused. It's important to
+        do this for hover AND focus,
+        since it will need the same kind
+        of styles with a mouse as with
+        a keyboard. */
 .Exercise1-button:hover,
 .Exercise1-button:focus {
-  background-color: #430180;
-  transition: 0.3s;
+  background-color: darkgray;
+}
+
+.Exercise1-buttonIllustration {
+  height: 30px;
+  line-height: 30px;
+  vertical-align: middle;
+}
+
+.Exercise1-decorativeIllustration {
+  height: 50px;
+  width: 50px;
 }

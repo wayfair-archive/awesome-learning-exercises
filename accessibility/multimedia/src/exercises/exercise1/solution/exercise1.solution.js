@@ -2,10 +2,12 @@
 
 `
 ✅ Exercise 1: Accessible Icons Solution ✅
+Check out the CSS file for some updates as well!
 `;
 
 const Exercise1 = () => {
   const [shouldShowSurprise, setShouldShowSurprise] = useState(false);
+  useShowAltTextAfterMedia();
 
   return (
     <div className="Exercise1">
@@ -17,6 +19,8 @@ const Exercise1 = () => {
         </p>
         <p>
           <button
+            // ✅ You can edit the CSS to give this button a different
+            // color on hover/focus1
             className="Exercise1-button"
             onClick={() => alert("You've got a new notification!")}
             // ✅ Give this button an title OR aria-label to indicate
@@ -29,14 +33,22 @@ const Exercise1 = () => {
         </p>
       </section>
 
-      <section>
+      <section classname="Exercise1-section2">
         <h2>Element 2</h2>
         <p>How would you make this decorative icon accessible?</p>
         <p>
-          {/* ✅ Add "role="img" to this icon to indicate that it is decorative */}
-          {/* Since it's an SVG, just doing alt="" or aria-label="" by themselves
-              will not be sufficient */}
-          <A11yIcon className="Exercise1-decorativeIllustration" aria-label="" role="img" />
+          {/* ✅ This just needs alt="" to indicate that the image
+                 is decorative and can be skipped
+                 by assistive technology */}
+          <p>
+            <img
+              alt=""
+              src="img/a11y.svg"
+              className="Exercise1-decorativeIllustration"
+            />{" "}
+            The A11y icon is a universal representation of accessibility in
+            digital and print media!
+          </p>
         </p>
       </section>
 
@@ -49,13 +61,12 @@ const Exercise1 = () => {
             onClick={() => setShouldShowSurprise((value) => !value)}
             type="button"
           >
-          {/* ✅ Add "role="img" to this icon to indicate that it is decorative */}
-          {/* Adding a label to this icon would be repetitive, since it has
-              text right next to it */}
+            {/* ✅ Adding a label to this icon would be repetitive, since it has
+              text right next to it. Providing a blank label is sufficient */}
             <PartyIcon
               aria-label=""
               role="img"
-              className="Exercise1-buttonIllustration" 
+              className="Exercise1-buttonIllustration"
             />{" "}
             {shouldShowSurprise ? "End" : "Initiate"} surprise
           </button>
@@ -107,6 +118,7 @@ const PartyIcon = (props) => (
 // ⛔ below this line
 import React, { useState } from "react";
 import Surprise from "react-confetti";
-import "./exercise1.css";
+import useShowAltTextAfterMedia from "../../../use_show_alt_text";
+import "./exercise1.solution.css";
 
 export default Exercise1;

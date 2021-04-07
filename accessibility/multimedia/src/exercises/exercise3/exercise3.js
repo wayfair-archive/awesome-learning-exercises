@@ -59,39 +59,42 @@ how would I be able to tell what's in it?"
 
 `;
 
-const Exercise3 = () => (
-  <main id="maincontent">
-    <h1>All about dragons</h1>
-    <h2>Sintel</h2>
-    <video controls={false}>
-      <source
-        src="https://github.com/iandevlin/iandevlin.github.io/blob/master/mdn/video-player-with-captions/video/sintel-short.mp4?raw=true"
-        type="video/mp4"
-      />
-    </video>
-    <h2>Spyro</h2>
-    <img src="https://media3.giphy.com/media/RL4MF0v7RNX7NO3SrR/giphy.gif" />
-    <h2>Elizabeth (Shrek)</h2>
-    <iframe
-      src="https://gifer.com/embed/S8J7"
-      width="480"
-      height="274.286"
-      frameBorder="0"
-      allowFullScreen
-    ></iframe>
-  </main>
-);
+const Exercise3 = () => {
+  useShowAltTextAfterMedia();
+  `⬇️⬇️⬇️⬇️⬇️ Edit code below this line! ⬇️⬇️⬇️⬇️⬇️`;
+  return (
+    <main id="maincontent">
+      <h1>All about dragons</h1>
+      <h2>Sintel</h2>
+      <video controls={false}>
+        <source
+          src="https://github.com/iandevlin/iandevlin.github.io/blob/master/mdn/video-player-with-captions/video/sintel-short.mp4?raw=true"
+          type="video/mp4"
+        />
+      </video>
+      <h2>Spyro</h2>
+      <img src="https://media3.giphy.com/media/RL4MF0v7RNX7NO3SrR/giphy.gif" />
+      <h2>Elizabeth (Shrek)</h2>
+      <iframe
+        src="https://gifer.com/embed/S8J7"
+        width="480"
+        height="274.286"
+        frameBorder="0"
+        allowFullScreen
+      ></iframe>
+    </main>
+  );
+  `⬆️⬆️⬆️⬆️⬆️ Edit code above this line! ⬆️⬆️⬆️⬆️⬆️`;
+};
 
 ` 
 ✅✅✅ 
 
   You've finished the Accessibility Course on Multimedia!
-  May your journeys with Accessibility be fruitful and may
-  your alt text be bontiful!
   
 ✅✅✅
 `;
 
 import React from "react";
-
+import useShowAltTextAfterMedia from "../../use_show_alt_text";
 export default Exercise3;

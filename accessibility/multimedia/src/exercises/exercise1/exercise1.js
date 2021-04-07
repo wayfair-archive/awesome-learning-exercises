@@ -40,6 +40,13 @@ icons. Each of them are built in a different context:
 
 const Exercise1 = () => {
   const [shouldShowSurprise, setShouldShowSurprise] = useState(false);
+  // You can uncomment this line to see how the
+  // changes you've made will appear to screen readers!
+  // This hook will add text to the screen to represent how
+  // assistive text will be presented to screen readers.
+  // You can use this, OR use a screen reader on your device,
+  // to see how you're progressing!
+  useShowAltTextAfterMedia();
 
   return (
     <div className="Exercise1">
@@ -52,9 +59,10 @@ const Exercise1 = () => {
           accessible to non-sighted users?
         </p>
         {/* What can you do to tell visitors what happens
-          when the button is clicked? Try visiting this page
-          with a screen reader. Buttons are supposed to tell you
-          what happens when you click on them, but this one doesn't! */}
+          when the button is clicked? 
+          Buttons are supposed to tell you
+          what happens when you click on them, 
+          but this one doesn't! */}
         <p>
           <button
             className="Exercise1-button"
@@ -73,7 +81,12 @@ const Exercise1 = () => {
             given a label. But does it need any other adjustments
             so that it doesn't get read by assistive technology? */}
         <p>
-          <A11yIcon className="Exercise1-decorativeIllustration" />
+          <img
+            src="img/a11y.svg"
+            className="Exercise1-decorativeIllustration"
+          />{" "}
+          The A11y icon is a universal representation of accessibility in
+          digital and print media!
         </p>
       </section>
 
@@ -86,11 +99,11 @@ const Exercise1 = () => {
             onClick={() => setShouldShowSurprise((value) => !value)}
             type="button"
           >
-            {/* What needs to change about this icon to make sure it is not
-            repeating text that is already readable by assistive technology? */}
+            {/* What, if anything, needs to change about this icon? */}
             <PartyIcon
-              aria-label={`${shouldShowSurprise ? "End" : "Initiate"} surprise`} 
-              className="Exercise1-buttonIllustration" 
+              aria-label={`${shouldShowSurprise ? "End" : "Initiate"} surprise`}
+              className="Exercise1-buttonIllustration"
+              role="img"
             />{" "}
             {shouldShowSurprise ? "End" : "Initiate"} surprise
           </button>
@@ -107,12 +120,6 @@ const NotificationBellIcon = (props) => (
   <svg fill="white" viewBox="0 0 611.999 611.999" {...props}>
     <path d="M570.107 500.254c-65.037-29.371-67.511-155.441-67.559-158.622v-84.578c0-81.402-49.742-151.399-120.427-181.203C381.969 34 347.883 0 306.001 0c-41.883 0-75.968 34.002-76.121 75.849-70.682 29.804-120.425 99.801-120.425 181.203v84.578c-.046 3.181-2.522 129.251-67.561 158.622a17.257 17.257 0 007.103 32.986h164.88c3.38 18.594 12.172 35.892 25.619 49.903 17.86 18.608 41.479 28.856 66.502 28.856 25.025 0 48.644-10.248 66.502-28.856 13.449-14.012 22.241-31.311 25.619-49.903h164.88a17.26 17.26 0 0016.872-13.626 17.25 17.25 0 00-9.764-19.358zm-85.673-60.395c6.837 20.728 16.518 41.544 30.246 58.866H97.32c13.726-17.32 23.407-38.135 30.244-58.866h356.87zM306.001 34.515c18.945 0 34.963 12.73 39.975 30.082-12.912-2.678-26.282-4.09-39.975-4.09s-27.063 1.411-39.975 4.09c5.013-17.351 21.031-30.082 39.975-30.082zM143.97 341.736v-84.685c0-89.343 72.686-162.029 162.031-162.029s162.031 72.686 162.031 162.029v84.826c.023 2.596.427 29.879 7.303 63.465H136.663c6.88-33.618 7.286-60.949 7.307-63.606zm162.031 235.749c-26.341 0-49.33-18.992-56.709-44.246h113.416c-7.379 25.254-30.364 44.246-56.707 44.246z" />
     <path d="M306.001 119.235c-74.25 0-134.657 60.405-134.657 134.654 0 9.531 7.727 17.258 17.258 17.258 9.531 0 17.258-7.727 17.258-17.258 0-55.217 44.923-100.139 100.142-100.139 9.531 0 17.258-7.727 17.258-17.258-.001-9.532-7.728-17.257-17.259-17.257z" />
-  </svg>
-);
-
-const A11yIcon = (props) => (
-  <svg viewBox="0 0 32 32" {...props}>
-    <path d="M 16 4 C 9.3844277 4 4 9.3844277 4 16 C 4 22.615572 9.3844277 28 16 28 C 22.615572 28 28 22.615572 28 16 C 28 9.3844277 22.615572 4 16 4 z M 16 6 C 21.534692 6 26 10.465308 26 16 C 26 21.534692 21.534692 26 16 26 C 10.465308 26 6 21.534692 6 16 C 6 10.465308 10.465308 6 16 6 z M 16 8 C 14.895431 8 14 8.8954305 14 10 C 14 11.104569 14.895431 12 16 12 C 17.104569 12 18 11.104569 18 10 C 18 8.8954305 17.104569 8 16 8 z M 10.21875 12.03125 L 9.78125 13.96875 L 14 14.90625 L 14 18.96875 L 14 19 L 13.03125 23.8125 L 14.96875 24.1875 L 15.96875 19.1875 L 16 19.09375 L 16.03125 19.1875 L 17.03125 24.1875 L 18.96875 23.8125 L 18 19 L 18 18.96875 L 18 14.90625 L 22.21875 13.96875 L 21.78125 12.03125 L 17.5 13 L 17.4375 13 L 14.5625 13 L 14.5 13 L 10.21875 12.03125 z"></path>
   </svg>
 );
 
@@ -142,6 +149,7 @@ const PartyIcon = (props) => (
 // ⛔ below this line
 import React, { useState } from "react";
 import Surprise from "react-confetti";
+import useShowAltTextAfterMedia from "../../use_show_alt_text";
 import "./exercise1.css";
 
 export default Exercise1;

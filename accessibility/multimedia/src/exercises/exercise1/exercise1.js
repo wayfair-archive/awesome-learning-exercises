@@ -47,6 +47,17 @@ const Exercise1 = () => {
   // You can use this, OR use a screen reader on your device,
   // to see how you're progressing!
   useShowAltTextAfterMedia();
+  // 📣📣📣📣📣 THIS IS NOT MEANT
+  // 📣📣📣📣📣 TO REPLACE SCREEN READERS!
+  // Before using this hook for any reason,
+  // we strongly recommend you enable your
+  // system's screen reader **FIRST**.
+  // This hook is meant to be used as a learning
+  // aid which generally emulates what a screen
+  // reader __would__ say, but it cannot
+  // ever be 100% accurate. Please consider
+  // using your computer's built-in screen
+  // reader __first__.
 
   return (
     <div className="Exercise1">

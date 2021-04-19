@@ -15,6 +15,17 @@ function getLabelSuffix(element) {
 // It's extracted to a function so learners can
 // comment it out if they want to go through this
 // exercise with a screen reader.
+// 📣📣📣📣📣 THIS IS NOT MEANT
+// 📣📣📣📣📣 TO REPLACE SCREEN READERS!
+// Before using this hook for any reason,
+// we strongly recommend you enable your
+// system's screen reader **FIRST**.
+// This hook is meant to be used as a learning
+// aid which generally emulates what a screen
+// reader __would__ say, but it cannot
+// ever be 100% accurate. Please consider
+// using your computer's built-in screen
+// reader __first__.
 function useShowAltTextAfterMedia() {
   useEffect(() => {
     // Get rid of all other elements that were added

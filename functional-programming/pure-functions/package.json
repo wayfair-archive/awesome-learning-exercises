@@ -1,0 +1,11 @@
+{
+  "name": "awesome-learning-functional-programming-pure-functions",
+  "description": "Awesome Learning: Functional Programming: Pure Functions Exercises",
+  "dependencies": {
+    "jest": "23.6.0"
+  },
+  "devDependencies": {
+    "@types/jest": "23.3.13",
+    "jest": "23.6.0"
+  }
+}
